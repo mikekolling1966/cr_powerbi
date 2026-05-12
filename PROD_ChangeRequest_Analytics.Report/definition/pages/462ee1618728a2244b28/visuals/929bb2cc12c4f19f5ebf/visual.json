@@ -1,0 +1,77 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "929bb2cc12c4f19f5ebf",
+  "position": {
+    "x": 34.47422680412371,
+    "y": 488.08247422680409,
+    "z": 5000,
+    "height": 198.68041237113403,
+    "width": 229.5257731958763,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "msevtmgt_Event"
+                    }
+                  },
+                  "Property": "Total EVents"
+                }
+              },
+              "queryRef": "msevtmgt_Event.Total EVents",
+              "nativeQueryRef": "Total Events",
+              "displayName": "Total Events"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "msevtmgt_Event"
+                  }
+                },
+                "Property": "Total EVents"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

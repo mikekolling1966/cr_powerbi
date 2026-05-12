@@ -1,0 +1,100 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "ce405a9bdae63e9aee19",
+  "position": {
+    "x": 488.17995910020448,
+    "y": 73.946830265848675,
+    "z": 3000,
+    "height": 457.42331288343559,
+    "width": 610.55214723926383,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "columnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ConsentTable"
+                    }
+                  },
+                  "Property": "ConsentType"
+                }
+              },
+              "queryRef": "ConsentTable.ConsentType",
+              "nativeQueryRef": "ConsentType",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ConsentTable"
+                        }
+                      },
+                      "Property": "ConsentGivenNumeric"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(ConsentTable.ConsentGivenNumeric)",
+              "nativeQueryRef": "Sum of ConsentGivenNumeric"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "ConsentTable"
+                      }
+                    },
+                    "Property": "ConsentGivenNumeric"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Consent Given'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

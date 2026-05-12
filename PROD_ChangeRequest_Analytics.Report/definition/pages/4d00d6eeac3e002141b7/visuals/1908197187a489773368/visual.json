@@ -1,0 +1,123 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "1908197187a489773368",
+  "position": {
+    "x": 312.680412371134,
+    "y": 370.20618556701032,
+    "z": 5000,
+    "height": 338.659793814433,
+    "width": 363.71134020618558,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cap_esacontactonboarding"
+                    }
+                  },
+                  "Property": "cap_name"
+                }
+              },
+              "queryRef": "cap_esacontactonboarding.cap_name",
+              "nativeQueryRef": "cap_name"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cap_esacontactonboarding"
+                    }
+                  },
+                  "Property": "Users Associated to an Onboarding Project"
+                }
+              },
+              "queryRef": "cap_esacontactonboarding.Users per Onboarding Project",
+              "nativeQueryRef": "Users Associated to an Onboarding Project"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "cap_esacontactonboarding"
+                  }
+                },
+                "Property": "cap_name"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "153.2233009469646D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "cap_esacontactonboarding.cap_name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "141.50485436893206D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "cap_esacontactonboarding.Users per Onboarding Project"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Onboarding Projects'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

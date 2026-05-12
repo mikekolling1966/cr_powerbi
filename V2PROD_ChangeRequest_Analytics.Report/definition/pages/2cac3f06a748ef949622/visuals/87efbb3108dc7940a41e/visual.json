@@ -1,0 +1,260 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "87efbb3108dc7940a41e",
+  "position": {
+    "x": 10.397148568467145,
+    "y": 0,
+    "z": 0,
+    "height": 129.9643571058393,
+    "width": 301.51730848554718,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ConsentValueCheck2"
+                    }
+                  },
+                  "Property": "msdynmkt_contactpointtype_display"
+                }
+              },
+              "queryRef": "ConsentValueCheck2.msdynmkt_contactpointtype_display",
+              "nativeQueryRef": "Message Type",
+              "displayName": "Message Type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ConsentValueCheck2"
+                    }
+                  },
+                  "Property": "msdynmkt_value_display"
+                }
+              },
+              "queryRef": "ConsentValueCheck2.msdynmkt_value_display",
+              "nativeQueryRef": "Response",
+              "displayName": "Response"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ConsentValueCheck2"
+                        }
+                      },
+                      "Property": "RowCount"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(ConsentValueCheck2.RowCount)",
+              "nativeQueryRef": "Count",
+              "displayName": "Count"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "ConsentValueCheck2"
+                      }
+                    },
+                    "Property": "RowCount"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "117.56281075153144D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ConsentValueCheck2.msdynmkt_contactpointtype_display"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "80.62067798919905D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ConsentValueCheck2.msdynmkt_value_display"
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "rowPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Consent '"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Minimal'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "50b875046baefd72ac28",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "ConsentValueCheck2"
+              }
+            },
+            "Property": "msdynmkt_contactpointtype_display"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "59507e19981f2a9b1ce6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "ConsentValueCheck2"
+              }
+            },
+            "Property": "msdynmkt_value_display"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "3771a4810bf1265a2195",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "ConsentValueCheck2"
+                  }
+                },
+                "Property": "RowCount"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

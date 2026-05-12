@@ -1,0 +1,224 @@
+table ListMember
+	lineageTag: 44b0b619-3e42-421c-b3ae-7d50cc8ec37f
+
+	measure 'Total Subscribers' = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT('listmember'[entityid]),
+			    'listmember'[entitytype] = "contact"
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 2af5e1af-2f74-4a76-8481-f6d60c6fca74
+
+	measure 'Average Subscriptions per Contact' = ```
+			
+			VAR ContactCount = 
+			    CALCULATE(
+			        DISTINCTCOUNT('listmember'[entityid]),
+			        'listmember'[entitytype] = "contact"
+			    )
+			VAR TotalSubscriptions = 
+			    CALCULATE(
+			        COUNTROWS('listmember'),
+			        'listmember'[entitytype] = "contact"
+			    )
+			RETURN
+			    DIVIDE(TotalSubscriptions, ContactCount, 0)
+			
+			```
+		lineageTag: 6561cfde-95f3-4fd0-b7dd-998e33e48499
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column createdby
+		dataType: string
+		lineageTag: 54a519ed-c86a-4272-bf25-c9d041f5739e
+		summarizeBy: none
+		sourceColumn: createdby
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e1404c27-3a03-48ab-8448-d0b3077be61d
+		summarizeBy: none
+		sourceColumn: createdon
+
+		variation Variation
+			isDefault
+			relationship: 3db856ec-ff74-4a96-a4cf-9233bc046329
+			defaultHierarchy: LocalDateTable_67aec16c-7b11-4ecc-b51b-b489bfdc44bd.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdonbehalfby
+		dataType: string
+		lineageTag: 47327e49-3c85-43af-8cf0-74d3d49c83e4
+		summarizeBy: none
+		sourceColumn: createdonbehalfby
+
+		annotation SummarizationSetBy = Automatic
+
+	column entityid
+		dataType: string
+		lineageTag: 63d26b7e-4e9c-403f-aecc-66c69f5745cd
+		summarizeBy: none
+		sourceColumn: entityid
+
+		annotation SummarizationSetBy = Automatic
+
+	column entitytype
+		dataType: string
+		lineageTag: 86dcc163-9bc4-43ae-b000-d97feb3dfc22
+		summarizeBy: none
+		sourceColumn: entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column importsequencenumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 2abb43b7-c6ad-4576-a989-5f226797428e
+		summarizeBy: sum
+		sourceColumn: importsequencenumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column listid
+		dataType: string
+		lineageTag: fbba5311-0071-46ff-9290-6ed96f06bb14
+		summarizeBy: none
+		sourceColumn: listid
+
+		annotation SummarizationSetBy = Automatic
+
+	column listmemberid
+		dataType: string
+		lineageTag: 64152280-102b-4003-ac83-9fff625c3e21
+		summarizeBy: none
+		sourceColumn: listmemberid
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedby
+		dataType: string
+		lineageTag: 3a048c84-8eee-42db-b115-0bcf1ab3e02b
+		summarizeBy: none
+		sourceColumn: modifiedby
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 49dd1e43-a086-4296-94e8-0f19042bcb67
+		summarizeBy: none
+		sourceColumn: modifiedon
+
+		variation Variation
+			isDefault
+			relationship: 7dab5d7a-c8cb-4bbd-9260-9579f3059afe
+			defaultHierarchy: LocalDateTable_780caee0-63be-4e4f-9166-29f6cbddf4e9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedonbehalfby
+		dataType: string
+		lineageTag: de5bcf1f-0d25-45ea-af25-c560341c4854
+		summarizeBy: none
+		sourceColumn: modifiedonbehalfby
+
+		annotation SummarizationSetBy = Automatic
+
+	column overriddencreatedon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3f237698-b753-48e1-a141-bfbe67d1d73e
+		summarizeBy: none
+		sourceColumn: overriddencreatedon
+
+		variation Variation
+			isDefault
+			relationship: 2d2772c4-2886-4fd5-9f16-d6487023f5b7
+			defaultHierarchy: LocalDateTable_b98862cc-7641-47f4-8145-29189f98a7a3.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ownerid
+		dataType: string
+		lineageTag: decfc7cb-2dad-4ab1-95d1-8cde03cd5de0
+		summarizeBy: none
+		sourceColumn: ownerid
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningbusinessunit
+		dataType: string
+		lineageTag: 0c511df1-cc6e-45f6-914d-92e5a9517094
+		summarizeBy: none
+		sourceColumn: owningbusinessunit
+
+		annotation SummarizationSetBy = Automatic
+
+	column owninguser
+		dataType: string
+		lineageTag: 03f15677-b8c1-40aa-a292-4a793171a6e2
+		summarizeBy: none
+		sourceColumn: owninguser
+
+		annotation SummarizationSetBy = Automatic
+
+	column timezoneruleversionnumber
+		dataType: int64
+		formatString: 0
+		lineageTag: d450b0b4-8221-4582-b88d-3b38ec72fc9a
+		summarizeBy: sum
+		sourceColumn: timezoneruleversionnumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column utcconversiontimezonecode
+		dataType: int64
+		formatString: 0
+		lineageTag: 61fea494-611c-419a-a80f-0d5c6826863a
+		summarizeBy: sum
+		sourceColumn: utcconversiontimezonecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column versionnumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 296c8331-6908-4292-8c29-7a044a99fcf2
+		summarizeBy: sum
+		sourceColumn: versionnumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdonDateOnly = ```
+			DATE(YEAR(ListMember[createdon]), MONTH(ListMember[createdon]), DAY(Listmember[createdon]))
+			
+			```
+		formatString: General Date
+		lineageTag: ab28bdfd-5f36-4216-85a6-8932e37e5d67
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ListMember = m
+		mode: import
+		source =
+				let
+				    Source = Cds.Entities(BaseUrl, [ReorderColumns=null, UseFormattedValue=null]),
+				    entities = Source{[Group="entities"]}[Data],
+				    listmembers = entities{[EntitySetName="listmembers"]}[Data]
+				in
+				    listmembers
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

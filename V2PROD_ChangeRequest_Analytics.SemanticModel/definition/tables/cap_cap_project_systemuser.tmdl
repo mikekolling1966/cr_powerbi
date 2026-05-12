@@ -1,0 +1,50 @@
+table cap_cap_project_systemuser
+	lineageTag: 5388c793-ad25-4622-9487-89cd65bf2047
+
+	column cap_cap_project_systemuserid
+		dataType: string
+		lineageTag: f6698a89-f76a-45bc-98a1-42a782874036
+		summarizeBy: none
+		sourceColumn: cap_cap_project_systemuserid
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_projectid
+		dataType: string
+		lineageTag: b623007d-3357-4cb1-853b-1c70d73611a4
+		summarizeBy: none
+		sourceColumn: cap_projectid
+
+		annotation SummarizationSetBy = Automatic
+
+	column systemuserid
+		dataType: string
+		lineageTag: f31829ea-acab-4b1b-8f33-7edfd57e928b
+		summarizeBy: none
+		sourceColumn: systemuserid
+
+		annotation SummarizationSetBy = Automatic
+
+	column versionnumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 9dbb9975-c47d-4aea-80a4-0a848e6403db
+		summarizeBy: sum
+		sourceColumn: versionnumber
+
+		annotation SummarizationSetBy = Automatic
+
+	partition cap_cap_project_systemuser = m
+		mode: import
+		source =
+				let
+				    Source = Cds.Entities(BaseUrl, null),
+				    entities = Source{[Group="entities"]}[Data],
+				    cap_cap_project_systemuserset = entities{[EntitySetName="cap_cap_project_systemuserset"]}[Data]
+				in
+				    cap_cap_project_systemuserset
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

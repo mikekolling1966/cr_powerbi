@@ -1,0 +1,2923 @@
+table Contact
+	lineageTag: 3b7a0180-afd3-4403-b834-4cbdf91a5c4a
+
+	measure 'Total Contacts' = COUNTROWS(Contact)
+		formatString: 0
+		lineageTag: 617d9bd7-65b6-4546-b1ce-3cd74349d2e9
+
+	column accountid
+		dataType: string
+		lineageTag: 73d897ff-ea17-4f80-be0d-6f32cc59a73e
+		summarizeBy: none
+		sourceColumn: accountid
+
+		annotation SummarizationSetBy = Automatic
+
+	column accountrolecode
+		dataType: int64
+		formatString: 0
+		lineageTag: 40410f77-2ddf-4ba4-98f3-b62a6eb67dac
+		summarizeBy: sum
+		sourceColumn: accountrolecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column accountrolecode_display
+		dataType: string
+		lineageTag: 8c6d02e5-9a95-4c50-bd1f-47f68d74a9a5
+		summarizeBy: none
+		sourceColumn: accountrolecode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column address1_addressid
+		dataType: string
+		lineageTag: 28da9837-afc2-46f2-ba01-628b507cf4a7
+		summarizeBy: none
+		sourceColumn: address1_addressid
+
+		annotation SummarizationSetBy = Automatic
+
+	column address1_addresstypecode
+		dataType: int64
+		formatString: 0
+		lineageTag: bd2a67f0-5714-4c63-aed8-eaeea5a73813
+		summarizeBy: sum
+		sourceColumn: address1_addresstypecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column address1_addresstypecode_display
+		dataType: string
+		lineageTag: 0b90d9d3-136e-48af-846c-5727c10a9eef
+		summarizeBy: none
+		sourceColumn: address1_addresstypecode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column address1_city
+		dataType: string
+		lineageTag: 727dcbba-7a82-4eb4-bc84-a7caab9a82a8
+		summarizeBy: none
+		sourceColumn: address1_city
+
+		annotation SummarizationSetBy = Automatic
+
+	column address1_composite
+		dataType: string
+		lineageTag: 396a5236-5bdf-4b86-a0db-36f81d99b9cc
+		summarizeBy: none
+		sourceColumn: address1_composite
+
+		annotation SummarizationSetBy = Automatic
+
+	column address1_country
+		dataType: string
+		lineageTag: f2869f3f-a8de-4b3b-88da-6910d4fd4fb8
+		summarizeBy: none
+		sourceColumn: address1_country
+
+		annotation SummarizationSetBy = Automatic
+
+	column address1_county
+		dataType: string
+		lineageTag: 0d0c7860-a3db-440f-a4fd-d06315b9de9c
+		summarizeBy: none
+		sourceColumn: address1_county
+
+		annotation SummarizationSetBy = Automatic
+
+	column address1_fax
+		dataType: string
+		lineageTag: 92844b1f-4ecb-4bb3-9a51-abac90d70168
+		summarizeBy: none
+		sourceColumn: address1_fax
+
+		annotation SummarizationSetBy = Automatic
+
+	column address1_freighttermscode
+		dataType: int64
+		formatString: 0
+		lineageTag: 5d232c55-7db9-44e2-8633-ffcac3f8004b
+		summarizeBy: sum
+		sourceColumn: address1_freighttermscode
+
+		annotation SummarizationSetBy = Automatic
+
+	column address1_freighttermscode_display
+		dataType: string
+		lineageTag: f0673729-b8b4-4ec1-b523-07dfeeba5354
+		summarizeBy: none
+		sourceColumn: address1_freighttermscode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column address1_latitude
+		dataType: double
+		lineageTag: 34b70c03-6a8b-45b9-a66a-f1a0ee6e39d0
+		summarizeBy: sum
+		sourceColumn: address1_latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column address1_line1
+		dataType: string
+		lineageTag: 12e927f5-4048-46dc-b6c7-bd81f924fea6
+		summarizeBy: none
+		sourceColumn: address1_line1
+
+		annotation SummarizationSetBy = Automatic
+
+	column address1_line2
+		dataType: string
+		lineageTag: a5922a22-8f68-44f8-8608-0b7bc9506cef
+		summarizeBy: none
+		sourceColumn: address1_line2
+
+		annotation SummarizationSetBy = Automatic
+
+	column address1_line3
+		dataType: string
+		lineageTag: 1204b642-7e11-440d-a585-8919f3e8981a
+		summarizeBy: none
+		sourceColumn: address1_line3
+
+		annotation SummarizationSetBy = Automatic
+
+	column address1_longitude
+		dataType: double
+		lineageTag: 76ecd92b-449e-48eb-94f9-ccf96b50a55e
+		summarizeBy: sum
+		sourceColumn: address1_longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column address1_name
+		dataType: string
+		lineageTag: 10a84589-2521-4ce6-a1b3-65bb985d9f5d
+		summarizeBy: none
+		sourceColumn: address1_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column address1_postalcode
+		dataType: string
+		lineageTag: d67a3bb0-ba3b-4067-8b2f-f5b26cd4e697
+		summarizeBy: none
+		sourceColumn: address1_postalcode
+
+		annotation SummarizationSetBy = Automatic
+
+	column address1_postofficebox
+		dataType: string
+		lineageTag: da2216b9-58f2-4af0-96e4-61861c5b8a4e
+		summarizeBy: none
+		sourceColumn: address1_postofficebox
+
+		annotation SummarizationSetBy = Automatic
+
+	column address1_primarycontactname
+		dataType: string
+		lineageTag: b65b7a63-a52c-4003-ba06-47a35ab985dd
+		summarizeBy: none
+		sourceColumn: address1_primarycontactname
+
+		annotation SummarizationSetBy = Automatic
+
+	column address1_shippingmethodcode
+		dataType: int64
+		formatString: 0
+		lineageTag: 65dfe5a3-7bc0-499f-a2f0-5805e74b3a57
+		summarizeBy: sum
+		sourceColumn: address1_shippingmethodcode
+
+		annotation SummarizationSetBy = Automatic
+
+	column address1_shippingmethodcode_display
+		dataType: string
+		lineageTag: 249a03d2-0c2b-40e9-824d-041aabfeb212
+		summarizeBy: none
+		sourceColumn: address1_shippingmethodcode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column address1_stateorprovince
+		dataType: string
+		lineageTag: 56708125-a3df-4503-bcf1-af4ee927dd38
+		summarizeBy: none
+		sourceColumn: address1_stateorprovince
+
+		annotation SummarizationSetBy = Automatic
+
+	column address1_telephone1
+		dataType: string
+		lineageTag: 6a906400-c988-4180-8a2d-f8491c6dcef3
+		summarizeBy: none
+		sourceColumn: address1_telephone1
+
+		annotation SummarizationSetBy = Automatic
+
+	column address1_telephone2
+		dataType: string
+		lineageTag: 31974910-08e3-4e77-94d5-aeb902d4ca49
+		summarizeBy: none
+		sourceColumn: address1_telephone2
+
+		annotation SummarizationSetBy = Automatic
+
+	column address1_telephone3
+		dataType: string
+		lineageTag: b98c9bd9-e13e-4a59-825f-43371420230c
+		summarizeBy: none
+		sourceColumn: address1_telephone3
+
+		annotation SummarizationSetBy = Automatic
+
+	column address1_upszone
+		dataType: string
+		lineageTag: c4264735-7204-4183-afae-fbd870aed6f9
+		summarizeBy: none
+		sourceColumn: address1_upszone
+
+		annotation SummarizationSetBy = Automatic
+
+	column address1_utcoffset
+		dataType: int64
+		formatString: 0
+		lineageTag: 6e439c36-3342-4bd2-af29-d9afccb1d1d8
+		summarizeBy: sum
+		sourceColumn: address1_utcoffset
+
+		annotation SummarizationSetBy = Automatic
+
+	column address2_addressid
+		dataType: string
+		lineageTag: b102c419-16ee-426c-b43b-af38d3ef7418
+		summarizeBy: none
+		sourceColumn: address2_addressid
+
+		annotation SummarizationSetBy = Automatic
+
+	column address2_addresstypecode
+		dataType: int64
+		formatString: 0
+		lineageTag: cf20d747-39ce-4b02-9c30-8c1173a8bd79
+		summarizeBy: sum
+		sourceColumn: address2_addresstypecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column address2_addresstypecode_display
+		dataType: string
+		lineageTag: f2fa4eb2-f34c-48c0-8d36-0c7c1902ffd7
+		summarizeBy: none
+		sourceColumn: address2_addresstypecode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column address2_city
+		dataType: string
+		lineageTag: a2c30730-0467-4e2b-a030-d0b346a88190
+		summarizeBy: none
+		sourceColumn: address2_city
+
+		annotation SummarizationSetBy = Automatic
+
+	column address2_composite
+		dataType: string
+		lineageTag: 3ac4e41f-2f4c-4f65-8f1f-1ed9a33ad4bd
+		summarizeBy: none
+		sourceColumn: address2_composite
+
+		annotation SummarizationSetBy = Automatic
+
+	column address2_country
+		dataType: string
+		lineageTag: c8ec6c15-d0e7-4671-8366-dfc3b8b8a5ec
+		summarizeBy: none
+		sourceColumn: address2_country
+
+		annotation SummarizationSetBy = Automatic
+
+	column address2_county
+		dataType: string
+		lineageTag: 2e8e2a39-6805-493b-ac19-b2d68c0dfbb3
+		summarizeBy: none
+		sourceColumn: address2_county
+
+		annotation SummarizationSetBy = Automatic
+
+	column address2_fax
+		dataType: string
+		lineageTag: 9955ef93-7433-472b-9bb7-2fa1db077314
+		summarizeBy: none
+		sourceColumn: address2_fax
+
+		annotation SummarizationSetBy = Automatic
+
+	column address2_freighttermscode
+		dataType: int64
+		formatString: 0
+		lineageTag: b6be5f59-1b05-4cf5-acfd-ecc46253fadd
+		summarizeBy: sum
+		sourceColumn: address2_freighttermscode
+
+		annotation SummarizationSetBy = Automatic
+
+	column address2_freighttermscode_display
+		dataType: string
+		lineageTag: 07b9b61b-1466-452b-885a-791838864165
+		summarizeBy: none
+		sourceColumn: address2_freighttermscode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column address2_latitude
+		dataType: double
+		lineageTag: ea182845-3504-4103-8f0c-d16241e5e6b9
+		summarizeBy: sum
+		sourceColumn: address2_latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column address2_line1
+		dataType: string
+		lineageTag: 51b3ba5d-62b2-46c8-8607-4d03a5b2f477
+		summarizeBy: none
+		sourceColumn: address2_line1
+
+		annotation SummarizationSetBy = Automatic
+
+	column address2_line2
+		dataType: string
+		lineageTag: b6296d2b-8ffc-434f-9509-9614d1fd08f3
+		summarizeBy: none
+		sourceColumn: address2_line2
+
+		annotation SummarizationSetBy = Automatic
+
+	column address2_line3
+		dataType: string
+		lineageTag: b928b7cc-dcdf-491e-93b4-80de97d7b512
+		summarizeBy: none
+		sourceColumn: address2_line3
+
+		annotation SummarizationSetBy = Automatic
+
+	column address2_longitude
+		dataType: double
+		lineageTag: c30a2b80-0faf-4e08-9975-d602571b5a4d
+		summarizeBy: sum
+		sourceColumn: address2_longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column address2_name
+		dataType: string
+		lineageTag: f554cf19-d0ff-4ae3-adf8-82ad0801a716
+		summarizeBy: none
+		sourceColumn: address2_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column address2_postalcode
+		dataType: string
+		lineageTag: b701d7b8-575e-43ea-88c0-ec51cb64f99a
+		summarizeBy: none
+		sourceColumn: address2_postalcode
+
+		annotation SummarizationSetBy = Automatic
+
+	column address2_postofficebox
+		dataType: string
+		lineageTag: 9a279d70-8d61-4e56-8d3a-ba116bdf40ff
+		summarizeBy: none
+		sourceColumn: address2_postofficebox
+
+		annotation SummarizationSetBy = Automatic
+
+	column address2_primarycontactname
+		dataType: string
+		lineageTag: 5e702423-c2f0-425e-9fe0-55b8f53620e2
+		summarizeBy: none
+		sourceColumn: address2_primarycontactname
+
+		annotation SummarizationSetBy = Automatic
+
+	column address2_shippingmethodcode
+		dataType: int64
+		formatString: 0
+		lineageTag: 82626234-f464-4084-a278-8096559c7fda
+		summarizeBy: sum
+		sourceColumn: address2_shippingmethodcode
+
+		annotation SummarizationSetBy = Automatic
+
+	column address2_shippingmethodcode_display
+		dataType: string
+		lineageTag: d4bbe441-9329-4fdd-8150-c7fda528c94f
+		summarizeBy: none
+		sourceColumn: address2_shippingmethodcode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column address2_stateorprovince
+		dataType: string
+		lineageTag: ed97f151-3ab4-45f9-9193-fe8dadfa1737
+		summarizeBy: none
+		sourceColumn: address2_stateorprovince
+
+		annotation SummarizationSetBy = Automatic
+
+	column address2_telephone1
+		dataType: string
+		lineageTag: 02e72ae7-eac8-439c-b0e5-e51b7ffc712c
+		summarizeBy: none
+		sourceColumn: address2_telephone1
+
+		annotation SummarizationSetBy = Automatic
+
+	column address2_telephone2
+		dataType: string
+		lineageTag: f53d3f18-3662-41be-9ff1-4a4d612fec1e
+		summarizeBy: none
+		sourceColumn: address2_telephone2
+
+		annotation SummarizationSetBy = Automatic
+
+	column address2_telephone3
+		dataType: string
+		lineageTag: 824743a9-c3dc-44bd-9c3b-b8b3da2884d4
+		summarizeBy: none
+		sourceColumn: address2_telephone3
+
+		annotation SummarizationSetBy = Automatic
+
+	column address2_upszone
+		dataType: string
+		lineageTag: 5dc6649a-6a88-4d12-80d4-c0e52b140ae7
+		summarizeBy: none
+		sourceColumn: address2_upszone
+
+		annotation SummarizationSetBy = Automatic
+
+	column address2_utcoffset
+		dataType: int64
+		formatString: 0
+		lineageTag: 3e0b844d-86a2-4fe9-b18b-140375cefee1
+		summarizeBy: sum
+		sourceColumn: address2_utcoffset
+
+		annotation SummarizationSetBy = Automatic
+
+	column address3_addressid
+		dataType: string
+		lineageTag: d73b077c-c1c7-422f-9c3f-27820b73ce53
+		summarizeBy: none
+		sourceColumn: address3_addressid
+
+		annotation SummarizationSetBy = Automatic
+
+	column address3_addresstypecode
+		dataType: int64
+		formatString: 0
+		lineageTag: 72c15ef5-72f5-4045-9a39-3f0bc630cc17
+		summarizeBy: sum
+		sourceColumn: address3_addresstypecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column address3_addresstypecode_display
+		dataType: string
+		lineageTag: 0d5750a4-d041-4ea2-a621-2dde2b4ea4d0
+		summarizeBy: none
+		sourceColumn: address3_addresstypecode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column address3_city
+		dataType: string
+		lineageTag: 3e7e4f14-e40b-42a9-ad81-7885fa73c485
+		summarizeBy: none
+		sourceColumn: address3_city
+
+		annotation SummarizationSetBy = Automatic
+
+	column address3_composite
+		dataType: string
+		lineageTag: ba360544-7f7b-470a-b72d-f965ec9614a0
+		summarizeBy: none
+		sourceColumn: address3_composite
+
+		annotation SummarizationSetBy = Automatic
+
+	column address3_country
+		dataType: string
+		lineageTag: 0d22e21e-fd6e-42bf-a216-03127153d7a2
+		summarizeBy: none
+		sourceColumn: address3_country
+
+		annotation SummarizationSetBy = Automatic
+
+	column address3_county
+		dataType: string
+		lineageTag: 5630ca6e-4a9d-47a6-afa8-9ab836c5357a
+		summarizeBy: none
+		sourceColumn: address3_county
+
+		annotation SummarizationSetBy = Automatic
+
+	column address3_fax
+		dataType: string
+		lineageTag: 3fe5751a-e066-499b-a572-089ffdaee722
+		summarizeBy: none
+		sourceColumn: address3_fax
+
+		annotation SummarizationSetBy = Automatic
+
+	column address3_freighttermscode
+		dataType: int64
+		formatString: 0
+		lineageTag: aa6c8360-31d5-43a0-8503-83b23a55322c
+		summarizeBy: sum
+		sourceColumn: address3_freighttermscode
+
+		annotation SummarizationSetBy = Automatic
+
+	column address3_freighttermscode_display
+		dataType: string
+		lineageTag: 5f189229-d151-4a82-a7df-96678d6b3bc3
+		summarizeBy: none
+		sourceColumn: address3_freighttermscode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column address3_latitude
+		dataType: double
+		lineageTag: a9aca538-c831-470f-9217-d25d3fdee2ee
+		summarizeBy: sum
+		sourceColumn: address3_latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column address3_line1
+		dataType: string
+		lineageTag: faf4f4ba-3587-4f9c-931c-0fa33c6bdede
+		summarizeBy: none
+		sourceColumn: address3_line1
+
+		annotation SummarizationSetBy = Automatic
+
+	column address3_line2
+		dataType: string
+		lineageTag: c15c8073-1b4d-4f1d-8af4-8717052fd2c7
+		summarizeBy: none
+		sourceColumn: address3_line2
+
+		annotation SummarizationSetBy = Automatic
+
+	column address3_line3
+		dataType: string
+		lineageTag: 9ce72b13-9b29-4f54-901e-88d2a5e19a6b
+		summarizeBy: none
+		sourceColumn: address3_line3
+
+		annotation SummarizationSetBy = Automatic
+
+	column address3_longitude
+		dataType: double
+		lineageTag: 27215a0a-fb17-452f-8648-9492e847bd68
+		summarizeBy: sum
+		sourceColumn: address3_longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column address3_name
+		dataType: string
+		lineageTag: dbaa49a5-21af-4665-b76f-5f6333b79c98
+		summarizeBy: none
+		sourceColumn: address3_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column address3_postalcode
+		dataType: string
+		lineageTag: 38567f45-ef9c-4a50-95a9-e78a87888764
+		summarizeBy: none
+		sourceColumn: address3_postalcode
+
+		annotation SummarizationSetBy = Automatic
+
+	column address3_postofficebox
+		dataType: string
+		lineageTag: 5d4ce792-cca7-498c-8818-32da03db21e1
+		summarizeBy: none
+		sourceColumn: address3_postofficebox
+
+		annotation SummarizationSetBy = Automatic
+
+	column address3_primarycontactname
+		dataType: string
+		lineageTag: 50affd66-7060-4ee0-aa13-987f8ec2a4d9
+		summarizeBy: none
+		sourceColumn: address3_primarycontactname
+
+		annotation SummarizationSetBy = Automatic
+
+	column address3_shippingmethodcode
+		dataType: int64
+		formatString: 0
+		lineageTag: 255d144a-5cc0-4c26-abf0-b57fe0db268d
+		summarizeBy: sum
+		sourceColumn: address3_shippingmethodcode
+
+		annotation SummarizationSetBy = Automatic
+
+	column address3_shippingmethodcode_display
+		dataType: string
+		lineageTag: 6aed76e1-e7ae-471c-97ab-d1e8c77b8493
+		summarizeBy: none
+		sourceColumn: address3_shippingmethodcode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column address3_stateorprovince
+		dataType: string
+		lineageTag: 85dd5e0b-51d2-4687-9f1a-f9965903db95
+		summarizeBy: none
+		sourceColumn: address3_stateorprovince
+
+		annotation SummarizationSetBy = Automatic
+
+	column address3_telephone1
+		dataType: string
+		lineageTag: e8734c21-683d-4af6-95ae-c7567e08f8e6
+		summarizeBy: none
+		sourceColumn: address3_telephone1
+
+		annotation SummarizationSetBy = Automatic
+
+	column address3_telephone2
+		dataType: string
+		lineageTag: 2e023fce-b0bb-4282-8fe4-f65334eeec77
+		summarizeBy: none
+		sourceColumn: address3_telephone2
+
+		annotation SummarizationSetBy = Automatic
+
+	column address3_telephone3
+		dataType: string
+		lineageTag: 8c2c96a4-bead-47cc-aa21-f21e32d06b4f
+		summarizeBy: none
+		sourceColumn: address3_telephone3
+
+		annotation SummarizationSetBy = Automatic
+
+	column address3_upszone
+		dataType: string
+		lineageTag: 522cad51-16bb-4d5b-8617-837aca000a0b
+		summarizeBy: none
+		sourceColumn: address3_upszone
+
+		annotation SummarizationSetBy = Automatic
+
+	column address3_utcoffset
+		dataType: int64
+		formatString: 0
+		lineageTag: ab0c5acc-e085-44b7-a66b-bb4c174f3068
+		summarizeBy: sum
+		sourceColumn: address3_utcoffset
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_confirmremovepassword
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: eb132d6f-e28f-4f4d-8c21-0ca0d327f373
+		summarizeBy: none
+		sourceColumn: adx_confirmremovepassword
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_createdbyipaddress
+		dataType: string
+		lineageTag: a9928aa3-5feb-40ca-9e77-048069b63fb7
+		summarizeBy: none
+		sourceColumn: adx_createdbyipaddress
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_createdbyusername
+		dataType: string
+		lineageTag: 59cd8bac-2d4b-4420-84dc-834d29a6107e
+		summarizeBy: none
+		sourceColumn: adx_createdbyusername
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_identity_accessfailedcount
+		dataType: int64
+		formatString: 0
+		lineageTag: 3832097b-6f5e-433f-a59e-7124ae6b52a2
+		summarizeBy: sum
+		sourceColumn: adx_identity_accessfailedcount
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_identity_emailaddress1confirmed
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 70710a2e-a587-4d8f-abee-2e8da00f0911
+		summarizeBy: none
+		sourceColumn: adx_identity_emailaddress1confirmed
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_identity_lastsuccessfullogin
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 261518ad-5684-485d-b7c2-e6387679b61f
+		summarizeBy: none
+		sourceColumn: adx_identity_lastsuccessfullogin
+
+		variation Variation
+			isDefault
+			relationship: 38ab81ff-0f80-4bce-9fdc-eda45e4f704b
+			defaultHierarchy: LocalDateTable_205d1503-94cd-476b-9a13-e4ce7c691f82.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_identity_locallogindisabled
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a9d479dd-c2cd-4fe8-ad28-5d04a1d4f469
+		summarizeBy: none
+		sourceColumn: adx_identity_locallogindisabled
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_identity_lockoutenabled
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 860f9934-56b6-4500-aab6-dc58ffd8f3a7
+		summarizeBy: none
+		sourceColumn: adx_identity_lockoutenabled
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_identity_lockoutenddate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c0ddb947-b2f0-46a6-a3d2-39bbc06d0072
+		summarizeBy: none
+		sourceColumn: adx_identity_lockoutenddate
+
+		variation Variation
+			isDefault
+			relationship: 3581d61b-90d6-48ac-82f3-c924f32022c1
+			defaultHierarchy: LocalDateTable_40cb4bf6-1fa7-4d47-b89d-ea206efe5d83.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_identity_logonenabled
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 255fad91-ea8a-4e19-8b0a-5b6f16d8f7bc
+		summarizeBy: none
+		sourceColumn: adx_identity_logonenabled
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_identity_mobilephoneconfirmed
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 7be2d54f-6285-4060-91e8-052c9b1912eb
+		summarizeBy: none
+		sourceColumn: adx_identity_mobilephoneconfirmed
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_identity_newpassword
+		dataType: string
+		lineageTag: 09de1a6d-29cf-4d55-9f65-8c515b754b69
+		summarizeBy: none
+		sourceColumn: adx_identity_newpassword
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_identity_passwordhash
+		dataType: string
+		lineageTag: 8960b9bd-fea2-4f02-bc0f-4daf4e95f3dd
+		summarizeBy: none
+		sourceColumn: adx_identity_passwordhash
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_identity_securitystamp
+		dataType: string
+		lineageTag: 83c1baf2-5b4d-4bc1-bf06-5dae9f49444d
+		summarizeBy: none
+		sourceColumn: adx_identity_securitystamp
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_identity_twofactorenabled
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 9b410e63-25f0-45e9-8f16-782a4e51b807
+		summarizeBy: none
+		sourceColumn: adx_identity_twofactorenabled
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_identity_username
+		dataType: string
+		lineageTag: 1fcf3424-7a12-4281-aa8c-d3b56fd67daf
+		summarizeBy: none
+		sourceColumn: adx_identity_username
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_modifiedbyipaddress
+		dataType: string
+		lineageTag: 54140730-34f1-435c-8b5f-265f4b033a17
+		summarizeBy: none
+		sourceColumn: adx_modifiedbyipaddress
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_modifiedbyusername
+		dataType: string
+		lineageTag: 5229241a-ac31-4d2e-b75b-e43272a1886c
+		summarizeBy: none
+		sourceColumn: adx_modifiedbyusername
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_organizationname
+		dataType: string
+		lineageTag: 8c900030-1852-4996-98a0-45989f25d82f
+		summarizeBy: none
+		sourceColumn: adx_organizationname
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_portalinvitationcode
+		dataType: string
+		lineageTag: bc227287-1308-4f3f-86df-bfe97d311613
+		summarizeBy: none
+		sourceColumn: adx_portalinvitationcode
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_portalinvitationurl
+		dataType: string
+		lineageTag: f8c8a609-ef9f-4ca3-8eb5-f1d5e54a3ec3
+		summarizeBy: none
+		sourceColumn: adx_portalinvitationurl
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_preferredlanguageid
+		dataType: string
+		lineageTag: 522c5103-ccab-4e26-8174-4b7591fa8639
+		summarizeBy: none
+		sourceColumn: adx_preferredlanguageid
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_preferredlcid
+		dataType: int64
+		formatString: 0
+		lineageTag: be3ac182-e52d-470f-9c5b-8b6cd95c2807
+		summarizeBy: sum
+		sourceColumn: adx_preferredlcid
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_profilealert
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 30eee655-091e-4465-8f62-5c7053964e11
+		summarizeBy: none
+		sourceColumn: adx_profilealert
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_profilealertdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 198c5e6c-e609-4d6e-b8ef-4e096af456e1
+		summarizeBy: none
+		sourceColumn: adx_profilealertdate
+
+		variation Variation
+			isDefault
+			relationship: 4f761f3f-a769-4dae-96bc-46cf3a0f9e12
+			defaultHierarchy: LocalDateTable_f1eb5f76-7488-412f-be0f-bc1e8339dcfd.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_profilealertinstructions
+		dataType: string
+		lineageTag: 3e2ceba7-b81a-45ef-b4ba-3b2dc9f4a985
+		summarizeBy: none
+		sourceColumn: adx_profilealertinstructions
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_profileisanonymous
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 073372ec-fcd8-44d7-8e75-0832883b936a
+		summarizeBy: none
+		sourceColumn: adx_profileisanonymous
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_profilelastactivity
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 66c86f9c-e762-44df-9822-7e0d5a46e5e5
+		summarizeBy: none
+		sourceColumn: adx_profilelastactivity
+
+		variation Variation
+			isDefault
+			relationship: 0da4d9e2-3231-4770-86f7-e47caadd4644
+			defaultHierarchy: LocalDateTable_a7df9ef5-1f78-4d94-a6b6-ce3d972b4630.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_profilemodifiedon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ddb05e45-9b5d-4086-acfa-63f2612df1c7
+		summarizeBy: none
+		sourceColumn: adx_profilemodifiedon
+
+		variation Variation
+			isDefault
+			relationship: 95df4b5c-7ef3-482e-8721-a7fc2e2528ac
+			defaultHierarchy: LocalDateTable_7ee86328-a7ba-4fa6-8271-4de990a2ecea.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_publicprofilecopy
+		dataType: string
+		lineageTag: 2b58100f-fd92-496c-a3dc-c086afa567c0
+		summarizeBy: none
+		sourceColumn: adx_publicprofilecopy
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_timezone
+		dataType: int64
+		formatString: 0
+		lineageTag: c4d247f8-2d07-4e7c-845a-21498f8c914b
+		summarizeBy: sum
+		sourceColumn: adx_timezone
+
+		annotation SummarizationSetBy = Automatic
+
+	column aging30
+		dataType: double
+		lineageTag: 7af680e1-7f50-4673-a612-82d51ccc9302
+		summarizeBy: sum
+		sourceColumn: aging30
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column aging30_base
+		dataType: double
+		lineageTag: a5feacd4-1523-4dc0-82ad-2a2de233229f
+		summarizeBy: sum
+		sourceColumn: aging30_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column aging60
+		dataType: double
+		lineageTag: f7d5274b-6b18-48ca-8585-b4bea71bfde8
+		summarizeBy: sum
+		sourceColumn: aging60
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column aging60_base
+		dataType: double
+		lineageTag: 796fa8bb-2458-47b2-8947-9b7956cff250
+		summarizeBy: sum
+		sourceColumn: aging60_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column aging90
+		dataType: double
+		lineageTag: 86a1eefb-acbb-4673-b671-b2544f315bef
+		summarizeBy: sum
+		sourceColumn: aging90
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column aging90_base
+		dataType: double
+		lineageTag: 3bfa6a7c-5992-41dd-9132-87fb1292cc72
+		summarizeBy: sum
+		sourceColumn: aging90_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column anniversary
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4c4598aa-7ee7-4ab4-a001-618a8e72833a
+		summarizeBy: none
+		sourceColumn: anniversary
+
+		variation Variation
+			isDefault
+			relationship: a79a53d6-6756-4cc2-ae91-36cdadf7b850
+			defaultHierarchy: LocalDateTable_46d1f31e-a5a5-4662-9ea9-61db87157a66.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column annualincome
+		dataType: double
+		lineageTag: 2a55d4cc-0af2-4430-806a-6d3d670a8922
+		summarizeBy: sum
+		sourceColumn: annualincome
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column annualincome_base
+		dataType: double
+		lineageTag: 5bfb97e2-5869-4b87-b1d6-c9e2d518fb30
+		summarizeBy: sum
+		sourceColumn: annualincome_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column assistantname
+		dataType: string
+		lineageTag: 9c8dcfd5-a57c-4631-926a-2bf3e33b8355
+		summarizeBy: none
+		sourceColumn: assistantname
+
+		annotation SummarizationSetBy = Automatic
+
+	column assistantphone
+		dataType: string
+		lineageTag: 9042ac23-d239-4631-b169-7a08294d1aa0
+		summarizeBy: none
+		sourceColumn: assistantphone
+
+		annotation SummarizationSetBy = Automatic
+
+	column birthdate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 557b743b-afc3-4e8c-9059-6f9e94d8452c
+		summarizeBy: none
+		sourceColumn: birthdate
+
+		variation Variation
+			isDefault
+			relationship: a4bb02c1-207c-40ab-a754-d3ee027c83c9
+			defaultHierarchy: LocalDateTable_22114129-b214-4faa-950c-f4a38a722613.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column business2
+		dataType: string
+		lineageTag: 1f2275f3-c963-48bd-b9b5-edb757610f20
+		summarizeBy: none
+		sourceColumn: business2
+
+		annotation SummarizationSetBy = Automatic
+
+	column callback
+		dataType: string
+		lineageTag: b3c55ab3-3dc6-40f3-abd5-950fee3e7f51
+		summarizeBy: none
+		sourceColumn: callback
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_autonumberemail
+		dataType: string
+		lineageTag: 87f76625-1129-4edf-92af-b5505861ea4f
+		summarizeBy: none
+		sourceColumn: cap_autonumberemail
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_autonumberfirstname
+		dataType: string
+		lineageTag: ac5f69b8-00a6-4e34-a86e-7b2860081314
+		summarizeBy: none
+		sourceColumn: cap_autonumberfirstname
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_autonumberlastname
+		dataType: string
+		lineageTag: 146cf830-7df6-4da8-abf5-5a767c8e04d6
+		summarizeBy: none
+		sourceColumn: cap_autonumberlastname
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_bouncedcontact
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f9aa40eb-b378-4595-9d32-4849d5b10aad
+		summarizeBy: none
+		sourceColumn: cap_bouncedcontact
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_checkedin
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f136f37d-180e-4a33-b7cf-1a81d8e76070
+		summarizeBy: none
+		sourceColumn: cap_checkedin
+
+		variation Variation
+			isDefault
+			relationship: bb037477-8489-41d1-a41d-f5e5dfec3ef9
+			defaultHierarchy: LocalDateTable_6039d643-45bd-4138-8d4e-ea735d429fc2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_companyinstitutionnametxt
+		dataType: string
+		lineageTag: 23bc49bb-d276-4f76-8408-b4c84edcba03
+		summarizeBy: none
+		sourceColumn: cap_companyinstitutionnametxt
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_companyname
+		dataType: string
+		lineageTag: eb848bbf-842d-45bc-9191-ce4342432cf8
+		summarizeBy: none
+		sourceColumn: cap_companyname
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_confirmationemail
+		dataType: string
+		lineageTag: 7b4fcd0e-2e3b-4162-abe4-84a7e6ab1b20
+		summarizeBy: none
+		sourceColumn: cap_confirmationemail
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_consentgivendescription
+		dataType: string
+		lineageTag: 1a082ce6-aa84-430f-a18f-55a25703b9fd
+		summarizeBy: none
+		sourceColumn: cap_consentgivendescription
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_councilheadofdelegation
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 2dcb2f1e-3624-4e1f-852b-4e3458de8823
+		summarizeBy: none
+		sourceColumn: cap_councilheadofdelegation
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_digestpreference
+		dataType: int64
+		formatString: 0
+		lineageTag: ba5900db-3368-424e-b9cb-2e7aa4609fb4
+		summarizeBy: sum
+		sourceColumn: cap_digestpreference
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_digestpreference_display
+		dataType: string
+		lineageTag: 4f71a737-c828-4e4c-bff9-75847ca26e46
+		summarizeBy: none
+		sourceColumn: cap_digestpreference_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_directorate
+		dataType: string
+		lineageTag: b70e2179-e9f1-4a42-8b5f-0e9aef30cfcc
+		summarizeBy: none
+		sourceColumn: cap_directorate
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_dpalecture
+		dataType: int64
+		formatString: 0
+		lineageTag: 49acf7a4-3702-4354-8671-d5b35c2f1178
+		summarizeBy: sum
+		sourceColumn: cap_dpalecture
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_dpalecture_display
+		dataType: string
+		lineageTag: 3fc11a7f-95dd-42f1-b7c3-a32cd5fd6488
+		summarizeBy: none
+		sourceColumn: cap_dpalecture_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_dpalecture_portal
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 01a9944c-a20c-4047-86ae-4e721b07f00c
+		summarizeBy: none
+		sourceColumn: cap_dpalecture_portal
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_entitycodeid
+		dataType: string
+		lineageTag: 14f624a3-4212-4efa-bf1a-4688fdc77972
+		summarizeBy: none
+		sourceColumn: cap_entitycodeid
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_eventmaterial
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0adf3f46-7a22-49d4-a6cf-4cc135801ba7
+		summarizeBy: none
+		sourceColumn: cap_eventmaterial
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_hardbouncednotification
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: c36ddce8-a9cb-4390-bd9e-a8bdb068d81b
+		summarizeBy: none
+		sourceColumn: cap_hardbouncednotification
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_industry
+		dataType: int64
+		formatString: 0
+		lineageTag: 98dd8523-9da3-43f9-8cb4-88af5d762484
+		summarizeBy: sum
+		sourceColumn: cap_industry
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_industry_display
+		dataType: string
+		lineageTag: 43893c0e-3aaa-478d-be26-b1cfccdfb209
+		summarizeBy: none
+		sourceColumn: cap_industry_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_interest
+		dataType: string
+		lineageTag: 6a15303e-d031-4df2-b8b4-d31005e61c18
+		summarizeBy: none
+		sourceColumn: cap_interest
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_interestsandresearches
+		dataType: string
+		lineageTag: 594d51cc-83d6-4a87-9921-93e261197b6a
+		summarizeBy: none
+		sourceColumn: cap_interestsandresearches
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_isvip
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 10e554e4-3ab7-4697-9e45-e458a45886ee
+		summarizeBy: none
+		sourceColumn: cap_isvip
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_mastercontactrelationid
+		dataType: string
+		lineageTag: a8dbbf9e-9063-42d8-bb64-2e4078b78a97
+		summarizeBy: none
+		sourceColumn: cap_mastercontactrelationid
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_memberstate
+		dataType: int64
+		formatString: 0
+		lineageTag: 90b5840b-3b0a-44b1-810c-abae75a05444
+		summarizeBy: sum
+		sourceColumn: cap_memberstate
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_memberstate_display
+		dataType: string
+		lineageTag: cbafdc48-73d7-4113-9902-b796f8cf9642
+		summarizeBy: none
+		sourceColumn: cap_memberstate_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_msrlookup
+		dataType: string
+		lineageTag: c1a8b6d3-2dc8-48a7-9dd4-1a695fd912a5
+		summarizeBy: none
+		sourceColumn: cap_msrlookup
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_msrstatusreason
+		dataType: int64
+		formatString: 0
+		lineageTag: a2421a6c-5557-43d7-8af5-7b1c9e20c029
+		summarizeBy: sum
+		sourceColumn: cap_msrstatusreason
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_msrstatusreason_display
+		dataType: string
+		lineageTag: 62804c11-b775-4d59-b011-12c7e2ed9657
+		summarizeBy: none
+		sourceColumn: cap_msrstatusreason_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_newsletterfromeventportal
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: e9bc9107-7220-4e0b-9714-5e875f4d1952
+		summarizeBy: none
+		sourceColumn: cap_newsletterfromeventportal
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_parentcontactid
+		dataType: string
+		lineageTag: f03c0398-f4f4-4f23-af10-7a9b7a6a7425
+		summarizeBy: none
+		sourceColumn: cap_parentcontactid
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_parentemail
+		dataType: string
+		lineageTag: a1631514-ba32-4243-a6b5-a4dee5adfa1a
+		summarizeBy: none
+		sourceColumn: cap_parentemail
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_personaltitle
+		dataType: string
+		lineageTag: fcf0523d-5b81-4f54-bd45-649b3e3b266f
+		summarizeBy: none
+		sourceColumn: cap_personaltitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_policystatus
+		dataType: int64
+		formatString: 0
+		lineageTag: ecb5100c-8008-4cc5-8486-482d3c415c45
+		summarizeBy: sum
+		sourceColumn: cap_policystatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_policystatus_display
+		dataType: string
+		lineageTag: 63280a95-6256-4a83-9e9f-a9986ad3f66e
+		summarizeBy: none
+		sourceColumn: cap_policystatus_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_registrationtypename
+		dataType: int64
+		formatString: 0
+		lineageTag: 0947b8ac-63db-436b-850c-8b1274e0b5a7
+		summarizeBy: sum
+		sourceColumn: cap_registrationtypename
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_registrationtypename_display
+		dataType: string
+		lineageTag: c8480529-b654-40bc-af6a-739126dee570
+		summarizeBy: none
+		sourceColumn: cap_registrationtypename_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_salutation
+		dataType: int64
+		formatString: 0
+		lineageTag: a5730b10-3a66-40a7-8bda-f075cc20890d
+		summarizeBy: sum
+		sourceColumn: cap_salutation
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_salutation_display
+		dataType: string
+		lineageTag: 43b26d62-6655-41c4-8ad6-43a35cbcfe20
+		summarizeBy: none
+		sourceColumn: cap_salutation_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_surveys
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 32a8d9d3-10ce-4486-8d4b-7541600dcd7f
+		summarizeBy: none
+		sourceColumn: cap_surveys
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_technologydomainid
+		dataType: string
+		lineageTag: 9ac1a176-13d2-44ff-a175-8964a41447c2
+		summarizeBy: none
+		sourceColumn: cap_technologydomainid
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_technologygroup
+		dataType: string
+		lineageTag: c718f234-ad01-45ae-a5f2-800a2993c3dc
+		summarizeBy: none
+		sourceColumn: cap_technologygroup
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_technologysubdomainid
+		dataType: string
+		lineageTag: 354a191f-6075-4cd4-9a80-e3816870811c
+		summarizeBy: none
+		sourceColumn: cap_technologysubdomainid
+
+		annotation SummarizationSetBy = Automatic
+
+	column childrensnames
+		dataType: string
+		lineageTag: e30c5a82-01eb-4848-910b-1638b2e09664
+		summarizeBy: none
+		sourceColumn: childrensnames
+
+		annotation SummarizationSetBy = Automatic
+
+	column company
+		dataType: string
+		lineageTag: 9cff81be-5654-4d89-8fa4-614c388066be
+		summarizeBy: none
+		sourceColumn: company
+
+		annotation SummarizationSetBy = Automatic
+
+	column contactid
+		dataType: string
+		lineageTag: bcf8a85d-fb5e-4961-96d4-73651843c90a
+		summarizeBy: none
+		sourceColumn: contactid
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdby
+		dataType: string
+		lineageTag: 249af60b-381b-4f02-b6dc-ef967e207c57
+		summarizeBy: none
+		sourceColumn: createdby
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdbyexternalparty
+		dataType: string
+		lineageTag: 34d498bc-90ad-4737-afce-f860420a228e
+		summarizeBy: none
+		sourceColumn: createdbyexternalparty
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6b6eb09f-8549-467b-a574-38c9c6fcbd03
+		summarizeBy: none
+		sourceColumn: createdon
+
+		variation Variation
+			isDefault
+			relationship: be0b0cc6-f1f2-4037-a7ad-d2e162731201
+			defaultHierarchy: LocalDateTable_2d86dbb0-1cfe-45a4-811d-8e8671e16cab.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdonbehalfby
+		dataType: string
+		lineageTag: bf558df7-f90c-4bd1-8a38-d35ae2ba88c6
+		summarizeBy: none
+		sourceColumn: createdonbehalfby
+
+		annotation SummarizationSetBy = Automatic
+
+	column creditlimit
+		dataType: double
+		lineageTag: 60f28d9b-3479-447f-b54a-d666af7d1eab
+		summarizeBy: sum
+		sourceColumn: creditlimit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column creditlimit_base
+		dataType: double
+		lineageTag: b03c08af-9122-43fd-b16d-2b22fa94cc35
+		summarizeBy: sum
+		sourceColumn: creditlimit_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column creditonhold
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: df2af1c0-0952-4aef-b2ec-93683be1bcfe
+		summarizeBy: none
+		sourceColumn: creditonhold
+
+		annotation SummarizationSetBy = Automatic
+
+	column customersizecode
+		dataType: int64
+		formatString: 0
+		lineageTag: ac7bd896-62e6-452f-9ca4-750acb0a627d
+		summarizeBy: sum
+		sourceColumn: customersizecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column customersizecode_display
+		dataType: string
+		lineageTag: 1953bf06-fe06-433e-a598-053c0290ea15
+		summarizeBy: none
+		sourceColumn: customersizecode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column customertypecode
+		dataType: int64
+		formatString: 0
+		lineageTag: 58cac302-f092-4135-81f5-f6873baeb46d
+		summarizeBy: sum
+		sourceColumn: customertypecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column customertypecode_display
+		dataType: string
+		lineageTag: c61bee83-1608-488b-b76b-f0b0ede2b414
+		summarizeBy: none
+		sourceColumn: customertypecode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column defaultpricelevelid
+		dataType: string
+		lineageTag: 34b0be87-a6f4-4979-9f17-900afe8cbb2b
+		summarizeBy: none
+		sourceColumn: defaultpricelevelid
+
+		annotation SummarizationSetBy = Automatic
+
+	column department
+		dataType: string
+		lineageTag: 944576e5-fa0f-4ba0-85ab-0dd35c4e2dfc
+		summarizeBy: none
+		sourceColumn: department
+
+		annotation SummarizationSetBy = Automatic
+
+	column description
+		dataType: string
+		lineageTag: 1a950e62-8172-4655-9f61-61b020906a31
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	column donotbulkemail
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 33074508-1633-4e3c-9518-104f97f88a8f
+		summarizeBy: none
+		sourceColumn: donotbulkemail
+
+		annotation SummarizationSetBy = Automatic
+
+	column donotbulkpostalmail
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 4ccf71dc-c916-4430-95e5-e24f2302cb17
+		summarizeBy: none
+		sourceColumn: donotbulkpostalmail
+
+		annotation SummarizationSetBy = Automatic
+
+	column donotemail
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 9621f29e-d27e-4955-b450-8baa46584282
+		summarizeBy: none
+		sourceColumn: donotemail
+
+		annotation SummarizationSetBy = Automatic
+
+	column donotfax
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f88e9b84-fc4d-409f-bc43-068188ba338e
+		summarizeBy: none
+		sourceColumn: donotfax
+
+		annotation SummarizationSetBy = Automatic
+
+	column donotphone
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 8ff94e3f-cdbe-4767-901b-13dae9f87b00
+		summarizeBy: none
+		sourceColumn: donotphone
+
+		annotation SummarizationSetBy = Automatic
+
+	column donotpostalmail
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 967101ad-8f3d-4381-9e8f-fa3066361457
+		summarizeBy: none
+		sourceColumn: donotpostalmail
+
+		annotation SummarizationSetBy = Automatic
+
+	column donotsendmm
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 86ccb11f-4ffa-4bde-a2f2-669e981f139e
+		summarizeBy: none
+		sourceColumn: donotsendmm
+
+		annotation SummarizationSetBy = Automatic
+
+	column dxc_otherareasofinterest
+		dataType: string
+		lineageTag: 62df1f1b-7b50-4acd-a5ae-f46c068bd759
+		summarizeBy: none
+		sourceColumn: dxc_otherareasofinterest
+
+		annotation SummarizationSetBy = Automatic
+
+	column dxc_whatareyourareasofinterest
+		dataType: int64
+		formatString: 0
+		lineageTag: 97f3e989-bcb6-455e-b097-993b192cdf3d
+		summarizeBy: sum
+		sourceColumn: dxc_whatareyourareasofinterest
+
+		annotation SummarizationSetBy = Automatic
+
+	column dxc_whatareyourareasofinterest_display
+		dataType: string
+		lineageTag: 49455b33-ec3a-4b46-b7e4-8abeeaab6ecc
+		summarizeBy: none
+		sourceColumn: dxc_whatareyourareasofinterest_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column educationcode
+		dataType: int64
+		formatString: 0
+		lineageTag: 47f266ba-d4a5-49f5-934b-c1e8d252a13e
+		summarizeBy: sum
+		sourceColumn: educationcode
+
+		annotation SummarizationSetBy = Automatic
+
+	column educationcode_display
+		dataType: string
+		lineageTag: 10510df6-7819-4ffa-b308-aab6bdff1eda
+		summarizeBy: none
+		sourceColumn: educationcode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column emailaddress1
+		dataType: string
+		lineageTag: 5dec6528-0f5d-4b71-998f-5f231d8b8e9d
+		summarizeBy: none
+		sourceColumn: emailaddress1
+
+		annotation SummarizationSetBy = Automatic
+
+	column emailaddress2
+		dataType: string
+		lineageTag: f8fde35b-1545-4785-98ec-c7933d837e26
+		summarizeBy: none
+		sourceColumn: emailaddress2
+
+		annotation SummarizationSetBy = Automatic
+
+	column emailaddress3
+		dataType: string
+		lineageTag: e81fe2bf-ea91-4039-b1b3-45889f272676
+		summarizeBy: none
+		sourceColumn: emailaddress3
+
+		annotation SummarizationSetBy = Automatic
+
+	column employeeid
+		dataType: string
+		lineageTag: 985ca3d8-a9a3-4fa9-b09c-4127d7831c7f
+		summarizeBy: none
+		sourceColumn: employeeid
+
+		annotation SummarizationSetBy = Automatic
+
+	column entityimage_timestamp
+		dataType: int64
+		formatString: 0
+		lineageTag: 6d08a241-429e-45cc-9483-266d62bcc481
+		summarizeBy: sum
+		sourceColumn: entityimage_timestamp
+
+		annotation SummarizationSetBy = Automatic
+
+	column entityimage_url
+		dataType: string
+		lineageTag: 97416488-7dd6-4bcf-9bbf-ed26d0aca7a3
+		summarizeBy: none
+		sourceColumn: entityimage_url
+
+		annotation SummarizationSetBy = Automatic
+
+	column entityimageid
+		dataType: string
+		lineageTag: f1232469-1f84-4175-9b53-4f07cb44945c
+		summarizeBy: none
+		sourceColumn: entityimageid
+
+		annotation SummarizationSetBy = Automatic
+
+	column exchangerate
+		dataType: double
+		lineageTag: dc428ca4-3295-4294-af18-44bb59583a31
+		summarizeBy: sum
+		sourceColumn: exchangerate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column externaluseridentifier
+		dataType: string
+		lineageTag: be3d26f2-6305-4743-91f4-5046fcde2b5a
+		summarizeBy: none
+		sourceColumn: externaluseridentifier
+
+		annotation SummarizationSetBy = Automatic
+
+	column familystatuscode
+		dataType: int64
+		formatString: 0
+		lineageTag: adc513ec-23d9-4459-960c-cc794ec6c08c
+		summarizeBy: sum
+		sourceColumn: familystatuscode
+
+		annotation SummarizationSetBy = Automatic
+
+	column familystatuscode_display
+		dataType: string
+		lineageTag: 2473bc32-8616-465e-b3e6-9220ebfd32c4
+		summarizeBy: none
+		sourceColumn: familystatuscode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column fax
+		dataType: string
+		lineageTag: 7757efa6-5a6f-40f6-9277-0ce538992dac
+		summarizeBy: none
+		sourceColumn: fax
+
+		annotation SummarizationSetBy = Automatic
+
+	column firstname
+		dataType: string
+		lineageTag: a6a563fd-5457-425f-aa1a-ffd3cd292482
+		summarizeBy: none
+		sourceColumn: firstname
+
+		annotation SummarizationSetBy = Automatic
+
+	column followemail
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 2e69f61b-4e7e-40d9-a2f3-30ac72792ea0
+		summarizeBy: none
+		sourceColumn: followemail
+
+		annotation SummarizationSetBy = Automatic
+
+	column ftpsiteurl
+		dataType: string
+		lineageTag: d4ba0f84-a624-428b-9f80-60211e3890a8
+		summarizeBy: none
+		sourceColumn: ftpsiteurl
+
+		annotation SummarizationSetBy = Automatic
+
+	column fullname
+		dataType: string
+		lineageTag: 34a78ae3-0f10-4d09-a408-753fa6d6e2c5
+		summarizeBy: none
+		sourceColumn: fullname
+
+		annotation SummarizationSetBy = Automatic
+
+	column gendercode
+		dataType: int64
+		formatString: 0
+		lineageTag: a7c3fb31-4db0-46b8-acaa-01588b1d2474
+		summarizeBy: sum
+		sourceColumn: gendercode
+
+		annotation SummarizationSetBy = Automatic
+
+	column gendercode_display
+		dataType: string
+		lineageTag: 86a7be52-3691-455d-80d4-60f2ac467b38
+		summarizeBy: none
+		sourceColumn: gendercode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column governmentid
+		dataType: string
+		lineageTag: 0db12ee4-a47f-4882-9fb4-2e66efcbe202
+		summarizeBy: none
+		sourceColumn: governmentid
+
+		annotation SummarizationSetBy = Automatic
+
+	column haschildrencode
+		dataType: int64
+		formatString: 0
+		lineageTag: a4adc509-9212-493c-a96c-b8b72a1c537c
+		summarizeBy: sum
+		sourceColumn: haschildrencode
+
+		annotation SummarizationSetBy = Automatic
+
+	column haschildrencode_display
+		dataType: string
+		lineageTag: 2c35f2bd-c151-43d7-a34e-1a279ca426b3
+		summarizeBy: none
+		sourceColumn: haschildrencode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column home2
+		dataType: string
+		lineageTag: 67336c50-20a2-4f74-bdf8-b463499109c4
+		summarizeBy: none
+		sourceColumn: home2
+
+		annotation SummarizationSetBy = Automatic
+
+	column importsequencenumber
+		dataType: int64
+		formatString: 0
+		lineageTag: d3bd825d-eaca-4b0a-8a09-8970ee2c5fb2
+		summarizeBy: sum
+		sourceColumn: importsequencenumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column isbackofficecustomer
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 06c7aa09-22d0-4009-9c81-1c110caaf13e
+		summarizeBy: none
+		sourceColumn: isbackofficecustomer
+
+		annotation SummarizationSetBy = Automatic
+
+	column jobtitle
+		dataType: string
+		lineageTag: 2a74d894-d746-40ae-94f4-36257a39678e
+		summarizeBy: none
+		sourceColumn: jobtitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column lastname
+		dataType: string
+		lineageTag: 37591bc6-bb68-4304-89d2-819432d131f8
+		summarizeBy: none
+		sourceColumn: lastname
+
+		annotation SummarizationSetBy = Automatic
+
+	column lastonholdtime
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 50515bf1-5b7e-43ca-b6b1-d0552d582552
+		summarizeBy: none
+		sourceColumn: lastonholdtime
+
+		variation Variation
+			isDefault
+			relationship: 2d9f53cd-4187-41ae-a767-c388e02a5f6e
+			defaultHierarchy: LocalDateTable_98ad6d8f-efc5-42ca-89a9-651c22a1d29c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column lastusedincampaign
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ddb1072e-dbae-4f57-816b-cecb55857def
+		summarizeBy: none
+		sourceColumn: lastusedincampaign
+
+		variation Variation
+			isDefault
+			relationship: b2f73405-f2b4-4f71-a1ed-1a103f963db4
+			defaultHierarchy: LocalDateTable_c6e8c4dd-2e71-4a48-a66a-fd055a831aec.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column leadsourcecode
+		dataType: int64
+		formatString: 0
+		lineageTag: 60a6f5d4-240c-4d49-8556-a9f274c90807
+		summarizeBy: sum
+		sourceColumn: leadsourcecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column leadsourcecode_display
+		dataType: string
+		lineageTag: 560ae1bd-5b56-427a-9ae4-6b2184eb69b6
+		summarizeBy: none
+		sourceColumn: leadsourcecode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column managername
+		dataType: string
+		lineageTag: 5b63a28e-7849-4847-84c7-8176ab5c8669
+		summarizeBy: none
+		sourceColumn: managername
+
+		annotation SummarizationSetBy = Automatic
+
+	column managerphone
+		dataType: string
+		lineageTag: 8d551d44-7c9b-486f-80c5-e160c52cd92c
+		summarizeBy: none
+		sourceColumn: managerphone
+
+		annotation SummarizationSetBy = Automatic
+
+	column marketingonly
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: d0dfcc53-48e1-4e74-8494-2a3748eebc81
+		summarizeBy: none
+		sourceColumn: marketingonly
+
+		annotation SummarizationSetBy = Automatic
+
+	column masterid
+		dataType: string
+		lineageTag: 2a4f6635-691a-4f00-b332-9ea5e7ad1479
+		summarizeBy: none
+		sourceColumn: masterid
+
+		annotation SummarizationSetBy = Automatic
+
+	column merged
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: babfeb24-5d63-4d09-ae3a-7684e1758283
+		summarizeBy: none
+		sourceColumn: merged
+
+		annotation SummarizationSetBy = Automatic
+
+	column middlename
+		dataType: string
+		lineageTag: fd100aa5-3eaf-4fb6-95c7-fb6de93aede8
+		summarizeBy: none
+		sourceColumn: middlename
+
+		annotation SummarizationSetBy = Automatic
+
+	column mobilephone
+		dataType: string
+		lineageTag: de4de368-6452-474e-918c-b90b1914fc00
+		summarizeBy: none
+		sourceColumn: mobilephone
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedby
+		dataType: string
+		lineageTag: 05d28b3f-c8ba-43c7-b963-7b72f0214e21
+		summarizeBy: none
+		sourceColumn: modifiedby
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedbyexternalparty
+		dataType: string
+		lineageTag: 5ce0f87d-2b4b-43f8-9be3-114133d30f1c
+		summarizeBy: none
+		sourceColumn: modifiedbyexternalparty
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ef71afea-d9cb-478a-9c3b-5a0a94f4a306
+		summarizeBy: none
+		sourceColumn: modifiedon
+
+		variation Variation
+			isDefault
+			relationship: fcde6088-5209-4a7b-965d-62ad907315f5
+			defaultHierarchy: LocalDateTable_7d070371-87d8-4fd4-9078-4c2cf2e78cb0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedonbehalfby
+		dataType: string
+		lineageTag: 907ae26f-941b-47e7-9f92-3854775c8022
+		summarizeBy: none
+		sourceColumn: modifiedonbehalfby
+
+		annotation SummarizationSetBy = Automatic
+
+	column msa_managingpartnerid
+		dataType: string
+		lineageTag: 78f0cefb-5e8e-42d2-8409-3c330bb48279
+		summarizeBy: none
+		sourceColumn: msa_managingpartnerid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyn_contactkpiid
+		dataType: string
+		lineageTag: 794a64cb-1945-4a31-b307-b7f391fa522c
+		summarizeBy: none
+		sourceColumn: msdyn_contactkpiid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyn_decisioninfluencetag
+		dataType: int64
+		formatString: 0
+		lineageTag: 1c273a22-ce3b-4c78-a441-3f46e156de32
+		summarizeBy: sum
+		sourceColumn: msdyn_decisioninfluencetag
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyn_decisioninfluencetag_display
+		dataType: string
+		lineageTag: 9eb8a6ff-e29f-4fa0-b7c1-a88821e673ee
+		summarizeBy: none
+		sourceColumn: msdyn_decisioninfluencetag_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyn_disablewebtracking
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 222d2cf1-e140-4b0c-b786-0b4d94daf777
+		summarizeBy: none
+		sourceColumn: msdyn_disablewebtracking
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyn_gdproptout
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 33968a89-6d9c-48f9-a3bc-04f4d3b65547
+		summarizeBy: none
+		sourceColumn: msdyn_gdproptout
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyn_isassistantinorgchart
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0b762cb1-846b-4ca7-9260-e1bf39daaaf4
+		summarizeBy: none
+		sourceColumn: msdyn_isassistantinorgchart
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyn_isminor
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: e078644e-2138-4308-b09a-0263199cf68c
+		summarizeBy: none
+		sourceColumn: msdyn_isminor
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyn_isminorwithparentalconsent
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f6357061-99dd-4879-acab-6c6a82876958
+		summarizeBy: none
+		sourceColumn: msdyn_isminorwithparentalconsent
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyn_orgchangestatus
+		dataType: int64
+		formatString: 0
+		lineageTag: d2fcce23-fd87-44e1-8bfc-09dc6e0122ed
+		summarizeBy: sum
+		sourceColumn: msdyn_orgchangestatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyn_orgchangestatus_display
+		dataType: string
+		lineageTag: f4fd7e89-a0f8-486c-99fe-8a3b3466e7fc
+		summarizeBy: none
+		sourceColumn: msdyn_orgchangestatus_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyn_portaltermsagreementdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c91e8359-5eb5-48ac-a47b-566f182991e4
+		summarizeBy: none
+		sourceColumn: msdyn_portaltermsagreementdate
+
+		variation Variation
+			isDefault
+			relationship: 4b94b2d5-03b8-40e8-9993-a12155c019e9
+			defaultHierarchy: LocalDateTable_4de84317-c86a-4ce6-8bf2-4d411f2b6533.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyn_primarytimezone
+		dataType: int64
+		formatString: 0
+		lineageTag: 603ee0ab-bbae-456e-9e1f-693af7e6dc19
+		summarizeBy: sum
+		sourceColumn: msdyn_primarytimezone
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyn_segmentid
+		dataType: string
+		lineageTag: 1aa2bce2-8c7d-4e49-9e83-3da9e4e46d4a
+		summarizeBy: none
+		sourceColumn: msdyn_segmentid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_contactid
+		dataType: string
+		lineageTag: 43512caf-570b-41f9-b3a2-4d90a439b36d
+		summarizeBy: none
+		sourceColumn: msdyncrm_contactid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_customerjourneyid
+		dataType: string
+		lineageTag: 6c8a10f1-9434-4a26-b0dc-9864c25abe2c
+		summarizeBy: none
+		sourceColumn: msdyncrm_customerjourneyid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_emailid
+		dataType: string
+		lineageTag: 869b7cf4-def5-49cc-adce-07877b39c6e3
+		summarizeBy: none
+		sourceColumn: msdyncrm_emailid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_insights_placeholder
+		dataType: string
+		lineageTag: c89b2bd6-2d41-4d2b-afd2-588b1793c609
+		summarizeBy: none
+		sourceColumn: msdyncrm_insights_placeholder
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_marketingformid
+		dataType: string
+		lineageTag: 41c16402-1f62-4e74-be6e-8bb65617d71e
+		summarizeBy: none
+		sourceColumn: msdyncrm_marketingformid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_marketingformsubmissiondateprecise
+		dataType: string
+		lineageTag: 36189164-819b-4795-ab8b-22af398aceab
+		summarizeBy: none
+		sourceColumn: msdyncrm_marketingformsubmissiondateprecise
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_marketingpageid
+		dataType: string
+		lineageTag: 1c683425-898f-4059-acc1-f3db45bb2b19
+		summarizeBy: none
+		sourceColumn: msdyncrm_marketingpageid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_rememberme
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: b63e6f62-3469-44af-9fc0-99a07729e90f
+		summarizeBy: none
+		sourceColumn: msdyncrm_rememberme
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_segmentmemberid
+		dataType: string
+		lineageTag: 5c35c2e4-fbce-411c-adaa-22797deab0ed
+		summarizeBy: none
+		sourceColumn: msdyncrm_segmentmemberid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_customerjourneyid
+		dataType: string
+		lineageTag: f44edb0f-dc45-4f3b-861d-cfc3bde3765c
+		summarizeBy: none
+		sourceColumn: msdynmkt_customerjourneyid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_emailid
+		dataType: string
+		lineageTag: 39a9bf93-4e05-47f7-bc25-1fda0ca2112f
+		summarizeBy: none
+		sourceColumn: msdynmkt_emailid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_marketingformid
+		dataType: string
+		lineageTag: a6ee99e8-e20b-4b03-a3ee-3482fb0a0454
+		summarizeBy: none
+		sourceColumn: msdynmkt_marketingformid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_aadobjectid
+		dataType: string
+		lineageTag: 49865ce1-609c-4d2d-b9b2-294a61191ea1
+		summarizeBy: none
+		sourceColumn: msevtmgt_aadobjectid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_contactid
+		dataType: string
+		lineageTag: 94a68aa4-895e-4037-8883-1decd5b300e6
+		summarizeBy: none
+		sourceColumn: msevtmgt_contactid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_originatingeventid
+		dataType: string
+		lineageTag: a2afca92-5dbd-4f52-9e09-e68677e6e5fa
+		summarizeBy: none
+		sourceColumn: msevtmgt_originatingeventid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msgdpr_consentchangesourceformid
+		dataType: string
+		lineageTag: a3a385c2-b546-482b-9ec0-c6356e0561ee
+		summarizeBy: none
+		sourceColumn: msgdpr_consentchangesourceformid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msgdpr_donottrack
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 9f32f6ff-a499-4f56-9e44-f4e69229d79a
+		summarizeBy: none
+		sourceColumn: msgdpr_donottrack
+
+		annotation SummarizationSetBy = Automatic
+
+	column msgdpr_gdprconsent
+		dataType: int64
+		formatString: 0
+		lineageTag: d8db4233-2b20-4a8e-9a91-0e71ffab76b1
+		summarizeBy: sum
+		sourceColumn: msgdpr_gdprconsent
+
+		annotation SummarizationSetBy = Automatic
+
+	column msgdpr_gdprconsent_display
+		dataType: string
+		lineageTag: b245f3a1-69ec-4797-91db-17dece0cf4d8
+		summarizeBy: none
+		sourceColumn: msgdpr_gdprconsent_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column msgdpr_gdprischild
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 7fd034ca-9bfe-4f17-baf5-8ec805ee2e2c
+		summarizeBy: none
+		sourceColumn: msgdpr_gdprischild
+
+		annotation SummarizationSetBy = Automatic
+
+	column msgdpr_gdprparentid
+		dataType: string
+		lineageTag: a0924afc-c4b5-4a41-a690-cd0daee95be4
+		summarizeBy: none
+		sourceColumn: msgdpr_gdprparentid
+
+		annotation SummarizationSetBy = Automatic
+
+	column mspp_userpreferredlcid
+		dataType: int64
+		formatString: 0
+		lineageTag: a1c2aa55-b702-4cde-ad6f-b5efb8cb7f89
+		summarizeBy: sum
+		sourceColumn: mspp_userpreferredlcid
+
+		annotation SummarizationSetBy = Automatic
+
+	column mspp_userpreferredlcid_display
+		dataType: string
+		lineageTag: abed6c2b-ed71-424e-bfb0-d62559207167
+		summarizeBy: none
+		sourceColumn: mspp_userpreferredlcid_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column nickname
+		dataType: string
+		lineageTag: 25842dfc-a27d-4e90-b18d-27b18797c423
+		summarizeBy: none
+		sourceColumn: nickname
+
+		annotation SummarizationSetBy = Automatic
+
+	column numberofchildren
+		dataType: int64
+		formatString: 0
+		lineageTag: ed09e7f4-2a23-4434-b8ec-a58f3c7fc7a5
+		summarizeBy: sum
+		sourceColumn: numberofchildren
+
+		annotation SummarizationSetBy = Automatic
+
+	column onholdtime
+		dataType: int64
+		formatString: 0
+		lineageTag: 18410670-421b-4d14-949a-ffaef22b6c9b
+		summarizeBy: sum
+		sourceColumn: onholdtime
+
+		annotation SummarizationSetBy = Automatic
+
+	column originatingleadid
+		dataType: string
+		lineageTag: bb5b0398-b259-4dc4-b013-a6fd17eb414f
+		summarizeBy: none
+		sourceColumn: originatingleadid
+
+		annotation SummarizationSetBy = Automatic
+
+	column overriddencreatedon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3cab8c80-5803-4883-a929-326a328073f0
+		summarizeBy: none
+		sourceColumn: overriddencreatedon
+
+		variation Variation
+			isDefault
+			relationship: 4f273721-0fde-4d4d-b5bc-1726dddd1793
+			defaultHierarchy: LocalDateTable_4d8c15ce-c742-410f-b37b-9e9324e1f8f1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ownerid
+		dataType: string
+		lineageTag: 37363a01-2659-43ed-ad7a-2df92ea24f70
+		summarizeBy: none
+		sourceColumn: ownerid
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningbusinessunit
+		dataType: string
+		lineageTag: be0e47b6-820a-4bd3-bfca-61e2f24433de
+		summarizeBy: none
+		sourceColumn: owningbusinessunit
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningteam
+		dataType: string
+		lineageTag: 0d16c545-6acc-4387-8da7-373684b8e898
+		summarizeBy: none
+		sourceColumn: owningteam
+
+		annotation SummarizationSetBy = Automatic
+
+	column owninguser
+		dataType: string
+		lineageTag: 3f695fc7-6bd0-4fb3-a04e-b56be6fccf28
+		summarizeBy: none
+		sourceColumn: owninguser
+
+		annotation SummarizationSetBy = Automatic
+
+	column pager
+		dataType: string
+		lineageTag: 0f0d6dfc-1520-4ac1-9c79-f8bc4ac4056f
+		summarizeBy: none
+		sourceColumn: pager
+
+		annotation SummarizationSetBy = Automatic
+
+	column parent_contactid
+		dataType: string
+		lineageTag: 304adaac-a56e-4245-9edd-0dec3acb7965
+		summarizeBy: none
+		sourceColumn: parent_contactid
+
+		annotation SummarizationSetBy = Automatic
+
+	column parentcontactid
+		dataType: string
+		lineageTag: 1175e293-b68a-4005-8599-9b24f8bada5a
+		summarizeBy: none
+		sourceColumn: parentcontactid
+
+		annotation SummarizationSetBy = Automatic
+
+	column parentcustomerid
+		dataType: string
+		lineageTag: 9f375b60-b3fd-4901-9738-7732df4818d8
+		summarizeBy: none
+		sourceColumn: parentcustomerid
+
+		annotation SummarizationSetBy = Automatic
+
+	column participatesinworkflow
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: fd17b5a0-860f-4402-ae56-d03fce96ad28
+		summarizeBy: none
+		sourceColumn: participatesinworkflow
+
+		annotation SummarizationSetBy = Automatic
+
+	column paymenttermscode
+		dataType: int64
+		formatString: 0
+		lineageTag: d1ae10e0-1c14-4615-a517-6eaf57f3f807
+		summarizeBy: sum
+		sourceColumn: paymenttermscode
+
+		annotation SummarizationSetBy = Automatic
+
+	column paymenttermscode_display
+		dataType: string
+		lineageTag: 35587f81-9ad3-4512-a1e5-3b1f11c1fa79
+		summarizeBy: none
+		sourceColumn: paymenttermscode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column preferredappointmentdaycode
+		dataType: int64
+		formatString: 0
+		lineageTag: 9e0a9bc1-b115-4c7f-8ce7-4670323a9413
+		summarizeBy: sum
+		sourceColumn: preferredappointmentdaycode
+
+		annotation SummarizationSetBy = Automatic
+
+	column preferredappointmentdaycode_display
+		dataType: string
+		lineageTag: 28b7c6ef-c2ab-41a5-9a12-1f79a4fd2ece
+		summarizeBy: none
+		sourceColumn: preferredappointmentdaycode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column preferredappointmenttimecode
+		dataType: int64
+		formatString: 0
+		lineageTag: b6de4c16-74ce-4641-8360-5eb227880b94
+		summarizeBy: sum
+		sourceColumn: preferredappointmenttimecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column preferredappointmenttimecode_display
+		dataType: string
+		lineageTag: b7151120-12bf-4482-8132-94cec90b3001
+		summarizeBy: none
+		sourceColumn: preferredappointmenttimecode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column preferredcontactmethodcode
+		dataType: int64
+		formatString: 0
+		lineageTag: 6ef25704-e89c-41cb-b015-5d36ceb46b0d
+		summarizeBy: sum
+		sourceColumn: preferredcontactmethodcode
+
+		annotation SummarizationSetBy = Automatic
+
+	column preferredcontactmethodcode_display
+		dataType: string
+		lineageTag: 77437968-27d5-425b-a41b-3e3a24069a30
+		summarizeBy: none
+		sourceColumn: preferredcontactmethodcode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column preferredequipmentid
+		dataType: string
+		lineageTag: 90eea024-af08-4dae-998d-612cc2ca5a69
+		summarizeBy: none
+		sourceColumn: preferredequipmentid
+
+		annotation SummarizationSetBy = Automatic
+
+	column preferredserviceid
+		dataType: string
+		lineageTag: 6c351421-cc59-4ed7-87ff-23c1811dca9b
+		summarizeBy: none
+		sourceColumn: preferredserviceid
+
+		annotation SummarizationSetBy = Automatic
+
+	column preferredsystemuserid
+		dataType: string
+		lineageTag: 5f76ebc0-355e-4a0c-8dad-eae213c8b0c2
+		summarizeBy: none
+		sourceColumn: preferredsystemuserid
+
+		annotation SummarizationSetBy = Automatic
+
+	column processid
+		dataType: string
+		lineageTag: ca04e7e3-8b5d-4145-8b9d-416ea8e7c090
+		summarizeBy: none
+		sourceColumn: processid
+
+		annotation SummarizationSetBy = Automatic
+
+	column salutation
+		dataType: string
+		lineageTag: 738f63b3-7b25-4b75-aca4-eeccefcb946b
+		summarizeBy: none
+		sourceColumn: salutation
+
+		annotation SummarizationSetBy = Automatic
+
+	column shippingmethodcode
+		dataType: int64
+		formatString: 0
+		lineageTag: fc5ee4e2-1c9c-4170-88c5-ab181ec93af1
+		summarizeBy: sum
+		sourceColumn: shippingmethodcode
+
+		annotation SummarizationSetBy = Automatic
+
+	column shippingmethodcode_display
+		dataType: string
+		lineageTag: f8e1078d-f4c7-4c49-9f7c-d6cbd6823901
+		summarizeBy: none
+		sourceColumn: shippingmethodcode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column slaid
+		dataType: string
+		lineageTag: 5bfc838b-cfb8-4e45-9776-58b28fed4333
+		summarizeBy: none
+		sourceColumn: slaid
+
+		annotation SummarizationSetBy = Automatic
+
+	column slainvokedid
+		dataType: string
+		lineageTag: cae3adaa-3689-4e1e-b0b1-7615faf85725
+		summarizeBy: none
+		sourceColumn: slainvokedid
+
+		annotation SummarizationSetBy = Automatic
+
+	column spousesname
+		dataType: string
+		lineageTag: 5dd409f0-9b19-43d4-bda9-590be33f8a51
+		summarizeBy: none
+		sourceColumn: spousesname
+
+		annotation SummarizationSetBy = Automatic
+
+	column stageid
+		dataType: string
+		lineageTag: cb161d2c-381a-4179-b8ea-ea1d009cfd4a
+		summarizeBy: none
+		sourceColumn: stageid
+
+		annotation SummarizationSetBy = Automatic
+
+	column statecode
+		dataType: int64
+		formatString: 0
+		lineageTag: c1f783c6-d94d-4a5a-be80-5ea3c7a03115
+		summarizeBy: sum
+		sourceColumn: statecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column statecode_display
+		dataType: string
+		lineageTag: 7cbf3e3b-efe1-436e-a2db-9c13437873d6
+		summarizeBy: none
+		sourceColumn: statecode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column statuscode
+		dataType: int64
+		formatString: 0
+		lineageTag: 7c4fafb1-aa0c-492b-ad89-b098293f5283
+		summarizeBy: sum
+		sourceColumn: statuscode
+
+		annotation SummarizationSetBy = Automatic
+
+	column statuscode_display
+		dataType: string
+		lineageTag: c5d8f834-47af-45bd-9ffc-c2679c40064e
+		summarizeBy: none
+		sourceColumn: statuscode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column suffix
+		dataType: string
+		lineageTag: fdf26d3c-d0d0-414b-b7db-ea6ee9d02843
+		summarizeBy: none
+		sourceColumn: suffix
+
+		annotation SummarizationSetBy = Automatic
+
+	column telephone1
+		dataType: string
+		lineageTag: a0f9bc93-a309-4d5e-95b1-decb9bc91e0f
+		summarizeBy: none
+		sourceColumn: telephone1
+
+		annotation SummarizationSetBy = Automatic
+
+	column telephone2
+		dataType: string
+		lineageTag: 8a6f69be-12b9-47da-9603-dac4ea4daa9e
+		summarizeBy: none
+		sourceColumn: telephone2
+
+		annotation SummarizationSetBy = Automatic
+
+	column telephone3
+		dataType: string
+		lineageTag: 3eb151a9-aae4-4067-8ff5-82f2b64659d2
+		summarizeBy: none
+		sourceColumn: telephone3
+
+		annotation SummarizationSetBy = Automatic
+
+	column territorycode
+		dataType: int64
+		formatString: 0
+		lineageTag: a8f4159c-83ad-4174-9fc7-19e94df4f31a
+		summarizeBy: sum
+		sourceColumn: territorycode
+
+		annotation SummarizationSetBy = Automatic
+
+	column territorycode_display
+		dataType: string
+		lineageTag: 5d97b9b5-d961-4623-9353-a3a188ea0cfd
+		summarizeBy: none
+		sourceColumn: territorycode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column timespentbymeonemailandmeetings
+		dataType: string
+		lineageTag: d888e2f5-1066-4686-9692-5382cfb55665
+		summarizeBy: none
+		sourceColumn: timespentbymeonemailandmeetings
+
+		annotation SummarizationSetBy = Automatic
+
+	column timezoneruleversionnumber
+		dataType: int64
+		formatString: 0
+		lineageTag: db35005a-7b9f-46fa-b40d-4a3782f90723
+		summarizeBy: sum
+		sourceColumn: timezoneruleversionnumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column transactioncurrencyid
+		dataType: string
+		lineageTag: 6ac1c194-b42a-497a-b1c9-91339786beb6
+		summarizeBy: none
+		sourceColumn: transactioncurrencyid
+
+		annotation SummarizationSetBy = Automatic
+
+	column traversedpath
+		dataType: string
+		lineageTag: 5c6dc5e9-a744-4e9c-a577-b49470f3de92
+		summarizeBy: none
+		sourceColumn: traversedpath
+
+		annotation SummarizationSetBy = Automatic
+
+	column utcconversiontimezonecode
+		dataType: int64
+		formatString: 0
+		lineageTag: 558cfddc-e13e-4436-ab02-7fb2ab5912e4
+		summarizeBy: sum
+		sourceColumn: utcconversiontimezonecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column versionnumber
+		dataType: int64
+		formatString: 0
+		lineageTag: e55f1cd4-84a5-4614-8218-08bfc2d68741
+		summarizeBy: sum
+		sourceColumn: versionnumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column websiteurl
+		dataType: string
+		lineageTag: fc1a2f23-bcc3-4719-88c3-5eb3bdac0c66
+		summarizeBy: none
+		sourceColumn: websiteurl
+
+		annotation SummarizationSetBy = Automatic
+
+	column yomifirstname
+		dataType: string
+		lineageTag: 3fe09bba-0ed5-40e7-9263-193ff09d90b2
+		summarizeBy: none
+		sourceColumn: yomifirstname
+
+		annotation SummarizationSetBy = Automatic
+
+	column yomifullname
+		dataType: string
+		lineageTag: 0156697d-993b-428d-b46c-673eaf1d042d
+		summarizeBy: none
+		sourceColumn: yomifullname
+
+		annotation SummarizationSetBy = Automatic
+
+	column yomilastname
+		dataType: string
+		lineageTag: ed26f0a6-9850-4bb6-b04b-5c18574cb536
+		summarizeBy: none
+		sourceColumn: yomilastname
+
+		annotation SummarizationSetBy = Automatic
+
+	column yomimiddlename
+		dataType: string
+		lineageTag: 18160842-3456-4301-bd50-5920c9f061bc
+		summarizeBy: none
+		sourceColumn: yomimiddlename
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdonDateOnly = ```
+			DATE(YEAR(Contact[createdon]), MONTH(Contact[createdon]), DAY(Contact[createdon]))
+			
+			```
+		formatString: General Date
+		lineageTag: dffba171-26e1-443e-a72b-b30f46129ab2
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column dxc_ambassadorid
+		dataType: string
+		lineageTag: fe5d251c-8ee0-4773-a271-dec78e425cb3
+		summarizeBy: none
+		sourceColumn: dxc_ambassadorid
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Contact = m
+		mode: import
+		source =
+				let
+				    Source = Cds.Entities(BaseUrl, [ReorderColumns=null, UseFormattedValue=null]),
+				    entities = Source{[Group="entities"]}[Data],
+				    contacts = entities{[EntitySetName="contacts"]}[Data]
+				in
+				    contacts
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

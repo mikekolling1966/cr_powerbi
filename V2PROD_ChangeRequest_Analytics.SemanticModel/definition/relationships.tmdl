@@ -1,0 +1,600 @@
+relationship dcb6fffe-2c55-42d4-9748-31072c980733
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Account.lastonholdtime
+	toColumn: LocalDateTable_af8f4c1d-0ef4-43ec-8498-fef177a4b985.Date
+
+relationship fae72281-3f0c-4144-b059-9ad3738e6607
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Account.lastusedincampaign
+	toColumn: LocalDateTable_c11c66d8-66c6-4e07-b5d1-e32b0c59e233.Date
+
+relationship c87debbe-2c03-49a5-9da7-725d169337fd
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Account.modifiedon
+	toColumn: LocalDateTable_34fff14a-1fce-4949-899a-47a234d70f45.Date
+
+relationship 7625f090-a409-414f-bbb4-1742e37f96dd
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Account.opendeals_date
+	toColumn: LocalDateTable_1aab97f9-ae16-413b-9da4-33a5f2575412.Date
+
+relationship 8b2af78a-9799-4229-bb63-c91e92762e1e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Account.openrevenue_date
+	toColumn: LocalDateTable_bbb1aa47-a73c-4b7e-b5db-0673f10b6958.Date
+
+relationship 8d88bbd3-6bcd-48f0-8fcf-bdb2716be1ca
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Account.overriddencreatedon
+	toColumn: LocalDateTable_f50e877e-a63e-4918-bc4f-15be475bd71b.Date
+
+relationship 824f5b29-57cd-4824-ac09-fe61d70d1e05
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Account.createdon
+	toColumn: LocalDateTable_49f3a540-9343-43a8-8f4c-3d5e6f8cee84.Date
+
+relationship 0f5331f2-73bf-78ca-c96d-40968e040ed2
+	fromColumn: Account.createdonDateOnly
+	toColumn: DateTable.Date
+
+relationship 38ab81ff-0f80-4bce-9fdc-eda45e4f704b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contact.adx_identity_lastsuccessfullogin
+	toColumn: LocalDateTable_205d1503-94cd-476b-9a13-e4ce7c691f82.Date
+
+relationship 3581d61b-90d6-48ac-82f3-c924f32022c1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contact.adx_identity_lockoutenddate
+	toColumn: LocalDateTable_40cb4bf6-1fa7-4d47-b89d-ea206efe5d83.Date
+
+relationship 4f761f3f-a769-4dae-96bc-46cf3a0f9e12
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contact.adx_profilealertdate
+	toColumn: LocalDateTable_f1eb5f76-7488-412f-be0f-bc1e8339dcfd.Date
+
+relationship 0da4d9e2-3231-4770-86f7-e47caadd4644
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contact.adx_profilelastactivity
+	toColumn: LocalDateTable_a7df9ef5-1f78-4d94-a6b6-ce3d972b4630.Date
+
+relationship 95df4b5c-7ef3-482e-8721-a7fc2e2528ac
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contact.adx_profilemodifiedon
+	toColumn: LocalDateTable_7ee86328-a7ba-4fa6-8271-4de990a2ecea.Date
+
+relationship a79a53d6-6756-4cc2-ae91-36cdadf7b850
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contact.anniversary
+	toColumn: LocalDateTable_46d1f31e-a5a5-4662-9ea9-61db87157a66.Date
+
+relationship a4bb02c1-207c-40ab-a754-d3ee027c83c9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contact.birthdate
+	toColumn: LocalDateTable_22114129-b214-4faa-950c-f4a38a722613.Date
+
+relationship bb037477-8489-41d1-a41d-f5e5dfec3ef9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contact.cap_checkedin
+	toColumn: LocalDateTable_6039d643-45bd-4138-8d4e-ea735d429fc2.Date
+
+relationship be0b0cc6-f1f2-4037-a7ad-d2e162731201
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contact.createdon
+	toColumn: LocalDateTable_2d86dbb0-1cfe-45a4-811d-8e8671e16cab.Date
+
+relationship 2d9f53cd-4187-41ae-a767-c388e02a5f6e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contact.lastonholdtime
+	toColumn: LocalDateTable_98ad6d8f-efc5-42ca-89a9-651c22a1d29c.Date
+
+relationship b2f73405-f2b4-4f71-a1ed-1a103f963db4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contact.lastusedincampaign
+	toColumn: LocalDateTable_c6e8c4dd-2e71-4a48-a66a-fd055a831aec.Date
+
+relationship fcde6088-5209-4a7b-965d-62ad907315f5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contact.modifiedon
+	toColumn: LocalDateTable_7d070371-87d8-4fd4-9078-4c2cf2e78cb0.Date
+
+relationship 4b94b2d5-03b8-40e8-9993-a12155c019e9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contact.msdyn_portaltermsagreementdate
+	toColumn: LocalDateTable_4de84317-c86a-4ce6-8bf2-4d411f2b6533.Date
+
+relationship 4f273721-0fde-4d4d-b5bc-1726dddd1793
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contact.overriddencreatedon
+	toColumn: LocalDateTable_4d8c15ce-c742-410f-b37b-9e9324e1f8f1.Date
+
+relationship c38d0c73-895b-42c0-be01-0a45e88eecd1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: cap_esacontactonboarding.createdon
+	toColumn: LocalDateTable_dcceaa61-daff-4009-92c9-3d6fe3024e4b.Date
+
+relationship f8c8e25f-c4b1-4b17-b396-a2bcbf40a990
+	joinOnDateBehavior: datePartOnly
+	fromColumn: cap_esacontactonboarding.modifiedon
+	toColumn: LocalDateTable_d1a07df5-9afe-46e6-baa4-b6bf484fe43e.Date
+
+relationship 971f8ba2-4961-411c-90b0-48b27738167f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: cap_esacontactonboarding.overriddencreatedon
+	toColumn: LocalDateTable_2cbc5a5a-4694-4fc4-b4cf-70a9ff06fb11.Date
+
+relationship a0a2f60e-ee11-4057-941d-3c87c6ea1286
+	joinOnDateBehavior: datePartOnly
+	fromColumn: cap_project.cap_projectenddate
+	toColumn: LocalDateTable_5c1ffcd6-4010-4448-aec3-589eb0d459bd.Date
+
+relationship 771ee8bd-0a9c-48ca-9aa4-8553d5bfec43
+	joinOnDateBehavior: datePartOnly
+	fromColumn: cap_project.cap_projectstartdate
+	toColumn: LocalDateTable_91012c18-62a9-49ef-a5a8-3a554e33e9bd.Date
+
+relationship c1f6b8f6-4ecb-4051-ad95-f0422d41e82d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: cap_project.createdon
+	toColumn: LocalDateTable_7cb8fb5b-0177-4d1b-8ee0-73e1513b78e7.Date
+
+relationship fece0b17-656a-4225-8ed1-dbc73edbaf3f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: cap_project.modifiedon
+	toColumn: LocalDateTable_f38a5895-dfdd-4deb-a013-838ecfff2e62.Date
+
+relationship 3431098d-6cf1-40d1-957f-5338d4ba5d06
+	joinOnDateBehavior: datePartOnly
+	fromColumn: cap_project.overriddencreatedon
+	toColumn: LocalDateTable_1176817a-708e-4867-8020-33337e4e9ed7.Date
+
+relationship b0a672ae-d543-489f-a085-fcabf8fefd3a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msevtmgt_Event.createdon
+	toColumn: LocalDateTable_a5aeba2c-bb4c-40dd-88b6-aeaeede88c70.Date
+
+relationship 73b7da8f-5db9-4dd5-b08a-b57f740ba6f9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msevtmgt_Event.modifiedon
+	toColumn: LocalDateTable_c60521e8-8ac7-4d26-8c8a-c7681d2d0c08.Date
+
+relationship 9e170057-2e42-4a85-bad9-53952ef7fbf7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msevtmgt_Event.msdyncrm_sessionscount_date
+	toColumn: LocalDateTable_edf8a483-f260-4a1b-ad01-16f98c87d9e5.Date
+
+relationship bc1ac7a4-f411-40f9-b986-fcd00b4ff64a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msevtmgt_Event.msdynmkt_completiondate
+	toColumn: LocalDateTable_3d094b5e-6c4d-4892-970c-c47bd4850bc6.Date
+
+relationship 5cde6bc8-e678-454f-b745-d8c39b80a697
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msevtmgt_Event.msevtmgt_earlybirdcutoffdate
+	toColumn: LocalDateTable_e6b546f2-2c10-4235-b3e0-0ebfbe571fe6.Date
+
+relationship 1426e738-1a43-4dff-92d1-81cd7e2a0e2e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msevtmgt_Event.msevtmgt_eventenddate
+	toColumn: LocalDateTable_245e4818-135d-4314-abde-b49f1eb54122.Date
+
+relationship 1043e680-b0ad-4982-968f-a1159e64122e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msevtmgt_Event.msevtmgt_eventstartdate
+	toColumn: LocalDateTable_4219b41e-868f-4aaa-81eb-f51497607e4c.Date
+
+relationship bf25eeaf-a200-4f68-bdf6-d2d036e7e409
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msevtmgt_Event.msevtmgt_lastteamssyncdate
+	toColumn: LocalDateTable_eba4a0fd-9646-4dc4-8339-9f7c7cb361e9.Date
+
+relationship 2ee33310-b5b0-4d0b-a146-f615c550568b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msevtmgt_Event.msevtmgt_portalspecificeventenddate
+	toColumn: LocalDateTable_0415e3c6-6276-4168-a091-1bed449f656d.Date
+
+relationship c3c0ec74-696e-4294-ad49-40f37919754c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msevtmgt_Event.msevtmgt_portalspecificeventstartdate
+	toColumn: LocalDateTable_1d2550cc-7617-4579-acbb-924b2bf41d22.Date
+
+relationship 3c80726c-3bf0-4a30-8b1c-7bf384b05d0e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msevtmgt_Event.msevtmgt_stopwebsiteregistrationson
+	toColumn: LocalDateTable_6ca5c7e6-8739-4626-ba1d-277d4fca865f.Date
+
+relationship 456ccb48-7be4-409b-b323-b148317e3c69
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msevtmgt_Event.overriddencreatedon
+	toColumn: LocalDateTable_ee0a08b7-c45c-450e-bee3-95ac3f0e32ed.Date
+
+relationship 00b52b98-5d2b-41d0-8d7e-3d3b5ade642a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msevtmgt_EventRegistration.createdon
+	toColumn: LocalDateTable_7eb008bc-e3ed-475d-b6d0-b87a4a8dc6e7.Date
+
+relationship 64d4bce9-b983-4a3d-9153-e6c9642e4da5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msevtmgt_EventRegistration.modifiedon
+	toColumn: LocalDateTable_916f61ec-cead-4e10-9d3e-7134d8666f24.Date
+
+relationship 16463440-0541-4192-bfed-e095becaa825
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msevtmgt_EventRegistration.msevtmgt_originaltimestamp
+	toColumn: LocalDateTable_2d032b82-ccfb-454f-8de8-39701e16706d.Date
+
+relationship 050dbd86-7bb6-4eb9-8162-4f4900e8b77b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msevtmgt_EventRegistration.overriddencreatedon
+	toColumn: LocalDateTable_6f2f4701-12a7-463b-b96d-01fbe39cbfd8.Date
+
+relationship 416439de-5aa8-4c14-87f4-d9389e876781
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msfp_surveyresponse.actualend
+	toColumn: LocalDateTable_6889040c-a87f-46aa-8916-49044cb22e38.Date
+
+relationship 97a05f24-757f-4278-aba5-d17ad5ec77c6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msfp_surveyresponse.actualstart
+	toColumn: LocalDateTable_8b3499a6-7a5c-4d4a-b138-0e132140d9e1.Date
+
+relationship 862ed59a-ad05-41bb-9250-20c9413f68b4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msfp_surveyresponse.createdon
+	toColumn: LocalDateTable_8468faa3-bad1-41ba-83d3-e03f5bfdf2d2.Date
+
+relationship 67dbb152-7415-4ebb-a869-5e12e80e4b8a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msfp_surveyresponse.deliverylastattemptedon
+	toColumn: LocalDateTable_1aabae92-3245-4be2-b652-0b4928c9ea56.Date
+
+relationship eae55657-7723-4f34-9119-bad6b2f5ae72
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msfp_surveyresponse.lastonholdtime
+	toColumn: LocalDateTable_040f1bc6-e984-4861-9572-01603dc5c339.Date
+
+relationship 832cc790-450f-442c-8afb-2e095ea04b78
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msfp_surveyresponse.modifiedon
+	toColumn: LocalDateTable_af14d60f-6588-490c-a845-06e791827341.Date
+
+relationship 712ecc0b-c4ec-4e5d-ad3b-4a172c904639
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msfp_surveyresponse.msfp_startdate
+	toColumn: LocalDateTable_1b79e62d-4c28-4f36-8cc3-f3f628834967.Date
+
+relationship 47e87798-6c7e-4981-bfb8-a45611c04e10
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msfp_surveyresponse.msfp_submitdate
+	toColumn: LocalDateTable_d8d21e00-b0de-4df0-a475-c53be3cb3508.Date
+
+relationship 84e5e9f4-5575-4107-b877-b1cce1e4de85
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msfp_surveyresponse.overriddencreatedon
+	toColumn: LocalDateTable_bafa02e1-6d23-4cbd-a249-210556dec356.Date
+
+relationship 61ccd771-b5d9-4c54-9fe1-b0c6e071f75f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msfp_surveyresponse.postponeactivityprocessinguntil
+	toColumn: LocalDateTable_c0ceed75-7cbd-410a-8760-d29ca23d94c9.Date
+
+relationship fafa3072-8245-4b82-8eed-a8117474f43d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msfp_surveyresponse.scheduledend
+	toColumn: LocalDateTable_9f39a9d4-b06e-40fc-87a5-aba774f8e86d.Date
+
+relationship 55b004a9-aa88-4c04-a32e-dbbb69e86429
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msfp_surveyresponse.scheduledstart
+	toColumn: LocalDateTable_4fdf3d33-00ea-4e7a-8617-e4c2388442c1.Date
+
+relationship cad82375-de65-40b1-af42-0c40502da366
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msfp_surveyresponse.senton
+	toColumn: LocalDateTable_d3548389-20aa-4f1a-a1be-0b66c35a4072.Date
+
+relationship e90b5356-2ff4-43e2-a4d0-c8d2afebaf67
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msfp_surveyresponse.sortdate
+	toColumn: LocalDateTable_871785eb-944b-40ee-b5a6-cb372a5ed48d.Date
+
+relationship AutoDetected_f7ef22cc-cf92-427d-b91d-a16222ca8b09
+	fromColumn: msevtmgt_EventRegistration.msevtmgt_eventid
+	toColumn: msevtmgt_Event.msevtmgt_eventid
+
+relationship 8abb718d-72da-f6af-e335-6311147e99d9
+	fromColumn: Contact.createdonDateOnly
+	toColumn: DateTable.Date
+
+relationship b2d4e848-66f1-4426-a9f9-0673746cc040
+	joinOnDateBehavior: datePartOnly
+	fromColumn: cap_project.createdonDateOnly
+	toColumn: LocalDateTable_a9cd7beb-8a7a-41e5-a8cd-bd33c948d60c.Date
+
+relationship bebd1879-3822-7ed4-d612-0babf40162e0
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: DateTable.Date
+	toColumn: cap_project.createdonDateOnly
+
+relationship 42b35269-16dd-cbcb-6a4c-dc941c704fde
+	fromColumn: cap_esacontactonboarding.createdonDateOnly
+	toColumn: DateTable.Date
+
+relationship de0bec9f-9043-3b55-faaa-8940cafbf2f5
+	fromColumn: msevtmgt_Event.createdonDateOnly
+	toColumn: DateTable.Date
+
+relationship cdede64b-ff23-109c-2833-e240a05f2c51
+	isActive: false
+	fromColumn: msevtmgt_EventRegistration.createdonDateOnly
+	toColumn: DateTable.Date
+
+relationship 99fb37fe-4414-d393-f0fe-0f373b2493f9
+	fromColumn: msfp_surveyresponse.createdonDateOnly
+	toColumn: DateTable.Date
+
+relationship ec583481-cce4-0ff6-aa09-55951513dba6
+	fromColumn: ConsentTable.ContactID
+	toColumn: Contact.contactid
+
+relationship dda0db29-340c-4cba-9573-aebfc786268e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SystemUser.createdon
+	toColumn: LocalDateTable_516adb92-a16b-4800-8727-451aaa39be93.Date
+
+relationship 9af15832-37c2-4164-86cf-56b92867e6a9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SystemUser.modifiedon
+	toColumn: LocalDateTable_c9ff7bc5-0cfc-401a-ab83-15a6eb7dc78c.Date
+
+relationship 495aa068-3d6c-42a5-ab86-25c5dc630c24
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SystemUser.overriddencreatedon
+	toColumn: LocalDateTable_c4f68eec-e7fe-45d3-affb-4cbafc3a06bc.Date
+
+relationship c5dbccbe-a955-eb2e-28a2-73a79b24fba7
+	fromColumn: cap_cap_project_systemuser.cap_projectid
+	toColumn: cap_project.cap_projectid
+
+relationship 7e8a1f35-56f1-6ba8-aacf-3ec39ed7e047
+	fromColumn: cap_cap_project_systemuser.systemuserid
+	toColumn: SystemUser.systemuserid
+
+relationship 607a9a99-84a7-7d59-518e-0b1c82bbd6b4
+	fromColumn: cap_cap_esacontactonboarding_systemuser.cap_esacontactonboardingid
+	toColumn: cap_esacontactonboarding.cap_esacontactonboardingid
+
+relationship 8d24b10a-e752-768c-2208-ec36863d3d16
+	fromColumn: cap_cap_esacontactonboarding_systemuser.systemuserid
+	toColumn: SystemUser.systemuserid
+
+relationship 2b013d88-1e28-480b-946c-c68c00dc09e0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msevtmgt_Event.msevtmgt_eventutcenddate
+	toColumn: LocalDateTable_4064e343-17a1-4fc2-a6c2-596d591db8f2.Date
+
+relationship e6ddf854-7932-47c0-b08d-c0bccbe8edc7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msevtmgt_Event.msevtmgt_eventutcstartdate
+	toColumn: LocalDateTable_53989ba0-f4ce-46ac-8aef-61b2527c5b06.Date
+
+relationship f7eb478d-1bfe-4b90-8165-cd0052644c9d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msevtmgt_Event.msevtmgt_registrationenddate
+	toColumn: LocalDateTable_1b5446e4-724e-400b-991d-e123821f9ea3.Date
+
+relationship d07e9a5a-4ef7-4884-adf9-257589e48a0d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msevtmgt_Event.msevtmgt_registrationstartdate
+	toColumn: LocalDateTable_d5163377-4742-4e22-8c09-e7bd61f627a2.Date
+
+relationship 59527fba-5ca4-4ed8-a868-b37e618def72
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msevtmgt_Event.msevtmgt_registrationutcenddate
+	toColumn: LocalDateTable_faa47af3-78b7-4d37-a789-c55bfa8984fa.Date
+
+relationship 1c2aee5d-d8a0-46f1-b75b-b0e70bd389a5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msevtmgt_Event.msevtmgt_registrationutcstartdate
+	toColumn: LocalDateTable_b1849e0d-1c08-4e14-8415-d1b59a98ea28.Date
+
+relationship ae6fd5c0-7939-4b5b-ac9b-89dae61acbe9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_journey.createdon
+	toColumn: LocalDateTable_15ba23e0-a28a-4ca6-bcac-8ecc93118eca.Date
+
+relationship 9b809b8d-af70-462e-a455-93c2a4c3aa5f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_journey.modifiedon
+	toColumn: LocalDateTable_1c279c7c-918e-4818-ad78-dc2cf00666b1.Date
+
+relationship 3833733e-0b1d-4313-bc8e-620b2c16592e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_journey.msdynmkt_automaticResumeTime
+	toColumn: LocalDateTable_8f0bb91e-2a07-43e1-8692-d74ccd251e70.Date
+
+relationship 29c6c337-4714-48b1-96e9-cf7e5183528e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_journey.msdynmkt_journeyendtime
+	toColumn: LocalDateTable_6dbf9058-75cb-44bb-84f6-ca075aa9ea0d.Date
+
+relationship 91a4919d-c4f6-4d0d-a5e6-4fe981621c41
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_journey.msdynmkt_journeystarttime
+	toColumn: LocalDateTable_9bd096ec-9b3d-4b4d-a5fb-a103d1909cf2.Date
+
+relationship d8228963-b9c1-41a3-b490-7365c03fd42d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_journey.msdynmkt_pauseTime
+	toColumn: LocalDateTable_52e3af85-d718-420a-a627-7e323823c1d1.Date
+
+relationship af646a38-1bb3-4ebf-9e83-70b5ed51e8d6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_journey.overriddencreatedon
+	toColumn: LocalDateTable_e072c45c-ad1e-422a-a0e0-c0daf7081909.Date
+
+relationship 1b822261-67ee-46e6-8d95-37cf06e13f67
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_email.createdon
+	toColumn: LocalDateTable_c0a1527e-0414-41c8-b4dd-4058692dcb01.Date
+
+relationship d0c66471-892d-4543-b51d-14ac590e3915
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_email.modifiedon
+	toColumn: LocalDateTable_dc434657-7f96-4647-b29a-d9992977dd5c.Date
+
+relationship 48a8c438-fab6-47a3-92c0-742b5eab1086
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_email.overriddencreatedon
+	toColumn: LocalDateTable_e382d4ee-3fa0-450e-8d68-297752223b45.Date
+
+relationship 372822b5-c6de-476d-a32a-114f741feb28
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_email.overwritetime
+	toColumn: LocalDateTable_d0a3ffe5-1803-4db7-99e2-97c3328d2545.Date
+
+relationship 6127b3b2-0823-440b-bd04-732199d49829
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_marketingform.createdon
+	toColumn: LocalDateTable_c31cdc1e-feb6-491c-8507-5b010d6c9ca9.Date
+
+relationship aaf7a714-c284-46a5-83bb-e4e3561b358c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_marketingform.modifiedon
+	toColumn: LocalDateTable_e3a0d1e5-c61d-456c-a0ba-75997652935a.Date
+
+relationship 4855b71b-7639-430a-b3d6-5b96f1a24efb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_marketingform.msdynmkt_doubleoptintogglemodifiedon
+	toColumn: LocalDateTable_9bcf0340-c391-4c6e-a890-7602944331d5.Date
+
+relationship cf9d6407-c34d-424f-bbfe-4d24eb832c13
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_marketingform.overriddencreatedon
+	toColumn: LocalDateTable_c722ae5f-2504-4de9-81a6-253582c77f8b.Date
+
+relationship cf8d56c5-c390-4906-824a-ef465337b790
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_marketingform.overwritetime
+	toColumn: LocalDateTable_4b7cd49e-7ee6-45d9-9745-fb27b2e7b83c.Date
+
+relationship 2e90e96d-45ab-4231-80e1-aa16dc562553
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_publishedforms.createdon
+	toColumn: LocalDateTable_7145a20c-bd8d-4add-a00e-71800990e787.Date
+
+relationship 92aec65b-a409-482d-84bf-569faf791832
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_publishedforms.modifiedon
+	toColumn: LocalDateTable_06a93a06-6079-4d65-a316-cf9acd20a925.Date
+
+relationship 7635a49c-5eb0-4110-96e2-746b7efc9b17
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_publishedforms.msdynmkt_doubleoptintogglemodifiedon
+	toColumn: LocalDateTable_a4922f06-c28a-4899-9ef9-4384eb71cf87.Date
+
+relationship c46664fa-93a0-4f5d-90ac-9890f56519ad
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_publishedforms.overriddencreatedon
+	toColumn: LocalDateTable_232b217a-5e8a-4685-8a1c-f9f4bbd4d19d.Date
+
+relationship af53b2ab-e577-42ab-98d5-5b0b043ffa23
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_publishedforms.overwritetime
+	toColumn: LocalDateTable_ddc3c796-4499-46c2-ad4c-542525b79a3e.Date
+
+relationship ff386a2d-64ed-4313-a0bd-74011f56ec0a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_segment.createdon
+	toColumn: LocalDateTable_dee352e9-530e-4206-bb8f-b8aacfe49a0b.Date
+
+relationship d7d71639-2f70-40d7-9876-7968ec8457b7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_segment.modifiedon
+	toColumn: LocalDateTable_0744930e-f0f6-452e-9740-6ac3b110aa8d.Date
+
+relationship 18d3db94-6894-4aa3-a85b-ec77983f24be
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_segment.msdynmkt_lastevaluated
+	toColumn: LocalDateTable_345c3c3c-d3aa-4b07-8a4b-9cac748e837c.Date
+
+relationship a209f0a9-1dd5-4029-9e9e-3f9ec93553db
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_segment.msdynmkt_lastexportedat
+	toColumn: LocalDateTable_ed1b0c70-c7ad-43ee-9abe-e1a8d44f0348.Date
+
+relationship 4c68e402-201e-44c3-8746-3af2ab0726f6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_segment.msdynmkt_lastupdatedon
+	toColumn: LocalDateTable_9f505aa1-4503-4ee5-9640-599f7f6aca6f.Date
+
+relationship b32a13b3-a820-4cee-97e9-a3030623f71f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_segment.msdynmkt_lastusedinjourney
+	toColumn: LocalDateTable_657c4cd6-a37f-4a9c-a393-99b551b947a2.Date
+
+relationship 97a88313-5d53-4e13-83ab-9ae12b744238
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_segment.msdynmkt_membercount_date
+	toColumn: LocalDateTable_0539469a-7adb-43ae-9a11-990ac6b2d7f3.Date
+
+relationship 991f692c-d17d-426d-ab66-8d23332c5e0a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_segment.msdynmkt_sourcesegmentcreatedon
+	toColumn: LocalDateTable_98a17ae9-194b-42aa-b755-8a16dce9b578.Date
+
+relationship 0b371b7d-3be6-4ecc-af49-522bfd3c5805
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_segment.msdynmkt_timerequiredby
+	toColumn: LocalDateTable_fc5a3580-dacb-4a0a-83ee-ae4e5e1b7a07.Date
+
+relationship 3b60970c-0f4e-44ad-9a16-fa5eff072b39
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_segment.msdynmkt_timerequiredend
+	toColumn: LocalDateTable_2c85028d-07c0-410a-a259-479399e198e0.Date
+
+relationship cdeb5abb-a51d-46e0-8db3-75d804980afb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_segment.overriddencreatedon
+	toColumn: LocalDateTable_3f3d0a16-14ab-479e-a128-cca37daad4e5.Date
+
+relationship ef189de5-d9bc-4060-a5ee-d05ea0a22596
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_contactpointconsent4.createdon
+	toColumn: LocalDateTable_1763822e-c379-425b-aadc-f96670afa4db.Date
+
+relationship 10f74f75-0223-4af4-a3bd-fdb304f8b99e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_contactpointconsent4.modifiedon
+	toColumn: LocalDateTable_62d3caa6-4b8e-4a81-956b-710fe8b04e8a.Date
+
+relationship e9f3af5b-b56e-41ad-9f85-d6a3ce2f794e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_contactpointconsent4.msdynmkt_migrationtimestamp
+	toColumn: LocalDateTable_da7e0f42-6d0c-4746-8bbf-d889b2b00395.Date
+
+relationship 6eef732e-66c6-4428-8042-3636e5d55e91
+	joinOnDateBehavior: datePartOnly
+	fromColumn: msdynmkt_contactpointconsent4.overriddencreatedon
+	toColumn: LocalDateTable_107e6e1c-9fe8-46a6-83a8-eaa5bd82e242.Date
+
+relationship bc2471e5-c2e3-472d-949c-22ff5e00028e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: LatestEmailConsent.createdon
+	toColumn: LocalDateTable_7f6a6960-8771-49d7-91ff-c63303f7077e.Date
+
+relationship 6be852da-3868-4d2a-9b3d-c6364678ee9a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: LatestEmailConsent.modifiedon
+	toColumn: LocalDateTable_005b64a0-b015-42fa-81a1-b39de3acbd64.Date
+
+relationship 162db02d-87c8-408d-b260-3a2c7d2fc89b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: LatestEmailConsent.msdynmkt_migrationtimestamp
+	toColumn: LocalDateTable_2d2ccb92-d02c-4c13-9d74-b44b86ea89a2.Date
+
+relationship 0c3c6687-bb5e-4197-80e7-6c9e528e6d31
+	joinOnDateBehavior: datePartOnly
+	fromColumn: LatestEmailConsent.overriddencreatedon
+	toColumn: LocalDateTable_29128282-1253-4cb9-9eb9-01f2d08d2a64.Date
+

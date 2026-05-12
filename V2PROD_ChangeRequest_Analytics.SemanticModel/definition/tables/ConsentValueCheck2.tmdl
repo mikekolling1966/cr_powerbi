@@ -1,0 +1,41 @@
+table ConsentValueCheck2
+	lineageTag: 2daba662-dae4-4d85-a288-4fb7a4348b05
+
+	column msdynmkt_contactpointtype_display
+		lineageTag: 24aa0d4c-051a-4a44-a6e5-98a920827bf3
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: msdynmkt_contactpointconsent4[msdynmkt_contactpointtype_display]
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_value_display
+		lineageTag: e806df32-9bb9-4487-951a-1081a4fdde44
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: msdynmkt_contactpointconsent4[msdynmkt_value_display]
+
+		annotation SummarizationSetBy = Automatic
+
+	column RowCount
+		formatString: 0
+		lineageTag: f613e1e9-1e24-42d1-b7f0-68d4081d9834
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [RowCount]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ConsentValueCheck2 = calculated
+		mode: import
+		source =
+				
+				SUMMARIZE(
+				    'msdynmkt_contactpointconsent4',
+				    'msdynmkt_contactpointconsent4'[msdynmkt_contactpointtype_display],
+				    'msdynmkt_contactpointconsent4'[msdynmkt_value_display],
+				    "RowCount", COUNTROWS('msdynmkt_contactpointconsent4')
+				)
+
+	annotation PBI_Id = ddf91e83ad0b44cba5f77508e8ddbaaf
+

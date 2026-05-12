@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "2a1bc4f43a7092965979",
+  "position": {
+    "x": 587.87628865979377,
+    "y": 741.19587628865975,
+    "z": 9000,
+    "height": 198.68041237113403,
+    "width": 178.72164948453607,
+    "tabOrder": 9000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ListMember"
+                    }
+                  },
+                  "Property": "Average Subscriptions per Contact"
+                }
+              },
+              "queryRef": "ListMember.Average Subscriptions per Contact",
+              "nativeQueryRef": "Average Subscriptions per Contact"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "ListMember"
+                  }
+                },
+                "Property": "Average Subscriptions per Contact"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

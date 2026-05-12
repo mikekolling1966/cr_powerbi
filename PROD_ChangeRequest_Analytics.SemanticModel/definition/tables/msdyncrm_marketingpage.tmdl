@@ -1,0 +1,568 @@
+table msdyncrm_marketingpage
+	lineageTag: 65a05f91-ea43-41be-8199-e525c78cfcb5
+
+	column adx_pagetemplateid
+		dataType: string
+		lineageTag: 86f7d958-d1a5-4e4d-ae68-f75f1b88c9c1
+		summarizeBy: none
+		sourceColumn: adx_pagetemplateid
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_parentwebpageid
+		dataType: string
+		lineageTag: 1f61e336-610e-46d2-902d-15477d0b18a2
+		summarizeBy: none
+		sourceColumn: adx_parentwebpageid
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_webpageid
+		dataType: string
+		lineageTag: 5cef8bd3-c6ec-4ed1-9c59-561fe6aaccd9
+		summarizeBy: none
+		sourceColumn: adx_webpageid
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_websiteid
+		dataType: string
+		lineageTag: 9ed1031f-5ec2-4327-88c1-f77b45819804
+		summarizeBy: none
+		sourceColumn: adx_websiteid
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_websitelanguageid
+		dataType: string
+		lineageTag: 708e3e0f-10a0-4864-8002-aab71c221259
+		summarizeBy: none
+		sourceColumn: adx_websitelanguageid
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_webtemplateid
+		dataType: string
+		lineageTag: 36d54d74-98b3-459d-a740-ce2c77c9baec
+		summarizeBy: none
+		sourceColumn: adx_webtemplateid
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdby
+		dataType: string
+		lineageTag: ee7f4e95-dbf9-4382-865c-9811995f41f9
+		summarizeBy: none
+		sourceColumn: createdby
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f8abe66a-bbec-4975-8aab-2f5ceb1f5d30
+		summarizeBy: none
+		sourceColumn: createdon
+
+		variation Variation
+			isDefault
+			relationship: 79b87286-378c-484d-90af-46a989b7a4dd
+			defaultHierarchy: LocalDateTable_aff3f290-1d63-41dd-9b99-163dd86c13a1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdonbehalfby
+		dataType: string
+		lineageTag: 6fea0602-b938-42bb-ba15-8c5b1c2debcb
+		summarizeBy: none
+		sourceColumn: createdonbehalfby
+
+		annotation SummarizationSetBy = Automatic
+
+	column importsequencenumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 583eb73d-4b10-494b-a414-cf155502a66f
+		summarizeBy: sum
+		sourceColumn: importsequencenumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedby
+		dataType: string
+		lineageTag: 70dfd52b-d342-47a2-bc1d-b8dc5f54a16a
+		summarizeBy: none
+		sourceColumn: modifiedby
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8aae783b-86a2-48b3-bfc0-40d5f110d963
+		summarizeBy: none
+		sourceColumn: modifiedon
+
+		variation Variation
+			isDefault
+			relationship: 46e64fc2-acbe-4e98-ba14-90e9b9188a8f
+			defaultHierarchy: LocalDateTable_2fff014c-5091-4e22-ae31-7ca51b03334e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedonbehalfby
+		dataType: string
+		lineageTag: e2d853ee-12b4-414e-95ce-e6c9088e6783
+		summarizeBy: none
+		sourceColumn: modifiedonbehalfby
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_alloweddomains
+		dataType: string
+		lineageTag: 902c3e97-7d97-44c1-97bb-f97285f1aa8b
+		summarizeBy: none
+		sourceColumn: msdyncrm_alloweddomains
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_content
+		dataType: string
+		lineageTag: 2bcd8c44-7e67-492a-9cd2-113bc2b8e0e3
+		summarizeBy: none
+		sourceColumn: msdyncrm_content
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_contenttype
+		dataType: int64
+		formatString: 0
+		lineageTag: 2b8200e7-a85c-4561-89b3-e3966f6449b2
+		summarizeBy: sum
+		sourceColumn: msdyncrm_contenttype
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_contenttype_display
+		dataType: string
+		lineageTag: 2c6a567a-2f7a-40d5-9286-b46c34f617de
+		summarizeBy: none
+		sourceColumn: msdyncrm_contenttype_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_forceportalless
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: adb375c2-a621-4aa2-bfe1-31c00e8eaf0c
+		summarizeBy: none
+		sourceColumn: msdyncrm_forceportalless
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_formpagemapping
+		dataType: string
+		lineageTag: 88954d52-22e5-45ba-b4df-ee2a7fe22af4
+		summarizeBy: none
+		sourceColumn: msdyncrm_formpagemapping
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_formtosave
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 837fd2f8-b904-474c-a279-338c1e50f304
+		summarizeBy: none
+		sourceColumn: msdyncrm_formtosave
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_full_page_url
+		dataType: string
+		lineageTag: e6faaf0a-1935-467f-81db-95a4ba35f024
+		summarizeBy: none
+		sourceColumn: msdyncrm_full_page_url
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_full_page_urls
+		dataType: string
+		lineageTag: 7e776aec-253a-483d-a989-cd1d6a110a4d
+		summarizeBy: none
+		sourceColumn: msdyncrm_full_page_urls
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_iamlive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 71d7eb30-8c9f-4b26-b11f-a3327b7f8d46
+		summarizeBy: none
+		sourceColumn: msdyncrm_iamlive
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_insights_placeholder
+		dataType: string
+		lineageTag: f592c20d-9a34-4479-8099-d3873f5f5059
+		summarizeBy: none
+		sourceColumn: msdyncrm_insights_placeholder
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_lastgoinglivedate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d607af43-e072-40ae-926e-f1d5266745a8
+		summarizeBy: none
+		sourceColumn: msdyncrm_lastgoinglivedate
+
+		variation Variation
+			isDefault
+			relationship: bb9d4326-9bba-4aa7-bad7-0640c7fbd285
+			defaultHierarchy: LocalDateTable_ae70f02f-cea5-4d49-bba2-b3ca066585f9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_lastpublisheddate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6b4a6c8a-fb83-465e-80c9-1c4dd9f05ed9
+		summarizeBy: none
+		sourceColumn: msdyncrm_lastpublisheddate
+
+		variation Variation
+			isDefault
+			relationship: 3c55bd27-bb74-4fea-93ca-41cc86ec57f4
+			defaultHierarchy: LocalDateTable_210492c5-c597-4f94-97fe-db29d6445f29.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_lastpublishstate
+		dataType: int64
+		formatString: 0
+		lineageTag: e5b253bb-2621-4823-819c-b2a655d96222
+		summarizeBy: sum
+		sourceColumn: msdyncrm_lastpublishstate
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_lastpublishstate_display
+		dataType: string
+		lineageTag: 199a0246-7d5e-4c93-b05b-5a36a58cc190
+		summarizeBy: none
+		sourceColumn: msdyncrm_lastpublishstate_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_lastunpublisheddate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5eec52d7-01bd-498e-9093-c77a57ad589a
+		summarizeBy: none
+		sourceColumn: msdyncrm_lastunpublisheddate
+
+		variation Variation
+			isDefault
+			relationship: 2bbcb07a-4f80-4411-9c07-2f0b0c3ecb91
+			defaultHierarchy: LocalDateTable_7b205343-11af-4293-869c-2039a6253aa7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_marketingpageid
+		dataType: string
+		lineageTag: 1705d2e8-3492-4e27-9efd-4d9a68af7e79
+		summarizeBy: none
+		sourceColumn: msdyncrm_marketingpageid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_marketingpagetemplate
+		dataType: string
+		lineageTag: 72f2b00d-ab0a-4945-9df6-fba1dd5d95f7
+		summarizeBy: none
+		sourceColumn: msdyncrm_marketingpagetemplate
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_marketingprovided
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0bc48d20-2746-4eb4-9289-ee8f1044b662
+		summarizeBy: none
+		sourceColumn: msdyncrm_marketingprovided
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_marketingwebsite
+		dataType: string
+		lineageTag: 8ed41aba-21de-4b43-9016-c951aa7f0053
+		summarizeBy: none
+		sourceColumn: msdyncrm_marketingwebsite
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_markettype
+		dataType: int64
+		formatString: 0
+		lineageTag: 1ea2dc2e-cfd2-438b-b470-03bb6a9f5466
+		summarizeBy: sum
+		sourceColumn: msdyncrm_markettype
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_markettype_display
+		dataType: string
+		lineageTag: 6522eb9b-5d20-490c-a9cb-5431ffdbc1d9
+		summarizeBy: none
+		sourceColumn: msdyncrm_markettype_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_name
+		dataType: string
+		lineageTag: 7354dbd2-583c-4c05-ada5-47d9187d2b5b
+		summarizeBy: none
+		sourceColumn: msdyncrm_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_optimizedfor
+		dataType: int64
+		formatString: 0
+		lineageTag: 809bbcb1-4795-4de5-9b14-34655bf8efb3
+		summarizeBy: sum
+		sourceColumn: msdyncrm_optimizedfor
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_optimizedfor_display
+		dataType: string
+		lineageTag: cb015540-e2b2-4cba-a7ee-b4b605a50324
+		summarizeBy: none
+		sourceColumn: msdyncrm_optimizedfor_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_partialurl
+		dataType: string
+		lineageTag: ce35e072-a703-42b8-8f32-c3134c7d4514
+		summarizeBy: none
+		sourceColumn: msdyncrm_partialurl
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_purpose
+		dataType: int64
+		formatString: 0
+		lineageTag: 2e38ac5b-59c6-4493-9b9e-29d2b9e6ffea
+		summarizeBy: sum
+		sourceColumn: msdyncrm_purpose
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_purpose_display
+		dataType: string
+		lineageTag: 78e0f7b2-a17c-413c-b8c3-91012ed47e1b
+		summarizeBy: none
+		sourceColumn: msdyncrm_purpose_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_remote_websiteid
+		dataType: string
+		lineageTag: 061f59c9-203e-4216-8bde-3d001ab24037
+		summarizeBy: none
+		sourceColumn: msdyncrm_remote_websiteid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_type
+		dataType: int64
+		formatString: 0
+		lineageTag: 0d302d3c-e202-4024-b6b7-cbb252bf09d1
+		summarizeBy: sum
+		sourceColumn: msdyncrm_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_type_display
+		dataType: string
+		lineageTag: 3dfba18b-a86e-4e94-abc2-9d5eb570e83c
+		summarizeBy: none
+		sourceColumn: msdyncrm_type_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_visualstyle
+		dataType: int64
+		formatString: 0
+		lineageTag: 69edf1bd-4a6d-4ce3-98e0-406236541e7a
+		summarizeBy: sum
+		sourceColumn: msdyncrm_visualstyle
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_visualstyle_display
+		dataType: string
+		lineageTag: 7f2433bb-590e-4d0c-a6a5-08f4a7cfa5a9
+		summarizeBy: none
+		sourceColumn: msdyncrm_visualstyle_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_websitefilter_placeholder
+		dataType: string
+		lineageTag: 5f4aecf4-8ae9-416e-8ab2-555a59602181
+		summarizeBy: none
+		sourceColumn: msdyncrm_websitefilter_placeholder
+
+		annotation SummarizationSetBy = Automatic
+
+	column overriddencreatedon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5e9c7c52-7c5a-4576-91b3-5f07da2afeac
+		summarizeBy: none
+		sourceColumn: overriddencreatedon
+
+		variation Variation
+			isDefault
+			relationship: 3c0da962-c004-45fe-ba90-3e8d5f94d293
+			defaultHierarchy: LocalDateTable_0c1e4db1-475b-4174-ad9f-3a430dab811f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ownerid
+		dataType: string
+		lineageTag: effad071-a1ee-496b-ad55-56ffa4e4b6a5
+		summarizeBy: none
+		sourceColumn: ownerid
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningbusinessunit
+		dataType: string
+		lineageTag: dea876d6-a9bc-4d37-832f-d78f2cc09a56
+		summarizeBy: none
+		sourceColumn: owningbusinessunit
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningteam
+		dataType: string
+		lineageTag: d73bd417-45de-4952-b797-af33e55543ca
+		summarizeBy: none
+		sourceColumn: owningteam
+
+		annotation SummarizationSetBy = Automatic
+
+	column owninguser
+		dataType: string
+		lineageTag: e891e363-e29e-499c-95a2-f6df49636378
+		summarizeBy: none
+		sourceColumn: owninguser
+
+		annotation SummarizationSetBy = Automatic
+
+	column statecode
+		dataType: int64
+		formatString: 0
+		lineageTag: 7bf36da3-b619-4f8e-ad91-f5f8879397ef
+		summarizeBy: sum
+		sourceColumn: statecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column statecode_display
+		dataType: string
+		lineageTag: 21813d1a-e96b-4b1a-b2e4-4b52729c98f8
+		summarizeBy: none
+		sourceColumn: statecode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column statuscode
+		dataType: int64
+		formatString: 0
+		lineageTag: cf2d7942-f672-499d-b36b-c814f819871c
+		summarizeBy: sum
+		sourceColumn: statuscode
+
+		annotation SummarizationSetBy = Automatic
+
+	column statuscode_display
+		dataType: string
+		lineageTag: feb4a7af-76a8-49b2-9108-a3aab4e60a48
+		summarizeBy: none
+		sourceColumn: statuscode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column timezoneruleversionnumber
+		dataType: int64
+		formatString: 0
+		lineageTag: e24bdc8c-a3df-459f-9888-758229cf8528
+		summarizeBy: sum
+		sourceColumn: timezoneruleversionnumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column utcconversiontimezonecode
+		dataType: int64
+		formatString: 0
+		lineageTag: 537202c1-2789-4ae2-a54a-c467b7c0a1f7
+		summarizeBy: sum
+		sourceColumn: utcconversiontimezonecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column versionnumber
+		dataType: int64
+		formatString: 0
+		lineageTag: de25d7ae-73e7-45d0-8dbe-7145be6e3bf0
+		summarizeBy: sum
+		sourceColumn: versionnumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdonDateOnly = ```
+			DATE(YEAR(msdyncrm_marketingpage[createdon]), MONTH(msdyncrm_marketingpage[createdon]), DAY(msdyncrm_marketingpage[createdon]))
+			
+			```
+		formatString: General Date
+		lineageTag: 9d263da3-8f82-435d-a5a0-ae891a4715d8
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column es = ```
+			COUNTROWS(msdyncrm_marketingpage) 
+			```
+		formatString: 0
+		lineageTag: 670216ad-61c3-42c9-a129-7aa649af47fa
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Marketing Pages' = COUNTROWS(msdyncrm_marketingpage)
+		formatString: 0
+		lineageTag: 918287fb-adfa-49aa-84ac-95847d1e7251
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition msdyncrm_marketingpage = m
+		mode: import
+		source =
+				let
+				    Source = Cds.Entities(BaseUrl, [ReorderColumns=null, UseFormattedValue=null]),
+				    entities = Source{[Group="entities"]}[Data],
+				    msdyncrm_marketingpages = entities{[EntitySetName="msdyncrm_marketingpages"]}[Data]
+				in
+				    msdyncrm_marketingpages
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

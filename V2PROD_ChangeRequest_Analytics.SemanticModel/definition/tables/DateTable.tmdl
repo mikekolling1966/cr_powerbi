@@ -1,0 +1,62 @@
+table DateTable
+	lineageTag: 45ee07b5-06a1-4f14-aa4a-f4db3525e9cc
+
+	column Date
+		formatString: General Date
+		lineageTag: 146325a5-a7a4-4f9d-a41b-36895ac4c5cd
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		formatString: 0
+		lineageTag: 1ca51abd-6ac9-498d-bf00-e66b18e73dc6
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Number'
+		formatString: 0
+		lineageTag: bdd735b7-15b8-4dd4-9dc6-8cd21b86bd65
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Month Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name'
+		lineageTag: d1f93131-3540-4b94-8c35-779225355729
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		lineageTag: 56dff058-7333-4486-96ae-5ba4a96ca769
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DateTable = calculated
+		mode: import
+		source = ```
+				
+				ADDCOLUMNS (
+				    CALENDAR (DATE(2015, 1, 1), DATE(2030, 12, 31)),
+				    "Year", YEAR([Date]),
+				    "Month Number", MONTH([Date]),
+				    "Month Name", FORMAT([Date], "MMMM"),
+				    "Quarter", "Q" & FORMAT([Date], "Q")
+				)
+				
+				```
+
+	annotation PBI_Id = ebc2b5e55b064cb0bed14ab989a86061
+

@@ -1,0 +1,464 @@
+table msdyncrm_customerjourney
+	lineageTag: be44577f-8edc-4c93-9ed8-707b7518f245
+
+	column createdby
+		dataType: string
+		lineageTag: 36f73ed3-5bc7-43a1-8dbf-d3207ed417e5
+		summarizeBy: none
+		sourceColumn: createdby
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f6caac45-59bf-4e0f-a069-d8a9a8597dc3
+		summarizeBy: none
+		sourceColumn: createdon
+
+		variation Variation
+			isDefault
+			relationship: bdc2a8db-878f-460f-a6fa-ce65c518f754
+			defaultHierarchy: LocalDateTable_0f9ad460-56cb-48a1-b6c5-859bfe11340b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdonbehalfby
+		dataType: string
+		lineageTag: 75de9711-667f-4f3b-8bb2-b93ac014dc8e
+		summarizeBy: none
+		sourceColumn: createdonbehalfby
+
+		annotation SummarizationSetBy = Automatic
+
+	column importsequencenumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 232b53dc-b452-4af0-bd94-69f58a50f978
+		summarizeBy: sum
+		sourceColumn: importsequencenumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedby
+		dataType: string
+		lineageTag: 37a29965-e9a1-43d8-b5c5-24ef68d0b7b8
+		summarizeBy: none
+		sourceColumn: modifiedby
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9b68336f-02fd-42a9-bdb3-c7c9a4ff676d
+		summarizeBy: none
+		sourceColumn: modifiedon
+
+		variation Variation
+			isDefault
+			relationship: a9a8624d-2136-4818-9016-e404d4ef531c
+			defaultHierarchy: LocalDateTable_b2ae2f20-ed5c-4505-ac9b-503c5e07042c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedonbehalfby
+		dataType: string
+		lineageTag: 6a82571c-9b81-46ad-b0e1-618efa34b8ed
+		summarizeBy: none
+		sourceColumn: modifiedonbehalfby
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncr2_linkedincampaign
+		dataType: string
+		lineageTag: 278cdcba-3bf3-4f6c-830b-e9087781bef1
+		summarizeBy: none
+		sourceColumn: msdyncr2_linkedincampaign
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_contentsettingsid
+		dataType: string
+		lineageTag: 3730f0f9-5cc7-4641-82a5-cf6a1d116b0d
+		summarizeBy: none
+		sourceColumn: msdyncrm_contentsettingsid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_customerjourneydesignerstate
+		dataType: string
+		lineageTag: 4401c5ab-c6a3-4034-b3a4-f7d73cd3e2b1
+		summarizeBy: none
+		sourceColumn: msdyncrm_customerjourneydesignerstate
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_customerjourneyid
+		dataType: string
+		lineageTag: 546198a4-6004-4472-af74-d892d5da4681
+		summarizeBy: none
+		sourceColumn: msdyncrm_customerjourneyid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_customerjourneytemplate
+		dataType: string
+		lineageTag: 7c7d9400-8a5d-4895-afe9-f6064c50c1fb
+		summarizeBy: none
+		sourceColumn: msdyncrm_customerjourneytemplate
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_customerjourneytimezone
+		dataType: int64
+		formatString: 0
+		lineageTag: 74c2f7db-690f-4a56-a673-9974a3702aac
+		summarizeBy: sum
+		sourceColumn: msdyncrm_customerjourneytimezone
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_description
+		dataType: string
+		lineageTag: 2378c705-61e8-453a-876e-d97bda319aca
+		summarizeBy: none
+		sourceColumn: msdyncrm_description
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_enddatetime
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 94d354d0-6d92-46d5-b145-d517d5f521c4
+		summarizeBy: none
+		sourceColumn: msdyncrm_enddatetime
+
+		variation Variation
+			isDefault
+			relationship: 5614bb38-26a3-41b6-be24-918017812423
+			defaultHierarchy: LocalDateTable_be7bedca-6b1a-42ce-b11d-279d49abd434.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_entitytarget
+		dataType: int64
+		formatString: 0
+		lineageTag: ba0b7990-14dd-42d4-a9f2-4789bdfa7dfd
+		summarizeBy: sum
+		sourceColumn: msdyncrm_entitytarget
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_entitytarget_display
+		dataType: string
+		lineageTag: 59f62566-29c5-4a56-8bec-19a5ff907aa9
+		summarizeBy: none
+		sourceColumn: msdyncrm_entitytarget_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_formtosave
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 9028e536-db6c-48b1-9041-652828513085
+		summarizeBy: none
+		sourceColumn: msdyncrm_formtosave
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_insights_placeholder
+		dataType: string
+		lineageTag: 24860a13-d408-473a-8126-3b187652c1f3
+		summarizeBy: none
+		sourceColumn: msdyncrm_insights_placeholder
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_isrecurring
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f7483748-5f86-4dcb-9866-b98d2fb4252d
+		summarizeBy: none
+		sourceColumn: msdyncrm_isrecurring
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_lockdowndateinmilliseconds
+		dataType: int64
+		formatString: 0
+		lineageTag: f3bc2e8f-f9b3-4542-80fc-e3bbdfcd5ad4
+		summarizeBy: sum
+		sourceColumn: msdyncrm_lockdowndateinmilliseconds
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_name
+		dataType: string
+		lineageTag: af6cd5cb-0296-4789-afeb-b82021c6a187
+		summarizeBy: none
+		sourceColumn: msdyncrm_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_publishedby
+		dataType: string
+		lineageTag: 2017e980-281f-44d4-b57b-e116fdc23523
+		summarizeBy: none
+		sourceColumn: msdyncrm_publishedby
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_purpose
+		dataType: string
+		lineageTag: d4c26d50-0737-43cd-a7dc-cd6fac8358ec
+		summarizeBy: none
+		sourceColumn: msdyncrm_purpose
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_recurrencecount
+		dataType: int64
+		formatString: 0
+		lineageTag: b1e597df-1e5a-4e3f-a0c3-df5274771862
+		summarizeBy: sum
+		sourceColumn: msdyncrm_recurrencecount
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_recurrenceintervaldays
+		dataType: int64
+		formatString: 0
+		lineageTag: a12019ff-b98d-4a6a-b7df-518ad424a42e
+		summarizeBy: sum
+		sourceColumn: msdyncrm_recurrenceintervaldays
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_scope
+		dataType: int64
+		formatString: 0
+		lineageTag: 556760cf-eab2-418c-bab9-3c035ad09cb6
+		summarizeBy: sum
+		sourceColumn: msdyncrm_scope
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_scope_display
+		dataType: string
+		lineageTag: e9d5ef29-1b72-4048-a378-77bf2816694b
+		summarizeBy: none
+		sourceColumn: msdyncrm_scope_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_startdatetime
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 55aa894f-a1f3-46ef-a990-c3054aefc066
+		summarizeBy: none
+		sourceColumn: msdyncrm_startdatetime
+
+		variation Variation
+			isDefault
+			relationship: 03b30594-fcec-49d9-b716-4e055ddda4a5
+			defaultHierarchy: LocalDateTable_be091735-df05-4bc1-a5f8-c03068bd08b3.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_suppressionsegmentid
+		dataType: string
+		lineageTag: a9cb188c-2b24-4bab-a7b2-6675ad9d1472
+		summarizeBy: none
+		sourceColumn: msdyncrm_suppressionsegmentid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_type
+		dataType: int64
+		formatString: 0
+		lineageTag: 3434a794-4bca-49b8-8d7e-97478f5b0199
+		summarizeBy: sum
+		sourceColumn: msdyncrm_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_type_display
+		dataType: string
+		lineageTag: e8227c0c-0ecd-42e4-a40e-3f71f2e7cca2
+		summarizeBy: none
+		sourceColumn: msdyncrm_type_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_validationresults
+		dataType: string
+		lineageTag: 837239c0-7dec-42d8-9443-3887f4334056
+		summarizeBy: none
+		sourceColumn: msdyncrm_validationresults
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_workflowdefinition
+		dataType: string
+		lineageTag: 3a80ba7c-01ae-43f4-9fce-75d86cc2d12c
+		summarizeBy: none
+		sourceColumn: msdyncrm_workflowdefinition
+
+		annotation SummarizationSetBy = Automatic
+
+	column msgdpr_requiredconsent
+		dataType: int64
+		formatString: 0
+		lineageTag: a8c7646f-fd50-4fdf-bc1f-4f370e97b14d
+		summarizeBy: sum
+		sourceColumn: msgdpr_requiredconsent
+
+		annotation SummarizationSetBy = Automatic
+
+	column msgdpr_requiredconsent_display
+		dataType: string
+		lineageTag: 9b4c748d-f7b2-477e-ab75-12f298c7b484
+		summarizeBy: none
+		sourceColumn: msgdpr_requiredconsent_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column overriddencreatedon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: cb393e86-26c2-43d8-957b-569a6e5d0e3d
+		summarizeBy: none
+		sourceColumn: overriddencreatedon
+
+		variation Variation
+			isDefault
+			relationship: 84618c71-97c6-4cf1-84d3-2a58c335d6ad
+			defaultHierarchy: LocalDateTable_29111249-9216-4e99-b00f-810129d690eb.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ownerid
+		dataType: string
+		lineageTag: a7c857ad-d95b-4a84-8dbe-783b6473bda7
+		summarizeBy: none
+		sourceColumn: ownerid
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningbusinessunit
+		dataType: string
+		lineageTag: d1f465d1-3f1c-4a82-ad14-c20c153f2017
+		summarizeBy: none
+		sourceColumn: owningbusinessunit
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningteam
+		dataType: string
+		lineageTag: d02c8d50-1cb1-4c01-b9b8-510c36a77839
+		summarizeBy: none
+		sourceColumn: owningteam
+
+		annotation SummarizationSetBy = Automatic
+
+	column owninguser
+		dataType: string
+		lineageTag: 1a237123-e974-4859-96c2-5984b9bd9f26
+		summarizeBy: none
+		sourceColumn: owninguser
+
+		annotation SummarizationSetBy = Automatic
+
+	column statecode
+		dataType: int64
+		formatString: 0
+		lineageTag: 818234cf-4a49-454c-8e27-e57a4d806ca3
+		summarizeBy: sum
+		sourceColumn: statecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column statecode_display
+		dataType: string
+		lineageTag: 4b4bba7c-f6f7-4c20-83af-040d27617779
+		summarizeBy: none
+		sourceColumn: statecode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column statuscode
+		dataType: int64
+		formatString: 0
+		lineageTag: 441a1cd6-3b65-497f-8902-1c47d3d39280
+		summarizeBy: sum
+		sourceColumn: statuscode
+
+		annotation SummarizationSetBy = Automatic
+
+	column statuscode_display
+		dataType: string
+		lineageTag: e0893c54-bd09-44e3-9688-689bdc308531
+		summarizeBy: none
+		sourceColumn: statuscode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column timezoneruleversionnumber
+		dataType: int64
+		formatString: 0
+		lineageTag: a22fd37b-2bc4-42a1-ab70-6791d812336b
+		summarizeBy: sum
+		sourceColumn: timezoneruleversionnumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column utcconversiontimezonecode
+		dataType: int64
+		formatString: 0
+		lineageTag: ad8417e1-bb1f-44c1-b512-987bcb0480a8
+		summarizeBy: sum
+		sourceColumn: utcconversiontimezonecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column versionnumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 5dc1eb52-f1de-45ce-b4eb-2668faa2c01e
+		summarizeBy: sum
+		sourceColumn: versionnumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdonDateOnly = ```
+			DATE(YEAR(msdyncrm_customerjourney[createdon]), MONTH(msdyncrm_customerjourney[createdon]), DAY(msdyncrm_customerjourney[createdon]))
+			
+			```
+		formatString: General Date
+		lineageTag: 979542be-5c88-4095-88ec-ab293677b7c9
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalJourneys = COUNTROWS(msdyncrm_customerjourney)
+		formatString: 0
+		lineageTag: 90bc1e64-dab5-4228-aba1-fa5797246610
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition msdyncrm_customerjourney = m
+		mode: import
+		source =
+				let
+				    Source = Cds.Entities(BaseUrl, [ReorderColumns=null, UseFormattedValue=null]),
+				    entities = Source{[Group="entities"]}[Data],
+				    msdyncrm_customerjourneys = entities{[EntitySetName="msdyncrm_customerjourneys"]}[Data]
+				in
+				    msdyncrm_customerjourneys
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

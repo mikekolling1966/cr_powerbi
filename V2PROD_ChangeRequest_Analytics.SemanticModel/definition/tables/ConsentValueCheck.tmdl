@@ -1,0 +1,25 @@
+table ConsentValueCheck
+	lineageTag: a2907ee8-4328-4506-8494-c9e36b1bc3c2
+
+	column Column
+		formatString: 0
+		lineageTag: 6df92937-cada-4413-bce9-f2371839f836
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ConsentValueCheck = calculated
+		mode: import
+		source =
+				
+				SUMMARIZE(
+				    'msdynmkt_contactpointconsent4',
+				    'msdynmkt_contactpointconsent4'[msdynmkt_contactpointtype],
+				    'msdynmkt_contactpointconsent4'[msdynmkt_consentstate],
+				    "RowCount", COUNTROWS('msdynmkt_contactpointconsent4')
+				)
+
+	annotation PBI_Id = c0427fa6031a4d7e975bbbe0f4ab48d4
+

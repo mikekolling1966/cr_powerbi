@@ -1,0 +1,174 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "66378a73e7ec0236907c",
+  "position": {
+    "x": 940.36809815950926,
+    "y": 14.396728016359919,
+    "z": 19000,
+    "height": 313.4560327198364,
+    "width": 274.1922290388548,
+    "tabOrder": 19000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cap_esacontactonboarding"
+                    }
+                  },
+                  "Property": "cap_name"
+                }
+              },
+              "queryRef": "cap_esacontactonboarding.cap_name",
+              "nativeQueryRef": "cap_name"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cap_esacontactonboarding"
+                    }
+                  },
+                  "Property": "Users Associated to an Onboarding Project"
+                }
+              },
+              "queryRef": "cap_esacontactonboarding.Users per Onboarding Project",
+              "nativeQueryRef": "Users Associated to an Onboarding Project"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "cap_esacontactonboarding"
+                  }
+                },
+                "Property": "cap_name"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "133.2233009469646D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "cap_esacontactonboarding.cap_name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "111.50485436893206D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "cap_esacontactonboarding.Users per Onboarding Project"
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Onboarding Projects'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

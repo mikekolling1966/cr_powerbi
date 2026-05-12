@@ -1,0 +1,7 @@
+expression BaseUrl = "https://esacontact.crm4.dynamics.com" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 79338096-29b9-44d6-a5e8-4a6cf043db86
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+

@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "c3b97f297deac280dc56",
+  "position": {
+    "x": 32.377740303541316,
+    "y": 89.578414839797645,
+    "z": 3000,
+    "height": 105.7672849915683,
+    "width": 153.25463743676224,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cap_project"
+                    }
+                  },
+                  "Property": "Total Users"
+                }
+              },
+              "queryRef": "cap_project.Total Users",
+              "nativeQueryRef": "Total Users"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "cap_project"
+                  }
+                },
+                "Property": "Total Users"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

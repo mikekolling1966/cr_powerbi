@@ -1,0 +1,90 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "a02a17e6525e013ac1bc",
+  "position": {
+    "x": 298.76288659793818,
+    "y": 117.83505154639175,
+    "z": 2000,
+    "height": 189.27835051546393,
+    "width": 599.38144329896909,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cap_project"
+                    }
+                  },
+                  "Property": "cap_name"
+                }
+              },
+              "queryRef": "cap_project.cap_name",
+              "nativeQueryRef": "cap_name",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cap_project"
+                    }
+                  },
+                  "Property": "Users Per Project"
+                }
+              },
+              "queryRef": "cap_project.Users Per Project",
+              "nativeQueryRef": "Users Per Project"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "cap_project"
+                  }
+                },
+                "Property": "Users Per Project"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Users Per Project by Project Name'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,507 @@
+table msdynmkt_segment
+	lineageTag: 8d07a896-03d6-414a-acfa-f1cd49ed273a
+
+	measure 'Total Subscribers' = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT('msdynmkt_contactpointconsent4'[msdynmkt_contactid]),
+			    'msdynmkt_contactpointconsent4'[msdynmkt_consentstate] = "Opted In"
+			)
+			
+			```
+		lineageTag: 7a227c49-3942-4c36-b411-25546e6a8613
+
+	measure 'Average Subscriptions per Contact' =
+			
+			AVERAGEX(
+			    'msdynmkt_segment',
+			    'msdynmkt_segment'[msdynmkt_membercount]
+			)
+		lineageTag: e1e014ed-0660-4e8b-8ca5-b03b6d07b9fb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column createdby
+		dataType: string
+		lineageTag: 9b7991a5-6a4b-4dc4-9c72-4b6111d25ec9
+		summarizeBy: none
+		sourceColumn: createdby
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 342f6d56-61dc-4f66-b338-4388daa23c17
+		summarizeBy: none
+		sourceColumn: createdon
+
+		variation Variation
+			isDefault
+			relationship: ff386a2d-64ed-4313-a0bd-74011f56ec0a
+			defaultHierarchy: LocalDateTable_dee352e9-530e-4206-bb8f-b8aacfe49a0b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdonbehalfby
+		dataType: string
+		lineageTag: 1d9321bf-4b4f-41da-bdf1-f0889fced02d
+		summarizeBy: none
+		sourceColumn: createdonbehalfby
+
+		annotation SummarizationSetBy = Automatic
+
+	column importsequencenumber
+		dataType: int64
+		formatString: 0
+		lineageTag: fedbf9f9-f516-414b-b94b-9b1854e1b2a3
+		summarizeBy: sum
+		sourceColumn: importsequencenumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedby
+		dataType: string
+		lineageTag: d273fd2c-2101-4980-9f70-6e8a1f252202
+		summarizeBy: none
+		sourceColumn: modifiedby
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 14e35e0f-5e24-4738-afca-a16cd1ac4ce7
+		summarizeBy: none
+		sourceColumn: modifiedon
+
+		variation Variation
+			isDefault
+			relationship: d7d71639-2f70-40d7-9876-7968ec8457b7
+			defaultHierarchy: LocalDateTable_0744930e-f0f6-452e-9740-6ac3b110aa8d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedonbehalfby
+		dataType: string
+		lineageTag: 58036c45-a961-45fc-9944-041ea29cc8ef
+		summarizeBy: none
+		sourceColumn: modifiedonbehalfby
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_baseentitylogicalname
+		dataType: string
+		lineageTag: d49f6ca2-4836-48fa-a5f9-14c54f07c334
+		summarizeBy: none
+		sourceColumn: msdynmkt_baseentitylogicalname
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_cdmmanifestrelativepath
+		dataType: string
+		lineageTag: a71399e3-230a-44d8-8f97-fed76d76e657
+		summarizeBy: none
+		sourceColumn: msdynmkt_cdmmanifestrelativepath
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_cdmpartitionprimarykeycolumn
+		dataType: string
+		lineageTag: d7f856d8-2bda-4b23-afaf-6dd260ebc4a0
+		summarizeBy: none
+		sourceColumn: msdynmkt_cdmpartitionprimarykeycolumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_datalakefolderid
+		dataType: string
+		lineageTag: 77e3db26-6b6e-46b9-bd6a-27c545050685
+		summarizeBy: none
+		sourceColumn: msdynmkt_datalakefolderid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_description
+		dataType: string
+		lineageTag: 76061fac-db91-458e-95ac-967a4542d785
+		summarizeBy: none
+		sourceColumn: msdynmkt_description
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_displayname
+		dataType: string
+		lineageTag: 0a04bf32-e23a-4c7c-b406-61c18b19c801
+		summarizeBy: none
+		sourceColumn: msdynmkt_displayname
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_lastevaluated
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 371c58b1-cd26-4cd2-be40-e2b7b6f7ff4f
+		summarizeBy: none
+		sourceColumn: msdynmkt_lastevaluated
+
+		variation Variation
+			isDefault
+			relationship: 18d3db94-6894-4aa3-a85b-ec77983f24be
+			defaultHierarchy: LocalDateTable_345c3c3c-d3aa-4b07-8a4b-9cac748e837c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_lastexportedat
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: fd78c1ae-069e-40b9-a345-49ea65abd313
+		summarizeBy: none
+		sourceColumn: msdynmkt_lastexportedat
+
+		variation Variation
+			isDefault
+			relationship: a209f0a9-1dd5-4029-9e9e-3f9ec93553db
+			defaultHierarchy: LocalDateTable_ed1b0c70-c7ad-43ee-9abe-e1a8d44f0348.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_lastsegmentrefreshversion
+		dataType: string
+		lineageTag: 5c804945-7587-4fd8-81d4-61bfcb5c0c48
+		summarizeBy: none
+		sourceColumn: msdynmkt_lastsegmentrefreshversion
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_lastupdatedon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: fba28c8c-2370-4c1b-b64b-7e7d9ea48371
+		summarizeBy: none
+		sourceColumn: msdynmkt_lastupdatedon
+
+		variation Variation
+			isDefault
+			relationship: 4c68e402-201e-44c3-8746-3af2ab0726f6
+			defaultHierarchy: LocalDateTable_9f505aa1-4503-4ee5-9640-599f7f6aca6f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_lastusedinjourney
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1da5b6e3-faab-4378-b05f-726a38ca764e
+		summarizeBy: none
+		sourceColumn: msdynmkt_lastusedinjourney
+
+		variation Variation
+			isDefault
+			relationship: b32a13b3-a820-4cee-97e9-a3030623f71f
+			defaultHierarchy: LocalDateTable_657c4cd6-a37f-4a9c-a393-99b551b947a2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_lastusedinjourneyby
+		dataType: string
+		lineageTag: 5f2c8077-58bf-4c1c-ba51-333affdf6ab7
+		summarizeBy: none
+		sourceColumn: msdynmkt_lastusedinjourneyby
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_membercount
+		dataType: int64
+		formatString: 0
+		lineageTag: b769b614-39e1-469e-bf69-34da8bf36df4
+		summarizeBy: sum
+		sourceColumn: msdynmkt_membercount
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_membercount_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0b335505-7a06-4cb3-9bde-9bda180d5931
+		summarizeBy: none
+		sourceColumn: msdynmkt_membercount_date
+
+		variation Variation
+			isDefault
+			relationship: 97a88313-5d53-4e13-83ab-9ae12b744238
+			defaultHierarchy: LocalDateTable_0539469a-7adb-43ae-9a11-990ac6b2d7f3.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_membercount_state
+		dataType: int64
+		formatString: 0
+		lineageTag: c05725eb-20ef-4e8c-9a93-35e1b4e3d813
+		summarizeBy: sum
+		sourceColumn: msdynmkt_membercount_state
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_publishedjourneycount
+		dataType: int64
+		formatString: 0
+		lineageTag: f13634e4-f340-4d67-9a7b-855e9cc86267
+		summarizeBy: sum
+		sourceColumn: msdynmkt_publishedjourneycount
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_scope
+		dataType: int64
+		formatString: 0
+		lineageTag: 0c5feeb8-224e-474f-a177-a4eaf6b3c3d7
+		summarizeBy: sum
+		sourceColumn: msdynmkt_scope
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_scope_display
+		dataType: string
+		lineageTag: 8b6cdb3b-5743-4d1c-bef0-74098b12a3c6
+		summarizeBy: none
+		sourceColumn: msdynmkt_scope_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_segmentid
+		dataType: string
+		lineageTag: 31bde38d-e388-4ae4-989f-bfe789639fbd
+		summarizeBy: none
+		sourceColumn: msdynmkt_segmentid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_source
+		dataType: int64
+		formatString: 0
+		lineageTag: 4d7179e9-393f-4e69-849d-c3954a1b54f0
+		summarizeBy: sum
+		sourceColumn: msdynmkt_source
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_source_display
+		dataType: string
+		lineageTag: 75d3532c-41a7-4922-9e04-07de7d3a7093
+		summarizeBy: none
+		sourceColumn: msdynmkt_source_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_sourcesegmentcreatedby
+		dataType: string
+		lineageTag: b3f04544-7ff9-43a1-aa40-aafeac9af598
+		summarizeBy: none
+		sourceColumn: msdynmkt_sourcesegmentcreatedby
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_sourcesegmentcreatedon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7d107693-c37b-42ac-aa8e-9a03b159543d
+		summarizeBy: none
+		sourceColumn: msdynmkt_sourcesegmentcreatedon
+
+		variation Variation
+			isDefault
+			relationship: 991f692c-d17d-426d-ab66-8d23332c5e0a
+			defaultHierarchy: LocalDateTable_98a17ae9-194b-42aa-b755-8a16dce9b578.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_sourcesegmentuid
+		dataType: string
+		lineageTag: 3aac7a8a-79a1-425e-a8d4-788a47f55cce
+		summarizeBy: none
+		sourceColumn: msdynmkt_sourcesegmentuid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_sourcesegmenturi
+		dataType: string
+		lineageTag: 3612133e-39cb-4084-9d79-695097ccc2f7
+		summarizeBy: none
+		sourceColumn: msdynmkt_sourcesegmenturi
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_timerequiredby
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2eab0ff5-21a0-4ecb-aea5-3aa64a70c743
+		summarizeBy: none
+		sourceColumn: msdynmkt_timerequiredby
+
+		variation Variation
+			isDefault
+			relationship: 0b371b7d-3be6-4ecc-af49-522bfd3c5805
+			defaultHierarchy: LocalDateTable_fc5a3580-dacb-4a0a-83ee-ae4e5e1b7a07.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_timerequiredend
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 199c8de3-3e65-48cf-adad-547ac1a026c4
+		summarizeBy: none
+		sourceColumn: msdynmkt_timerequiredend
+
+		variation Variation
+			isDefault
+			relationship: 3b60970c-0f4e-44ad-9a16-fa5eff072b39
+			defaultHierarchy: LocalDateTable_2c85028d-07c0-410a-a259-479399e198e0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_type
+		dataType: int64
+		formatString: 0
+		lineageTag: 851d5974-2cd4-469d-bd85-4557b5567c08
+		summarizeBy: sum
+		sourceColumn: msdynmkt_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_type_display
+		dataType: string
+		lineageTag: d60e55c8-3cf3-449f-ad35-a724012e0b79
+		summarizeBy: none
+		sourceColumn: msdynmkt_type_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column organizationid
+		dataType: string
+		lineageTag: e6a024f5-53d7-4e2b-9f94-b3a4a2e5b8bd
+		summarizeBy: none
+		sourceColumn: organizationid
+
+		annotation SummarizationSetBy = Automatic
+
+	column overriddencreatedon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8c861d54-ebe7-46f4-a83b-9262c87f8c24
+		summarizeBy: none
+		sourceColumn: overriddencreatedon
+
+		variation Variation
+			isDefault
+			relationship: cdeb5abb-a51d-46e0-8db3-75d804980afb
+			defaultHierarchy: LocalDateTable_3f3d0a16-14ab-479e-a128-cca37daad4e5.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ownerid
+		dataType: string
+		lineageTag: d6cf10f3-64ae-4c9d-8707-f0c7d3c8c5f0
+		summarizeBy: none
+		sourceColumn: ownerid
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningbusinessunit
+		dataType: string
+		lineageTag: 37ba2124-f501-43af-97ca-062b4e6add1e
+		summarizeBy: none
+		sourceColumn: owningbusinessunit
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningteam
+		dataType: string
+		lineageTag: 58a76aec-0a5f-4d30-968e-b1e3c444fda0
+		summarizeBy: none
+		sourceColumn: owningteam
+
+		annotation SummarizationSetBy = Automatic
+
+	column owninguser
+		dataType: string
+		lineageTag: 4b3b038e-f17f-498d-abab-9a250d771fe9
+		summarizeBy: none
+		sourceColumn: owninguser
+
+		annotation SummarizationSetBy = Automatic
+
+	column statecode
+		dataType: int64
+		formatString: 0
+		lineageTag: 71506044-80c9-4a7a-8c50-68b1eab11880
+		summarizeBy: sum
+		sourceColumn: statecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column statecode_display
+		dataType: string
+		lineageTag: 7aeb6027-ef0e-44d8-8ba8-178e1e57b05e
+		summarizeBy: none
+		sourceColumn: statecode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column statuscode
+		dataType: int64
+		formatString: 0
+		lineageTag: 6c6f6a29-4da7-47e2-b170-deffa431b04b
+		summarizeBy: sum
+		sourceColumn: statuscode
+
+		annotation SummarizationSetBy = Automatic
+
+	column statuscode_display
+		dataType: string
+		lineageTag: e7a99d2c-d390-415f-827b-ad231d372f0d
+		summarizeBy: none
+		sourceColumn: statuscode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column timezoneruleversionnumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 8f6e6e70-1e24-4884-976f-493f9035fff2
+		summarizeBy: sum
+		sourceColumn: timezoneruleversionnumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column utcconversiontimezonecode
+		dataType: int64
+		formatString: 0
+		lineageTag: b97855f6-ee27-418e-b7ca-086eeecc951a
+		summarizeBy: sum
+		sourceColumn: utcconversiontimezonecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column versionnumber
+		dataType: int64
+		formatString: 0
+		lineageTag: d6ca0989-b623-4615-a11e-03c329e3b1d4
+		summarizeBy: sum
+		sourceColumn: versionnumber
+
+		annotation SummarizationSetBy = Automatic
+
+	partition msdynmkt_segment = m
+		mode: import
+		source =
+				let
+				    Source = Cds.Entities(BaseUrl, [ReorderColumns=null, UseFormattedValue=null]),
+				    entities = Source{[Group="entities"]}[Data],
+				    msdynmkt_segments = entities{[EntitySetName="msdynmkt_segments"]}[Data]
+				in
+				    msdynmkt_segments
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,78 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "d910fac1779891a41620",
+  "position": {
+    "x": 18.556701030927837,
+    "y": 613.29896907216494,
+    "z": 4000,
+    "height": 195.77319587628867,
+    "width": 223.60824742268042,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cap_esacontactonboarding"
+                    }
+                  },
+                  "Property": "Users Associated to an Onboarding Project"
+                }
+              },
+              "queryRef": "cap_esacontactonboarding.Users per Onboarding Project",
+              "nativeQueryRef": "Users Associated to an Onboarding Project"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "cap_esacontactonboarding"
+                  }
+                },
+                "Property": "Users Associated to an Onboarding Project"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Onboarding Project Users'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

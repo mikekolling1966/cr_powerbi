@@ -1,0 +1,90 @@
+table ConsentTable
+	lineageTag: 8fdb932d-a80f-4931-8dc3-ec5d5a60d08a
+
+	column ContactID
+		lineageTag: 219b52fe-a550-43e1-aa98-51f34e32a027
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [ContactID]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ConsentType
+		lineageTag: 24c8fe64-a14a-4621-9983-b8e4aa756299
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [ConsentType]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ConsentGiven
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 8419d157-803d-4a3b-86de-6688569c321a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [ConsentGiven]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ConsentGivenNumeric
+		formatString: 0
+		lineageTag: 950ca05f-9c17-43e0-bdea-3cf752c17cda
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [ConsentGivenNumeric]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ConsentTable = calculated
+		mode: import
+		source = ```
+				
+				UNION(
+				    SELECTCOLUMNS(
+				        Contact,
+				        "ContactID", Contact[contactid],
+				        "ConsentType", "No Bulk Email",
+				        "ConsentGiven", Contact[donotbulkemail],
+				        "ConsentGivenNumeric", IF(Contact[donotbulkemail] = TRUE(), 0, 1)
+				    ),
+				    SELECTCOLUMNS(
+				        Contact,
+				        "ContactID", Contact[contactid],
+				        "ConsentType", "No Bulk Postal Mail",
+				        "ConsentGiven", Contact[donotbulkpostalmail],
+				        "ConsentGivenNumeric", IF(Contact[donotbulkpostalmail] = TRUE(), 0, 1)
+				    ),
+				    SELECTCOLUMNS(
+				        Contact,
+				        "ContactID", Contact[contactid],
+				        "ConsentType", "No Email",
+				        "ConsentGiven", Contact[donotemail],
+				        "ConsentGivenNumeric", IF(Contact[donotemail] = TRUE(), 0, 1)
+				    ),
+				    SELECTCOLUMNS(
+				        Contact,
+				        "ContactID", Contact[contactid],
+				        "ConsentType", "No Phone",
+				        "ConsentGiven", Contact[donotphone],
+				        "ConsentGivenNumeric", IF(Contact[donotphone] = TRUE(), 0, 1)
+				    ),
+				    SELECTCOLUMNS(
+				        Contact,
+				        "ContactID", Contact[contactid],
+				        "ConsentType", "No Postal Mail",
+				        "ConsentGiven", Contact[donotpostalmail],
+				        "ConsentGivenNumeric", IF(Contact[donotpostalmail] = TRUE(), 0, 1)
+				    ),
+				    SELECTCOLUMNS(
+				        Contact,
+				        "ContactID", Contact[contactid],
+				        "ConsentType", "GDPR Do Not Track",
+				        "ConsentGiven", Contact[msgdpr_donottrack],
+				        "ConsentGivenNumeric", IF(Contact[msgdpr_donottrack] = TRUE(), 0, 1)
+				    )
+				)
+				
+				```
+
+	annotation PBI_Id = 4a7e2978e75a4663b0bb76dcc733103f
+

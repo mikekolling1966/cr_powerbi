@@ -1,0 +1,35 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "fbbe857250867b3c7d60",
+  "displayName": "Page 1",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "25d4577c5330dd0b0490",
+      "target": "61cf2f2fde0084de2766",
+      "type": "NoFilter"
+    },
+    {
+      "source": "25d4577c5330dd0b0490",
+      "target": "a5a0482d70460c809e5d",
+      "type": "NoFilter"
+    },
+    {
+      "source": "25d4577c5330dd0b0490",
+      "target": "9bf3e070809a8b02ac54",
+      "type": "NoFilter"
+    },
+    {
+      "source": "25d4577c5330dd0b0490",
+      "target": "154b3b5f50ee8b9415be",
+      "type": "NoFilter"
+    },
+    {
+      "source": "25d4577c5330dd0b0490",
+      "target": "f20f9405a984da4a870a",
+      "type": "NoFilter"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-GB
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Account","Contact","cap_esacontactonboarding","cap_project","msdyncrm_customerjourney","msdyncrm_marketingemail","msdyncrm_marketingform","msdyncrm_marketingpage","msevtmgt_Event","msevtmgt_EventRegistration","msfp_surveyresponse","ListMember","SystemUser","cap_cap_project_systemuser","cap_cap_esacontactonboarding_systemuser","BaseUrl"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Account
+ref table DateTableTemplate_2e3f0f95-61e7-48fc-ad59-dacf08de1033
+ref table LocalDateTable_af8f4c1d-0ef4-43ec-8498-fef177a4b985
+ref table LocalDateTable_c11c66d8-66c6-4e07-b5d1-e32b0c59e233
+ref table LocalDateTable_34fff14a-1fce-4949-899a-47a234d70f45
+ref table LocalDateTable_1aab97f9-ae16-413b-9da4-33a5f2575412
+ref table LocalDateTable_bbb1aa47-a73c-4b7e-b5db-0673f10b6958
+ref table LocalDateTable_f50e877e-a63e-4918-bc4f-15be475bd71b
+ref table DateTable
+ref table LocalDateTable_49f3a540-9343-43a8-8f4c-3d5e6f8cee84
+ref table Contact
+ref table LocalDateTable_205d1503-94cd-476b-9a13-e4ce7c691f82
+ref table LocalDateTable_40cb4bf6-1fa7-4d47-b89d-ea206efe5d83
+ref table LocalDateTable_f1eb5f76-7488-412f-be0f-bc1e8339dcfd
+ref table LocalDateTable_a7df9ef5-1f78-4d94-a6b6-ce3d972b4630
+ref table LocalDateTable_7ee86328-a7ba-4fa6-8271-4de990a2ecea
+ref table LocalDateTable_46d1f31e-a5a5-4662-9ea9-61db87157a66
+ref table LocalDateTable_22114129-b214-4faa-950c-f4a38a722613
+ref table LocalDateTable_6039d643-45bd-4138-8d4e-ea735d429fc2
+ref table LocalDateTable_2d86dbb0-1cfe-45a4-811d-8e8671e16cab
+ref table LocalDateTable_98ad6d8f-efc5-42ca-89a9-651c22a1d29c
+ref table LocalDateTable_c6e8c4dd-2e71-4a48-a66a-fd055a831aec
+ref table LocalDateTable_7d070371-87d8-4fd4-9078-4c2cf2e78cb0
+ref table LocalDateTable_4de84317-c86a-4ce6-8bf2-4d411f2b6533
+ref table LocalDateTable_4d8c15ce-c742-410f-b37b-9e9324e1f8f1
+ref table cap_esacontactonboarding
+ref table LocalDateTable_dcceaa61-daff-4009-92c9-3d6fe3024e4b
+ref table LocalDateTable_d1a07df5-9afe-46e6-baa4-b6bf484fe43e
+ref table LocalDateTable_2cbc5a5a-4694-4fc4-b4cf-70a9ff06fb11
+ref table cap_project
+ref table LocalDateTable_5c1ffcd6-4010-4448-aec3-589eb0d459bd
+ref table LocalDateTable_91012c18-62a9-49ef-a5a8-3a554e33e9bd
+ref table LocalDateTable_7cb8fb5b-0177-4d1b-8ee0-73e1513b78e7
+ref table LocalDateTable_f38a5895-dfdd-4deb-a013-838ecfff2e62
+ref table LocalDateTable_1176817a-708e-4867-8020-33337e4e9ed7
+ref table msdyncrm_customerjourney
+ref table LocalDateTable_0f9ad460-56cb-48a1-b6c5-859bfe11340b
+ref table LocalDateTable_b2ae2f20-ed5c-4505-ac9b-503c5e07042c
+ref table LocalDateTable_be7bedca-6b1a-42ce-b11d-279d49abd434
+ref table LocalDateTable_be091735-df05-4bc1-a5f8-c03068bd08b3
+ref table LocalDateTable_29111249-9216-4e99-b00f-810129d690eb
+ref table msdyncrm_marketingemail
+ref table LocalDateTable_40a2b14f-3c13-4493-a0ce-d46f873e4db7
+ref table LocalDateTable_d43b3978-aaa6-44aa-8603-f09f1188cc11
+ref table LocalDateTable_012fe2dc-f507-4bbe-b7c5-37a437ef3c6c
+ref table msdyncrm_marketingform
+ref table LocalDateTable_49e83e20-45cc-4cf4-8388-7e455ca16d3b
+ref table LocalDateTable_98cd3c38-2114-4232-94d0-13c96ab49ca8
+ref table LocalDateTable_cc0cf014-2b8f-4af0-87db-208ef7a7aacd
+ref table LocalDateTable_f58b75d9-0131-4b17-a83f-aa1aa27ca477
+ref table msdyncrm_marketingpage
+ref table LocalDateTable_aff3f290-1d63-41dd-9b99-163dd86c13a1
+ref table LocalDateTable_2fff014c-5091-4e22-ae31-7ca51b03334e
+ref table LocalDateTable_ae70f02f-cea5-4d49-bba2-b3ca066585f9
+ref table LocalDateTable_210492c5-c597-4f94-97fe-db29d6445f29
+ref table LocalDateTable_7b205343-11af-4293-869c-2039a6253aa7
+ref table LocalDateTable_0c1e4db1-475b-4174-ad9f-3a430dab811f
+ref table msevtmgt_Event
+ref table LocalDateTable_a5aeba2c-bb4c-40dd-88b6-aeaeede88c70
+ref table LocalDateTable_c60521e8-8ac7-4d26-8c8a-c7681d2d0c08
+ref table LocalDateTable_edf8a483-f260-4a1b-ad01-16f98c87d9e5
+ref table LocalDateTable_3d094b5e-6c4d-4892-970c-c47bd4850bc6
+ref table LocalDateTable_e6b546f2-2c10-4235-b3e0-0ebfbe571fe6
+ref table LocalDateTable_245e4818-135d-4314-abde-b49f1eb54122
+ref table LocalDateTable_4219b41e-868f-4aaa-81eb-f51497607e4c
+ref table LocalDateTable_eba4a0fd-9646-4dc4-8339-9f7c7cb361e9
+ref table LocalDateTable_0415e3c6-6276-4168-a091-1bed449f656d
+ref table LocalDateTable_1d2550cc-7617-4579-acbb-924b2bf41d22
+ref table LocalDateTable_6ca5c7e6-8739-4626-ba1d-277d4fca865f
+ref table LocalDateTable_ee0a08b7-c45c-450e-bee3-95ac3f0e32ed
+ref table msevtmgt_EventRegistration
+ref table LocalDateTable_7eb008bc-e3ed-475d-b6d0-b87a4a8dc6e7
+ref table LocalDateTable_916f61ec-cead-4e10-9d3e-7134d8666f24
+ref table LocalDateTable_2d032b82-ccfb-454f-8de8-39701e16706d
+ref table LocalDateTable_6f2f4701-12a7-463b-b96d-01fbe39cbfd8
+ref table msfp_surveyresponse
+ref table LocalDateTable_6889040c-a87f-46aa-8916-49044cb22e38
+ref table LocalDateTable_8b3499a6-7a5c-4d4a-b138-0e132140d9e1
+ref table LocalDateTable_8468faa3-bad1-41ba-83d3-e03f5bfdf2d2
+ref table LocalDateTable_1aabae92-3245-4be2-b652-0b4928c9ea56
+ref table LocalDateTable_040f1bc6-e984-4861-9572-01603dc5c339
+ref table LocalDateTable_af14d60f-6588-490c-a845-06e791827341
+ref table LocalDateTable_1b79e62d-4c28-4f36-8cc3-f3f628834967
+ref table LocalDateTable_d8d21e00-b0de-4df0-a475-c53be3cb3508
+ref table LocalDateTable_bafa02e1-6d23-4cbd-a249-210556dec356
+ref table LocalDateTable_c0ceed75-7cbd-410a-8760-d29ca23d94c9
+ref table LocalDateTable_9f39a9d4-b06e-40fc-87a5-aba774f8e86d
+ref table LocalDateTable_4fdf3d33-00ea-4e7a-8617-e4c2388442c1
+ref table LocalDateTable_d3548389-20aa-4f1a-a1be-0b66c35a4072
+ref table LocalDateTable_871785eb-944b-40ee-b5a6-cb372a5ed48d
+ref table ListMember
+ref table LocalDateTable_67aec16c-7b11-4ecc-b51b-b489bfdc44bd
+ref table LocalDateTable_780caee0-63be-4e4f-9166-29f6cbddf4e9
+ref table LocalDateTable_b98862cc-7641-47f4-8145-29189f98a7a3
+ref table LocalDateTable_a9cd7beb-8a7a-41e5-a8cd-bd33c948d60c
+ref table ConsentTable
+ref table SystemUser
+ref table LocalDateTable_516adb92-a16b-4800-8727-451aaa39be93
+ref table LocalDateTable_c9ff7bc5-0cfc-401a-ab83-15a6eb7dc78c
+ref table LocalDateTable_c4f68eec-e7fe-45d3-affb-4cbafc3a06bc
+ref table cap_cap_project_systemuser
+ref table cap_cap_esacontactonboarding_systemuser
+ref table LocalDateTable_4064e343-17a1-4fc2-a6c2-596d591db8f2
+ref table LocalDateTable_53989ba0-f4ce-46ac-8aef-61b2527c5b06
+ref table LocalDateTable_1b5446e4-724e-400b-991d-e123821f9ea3
+ref table LocalDateTable_d5163377-4742-4e22-8c09-e7bd61f627a2
+ref table LocalDateTable_faa47af3-78b7-4d37-a789-c55bfa8984fa
+ref table LocalDateTable_b1849e0d-1c08-4e14-8415-d1b59a98ea28
+
+ref cultureInfo en-US
+

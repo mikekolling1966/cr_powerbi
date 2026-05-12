@@ -1,0 +1,371 @@
+table cap_project
+	lineageTag: 62e786a2-664a-45d8-b8f5-ddb1619e7d15
+
+	measure 'Total Projects' = COUNTROWS(cap_project)
+		formatString: 0
+		lineageTag: adce6a1e-fc62-4940-8f0d-dce2761542e4
+
+	measure 'Total Users' = ```
+			DISTINCTCOUNT('cap_cap_project_systemuser'[systemuserid])
+			
+			
+			
+			```
+		formatString: 0
+		lineageTag: d29c8596-b2cf-46ae-8927-d6f404b9c640
+
+	measure 'Measure 3'
+		lineageTag: bc21f896-8d52-4fcb-aa16-617679feb08c
+
+		annotation 43dbc3e8-3a1c-4b6f-9923-b49ff7d6691c = True
+
+	measure 'Users Per Project' = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT('cap_cap_project_systemuser'[systemuserid]),
+			    KEEPFILTERS(VALUES('cap_project'[cap_projectid]))
+			)
+			
+			
+			```
+		formatString: 0
+		lineageTag: 5d245aee-c78a-40ae-90fc-2b6d810c17c3
+
+	column cap_descriptionone
+		dataType: string
+		lineageTag: 9efdd61e-740f-43ab-925c-d6866e3386c7
+		summarizeBy: none
+		sourceColumn: cap_descriptionone
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_marketingemailfromaddress
+		dataType: string
+		lineageTag: feaab9b6-03b4-4429-9a59-034c10479435
+		summarizeBy: none
+		sourceColumn: cap_marketingemailfromaddress
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_marketingemailfromname
+		dataType: string
+		lineageTag: 7f039804-39da-4690-8e3d-c81c9c8dec9e
+		summarizeBy: none
+		sourceColumn: cap_marketingemailfromname
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_name
+		dataType: string
+		lineageTag: 20c77195-db96-44e3-93aa-2b9624d3ca1e
+		summarizeBy: none
+		sourceColumn: cap_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_primaryaccount
+		dataType: string
+		lineageTag: 0a681843-2b2d-4b8c-9c78-9efb119c8724
+		summarizeBy: none
+		sourceColumn: cap_primaryaccount
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_primarycontact
+		dataType: string
+		lineageTag: 99532a19-bb0f-4a4d-8e4e-285214580080
+		summarizeBy: none
+		sourceColumn: cap_primarycontact
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_primaryuserinvolvedid
+		dataType: string
+		lineageTag: a114cc15-1866-4080-9cfa-8a44618d0cfd
+		summarizeBy: none
+		sourceColumn: cap_primaryuserinvolvedid
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_projectenddate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 39c5d215-0739-4d3d-83d1-881436693189
+		summarizeBy: none
+		sourceColumn: cap_projectenddate
+
+		variation Variation
+			isDefault
+			relationship: a0a2f60e-ee11-4057-941d-3c87c6ea1286
+			defaultHierarchy: LocalDateTable_5c1ffcd6-4010-4448-aec3-589eb0d459bd.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_projectid
+		dataType: string
+		lineageTag: b3ec3278-cb36-4187-b9a9-c24be0b9e33e
+		summarizeBy: none
+		sourceColumn: cap_projectid
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_projectstartdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d2001ac1-5ae6-403b-98ed-b6ce3c146fb4
+		summarizeBy: none
+		sourceColumn: cap_projectstartdate
+
+		variation Variation
+			isDefault
+			relationship: 771ee8bd-0a9c-48ca-9aa4-8553d5bfec43
+			defaultHierarchy: LocalDateTable_91012c18-62a9-49ef-a5a8-3a554e33e9bd.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_projectstatus
+		dataType: int64
+		formatString: 0
+		lineageTag: 2684b77f-78c8-4085-978b-5a02f8c9c078
+		summarizeBy: sum
+		sourceColumn: cap_projectstatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_projectstatus_display
+		dataType: string
+		lineageTag: a54fa028-afa5-40f8-8375-9a49015d509f
+		summarizeBy: none
+		sourceColumn: cap_projectstatus_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_technologydomain
+		dataType: string
+		lineageTag: d198e703-0d75-46f5-bf62-34688a74ca53
+		summarizeBy: none
+		sourceColumn: cap_technologydomain
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_technologygroup
+		dataType: string
+		lineageTag: 51053704-df5b-44d7-a3a8-65c1b4ec20d5
+		summarizeBy: none
+		sourceColumn: cap_technologygroup
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_technologysubdomain
+		dataType: string
+		lineageTag: 86ad7d7f-3866-4718-bd58-b70b7ae7766b
+		summarizeBy: none
+		sourceColumn: cap_technologysubdomain
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdby
+		dataType: string
+		lineageTag: 4ff49289-37d3-495f-9a26-6907c8205d7f
+		summarizeBy: none
+		sourceColumn: createdby
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 90833eaf-bc27-433b-a0de-fde0dde5d6ad
+		summarizeBy: none
+		sourceColumn: createdon
+
+		variation Variation
+			isDefault
+			relationship: c1f6b8f6-4ecb-4051-ad95-f0422d41e82d
+			defaultHierarchy: LocalDateTable_7cb8fb5b-0177-4d1b-8ee0-73e1513b78e7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdonbehalfby
+		dataType: string
+		lineageTag: 24df03d4-5f99-444d-8a58-218f29e678b2
+		summarizeBy: none
+		sourceColumn: createdonbehalfby
+
+		annotation SummarizationSetBy = Automatic
+
+	column importsequencenumber
+		dataType: int64
+		formatString: 0
+		lineageTag: fbd8dffb-6073-4a36-ba50-89e3f3ba44d1
+		summarizeBy: sum
+		sourceColumn: importsequencenumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedby
+		dataType: string
+		lineageTag: 752f07fa-02b6-48ac-b0f0-352be9a919d7
+		summarizeBy: none
+		sourceColumn: modifiedby
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 841c1c89-d20c-419a-849d-bdbcc236e31c
+		summarizeBy: none
+		sourceColumn: modifiedon
+
+		variation Variation
+			isDefault
+			relationship: fece0b17-656a-4225-8ed1-dbc73edbaf3f
+			defaultHierarchy: LocalDateTable_f38a5895-dfdd-4deb-a013-838ecfff2e62.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedonbehalfby
+		dataType: string
+		lineageTag: 0c159655-1dfe-4ecd-80e2-8efd1a25c656
+		summarizeBy: none
+		sourceColumn: modifiedonbehalfby
+
+		annotation SummarizationSetBy = Automatic
+
+	column overriddencreatedon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: dc0eded9-fbee-4a5a-84b5-386fa6a8c7a7
+		summarizeBy: none
+		sourceColumn: overriddencreatedon
+
+		variation Variation
+			isDefault
+			relationship: 3431098d-6cf1-40d1-957f-5338d4ba5d06
+			defaultHierarchy: LocalDateTable_1176817a-708e-4867-8020-33337e4e9ed7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ownerid
+		dataType: string
+		lineageTag: 6b4747c8-430d-4293-a9bb-29b84ff33503
+		summarizeBy: none
+		sourceColumn: ownerid
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningbusinessunit
+		dataType: string
+		lineageTag: 9d27b208-1bef-4bf8-b571-db2a451acd36
+		summarizeBy: none
+		sourceColumn: owningbusinessunit
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningteam
+		dataType: string
+		lineageTag: 27c13d21-3a69-480c-aac7-7727fb4c4074
+		summarizeBy: none
+		sourceColumn: owningteam
+
+		annotation SummarizationSetBy = Automatic
+
+	column owninguser
+		dataType: string
+		lineageTag: be9de557-4d12-4e3f-a3ca-a4abe74ca62e
+		summarizeBy: none
+		sourceColumn: owninguser
+
+		annotation SummarizationSetBy = Automatic
+
+	column statecode
+		dataType: int64
+		formatString: 0
+		lineageTag: 65f9ae4e-b8eb-4f41-987f-de09e83241d5
+		summarizeBy: sum
+		sourceColumn: statecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column statecode_display
+		dataType: string
+		lineageTag: d3a01569-b0a4-43a2-8454-f2121b58b6dd
+		summarizeBy: none
+		sourceColumn: statecode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column statuscode
+		dataType: int64
+		formatString: 0
+		lineageTag: 388c6b0d-70bc-4548-8bd4-b6ad18ab0597
+		summarizeBy: sum
+		sourceColumn: statuscode
+
+		annotation SummarizationSetBy = Automatic
+
+	column statuscode_display
+		dataType: string
+		lineageTag: 0f8fb3c5-5027-4ab7-8232-8b7a7d949c1d
+		summarizeBy: none
+		sourceColumn: statuscode_display
+
+		annotation SummarizationSetBy = Automatic
+
+	column timezoneruleversionnumber
+		dataType: int64
+		formatString: 0
+		lineageTag: f31b1a3c-8d88-4700-80df-ee380a52c6b5
+		summarizeBy: sum
+		sourceColumn: timezoneruleversionnumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column utcconversiontimezonecode
+		dataType: int64
+		formatString: 0
+		lineageTag: 72446b00-cd57-4521-9ea8-a62cb3cbffb6
+		summarizeBy: sum
+		sourceColumn: utcconversiontimezonecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column versionnumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 3fea24ad-b647-498d-bcd7-96809033aebd
+		summarizeBy: sum
+		sourceColumn: versionnumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdonDateOnly = ```
+			DATE(YEAR(cap_project[createdon]), MONTH(cap_project[createdon]), DAY(cap_project[createdon]))
+			
+			```
+		formatString: General Date
+		lineageTag: 4f3b1b28-9529-43a8-8429-ada24096d7ed
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: b2d4e848-66f1-4426-a9f9-0673746cc040
+			defaultHierarchy: LocalDateTable_a9cd7beb-8a7a-41e5-a8cd-bd33c948d60c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition cap_project = m
+		mode: import
+		source =
+				let
+				    Source = Cds.Entities(BaseUrl, [ReorderColumns=null, UseFormattedValue=null]),
+				    entities = Source{[Group="entities"]}[Data],
+				    cap_projects = entities{[EntitySetName="cap_projects"]}[Data]
+				in
+				    cap_projects
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
