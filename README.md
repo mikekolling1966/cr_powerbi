@@ -18,6 +18,14 @@ This solution connects to the ESA D365 CRM production Dataverse environment, pul
 
 ---
 
+## Business Requirement
+
+The original requirement was:
+
+> *"Report/KPI showing the situation of the infrastructure like capacity, availability etc. Proper alert shall be put in place (e.g. free disk storage is low than a threshold) so to be able to act before an issue is experienced."*
+
+---
+
 ## Architecture
 
 ```
@@ -443,6 +451,16 @@ environment    = 'PROD'
 
 ## Access
 
+### Current Workspace Members
+
+| User | Role | Notes |
+|---|---|---|
+| Mike Kolling (Mike.Kolling@ext.esa.int) | Workspace Admin | Report author and solution owner |
+| Subramani Paramasivam | Workspace Admin | |
+| Raj Kandadai | Workspace Admin | |
+| Nicholas Reeve | Workspace Contributor | |
+| Maurizio Broglia | Workspace Viewer | Also needs Dataverse Marketing security role |
+
 ### Adding a New Report Viewer
 
 New users require **both** of the following:
@@ -450,10 +468,7 @@ New users require **both** of the following:
 1. **Fabric Workspace** — add as Viewer via workspace Settings → Access
 2. **Dataverse Security Role** — assign in Power Platform Admin Centre → esacontact (production) → Users → Manage security roles
 
-Minimum Dataverse roles for full report access:
-
-- `Basic User`
-- `Marketing Professional` (required for Marketing pages)
+Minimum Dataverse roles required depend on which pages the user needs. For the full report including Marketing pages, assign `Marketing Professional` or `Marketing Manager`.
 
 ---
 
@@ -461,11 +476,23 @@ Minimum Dataverse roles for full report access:
 
 ### ⚠️ Storage Capacity Data — BLOCKED
 
-Database, file and log storage figures require the **Power Platform Administrator** role assigned in Microsoft Entra ID to the Service Principal.
+Database, file and log storage figures are not available through the Dataverse OData API. They require the **Power Platform Administrator** role assigned in Microsoft Entra ID to the Service Principal, and access to a separate API endpoint.
+
+| Item | Detail |
+|---|---|
+| API required | `https://api.powerplatform.com` or `https://api.bap.microsoft.com` |
+| Role needed | Power Platform Administrator (Entra ID built-in role) |
+| App Registration | Dynamics CRM — ID: `28d48667-10ad-4563-93c3-499438dafbab` |
+| Action required from | Entra ID / Global Admin (not Power Platform Admin) |
+| Impact | `db_storage_used_mb`, `file_storage_used_mb`, `log_storage_used_mb` columns remain NULL |
+| Workaround | Manual check via Power Platform Admin Centre → Environments → Capacity |
+
+> ⚠️ ESA Conditional Access Policy currently blocks the Service Principal from calling `api.powerplatform.com` — only the Dataverse OData API is accessible. The Entra ID role assignment alone may not be sufficient; the CAP restriction may also need to be addressed.
 
 **Admin request:**
-> Assign the **Power Platform Administrator** role in Microsoft Entra ID to App Registration **Dynamics CRM** (ID: `28d48667-10ad-4563-93c3-499438dafbab`).
-> Steps: `entra.microsoft.com → Roles and administrators → Power Platform administrator → Add assignments → search App ID`
+> Please assign the **Power Platform Administrator** role in Microsoft Entra ID to the App Registration named **Dynamics CRM** (Application ID: `28d48667-10ad-4563-93c3-499438dafbab`).
+> Steps: `entra.microsoft.com → Roles and administrators → Power Platform administrator → Add assignments → search for the App ID → Add`
+> This is read-only and required for automated infrastructure monitoring.
 
 ### ⚠️ MarketingInsights Email Bounce Visuals — BROKEN
 
@@ -478,6 +505,24 @@ The Gen2 dataflow is currently showing a refresh error in the workspace. This wi
 ### ⚠️ CRM Health Monitoring Semantic Model — LIKELY REDUNDANT
 
 The workspace contains a `CRM Health Monitoring` semantic model which is not referenced anywhere in the current report. It appears to be a legacy object from an earlier iteration before the infrastructure health data was consolidated into the main semantic model. Confirm nothing else connects to it via the lineage view in the Power BI service, then delete.
+
+### Known Limitations
+
+| Limitation | Detail |
+|---|---|
+| `enabled_users` capped at 5,000 | Dataverse OData count limit — actual number may be higher |
+| Storage fields show NULL | Pending Power Platform Administrator role in Entra ID |
+| Email alerts not yet configured | Requires report to be published to Power BI service first |
+| pip install requires manual first-run step | Run Cell 1 separately before Run All in notebooks |
+| Service Principal cannot call `api.powerplatform.com` | ESA Conditional Access Policy blocks access — only Dataverse OData API is accessible |
+
+### Recommended Next Actions
+
+- Publish report to Power BI service and configure email alert on Failed System Jobs > 100
+- Submit Entra ID request for Power Platform Administrator role to unlock storage metrics
+- Investigate failed system jobs in PROD — review which jobs are failing and why
+- Add a second email alert for when `active_users_pct` exceeds 80%
+- Consider adding Service Health monitoring via the Microsoft 365 Service Communications API for availability and uptime data
 
 ### Email Alerts — NOT YET CONFIGURED
 
