@@ -1,12 +1,12 @@
 # ESA CRM Analytics — Power BI Solution
 
-> Full CRM analytics solution for the ESA D365 CRM (Dataverse) production environment. Covers customer and contact metrics, GDPR consent tracking, onboarding project monitoring, marketing performance, and infrastructure health. Data flows from Dataverse through Microsoft Fabric into a shared semantic model, surfaced in a single Power BI report.
+> Full CRM analytics solution for the ESA D365 CRM (Dataverse) production environment. Covers customer and contact metrics, GDPR consent tracking, onboarding project monitoring, marketing performance, and infrastructure health. Data flows from Dataverse through Microsoft Fabric into a unified semantic model, surfaced in a single Power BI report.
 
 ---
 
 ## Overview
 
-This solution connects to the ESA D365 CRM production Dataverse environment, pulls data into Microsoft Fabric via notebooks and dataflows, and exposes it through a five-page Power BI report.
+This solution connects to the ESA D365 CRM production Dataverse environment, pulls data into Microsoft Fabric via a notebook and a dataflow, and exposes it through a five-page Power BI report.
 
 | Page | What it shows |
 |---|---|
@@ -21,42 +21,102 @@ This solution connects to the ESA D365 CRM production Dataverse environment, pul
 ## Architecture
 
 ```
-┌──────────────────────────────────────────────────────────┐
-│                  Dataverse (D365 CRM)                    │
-│          esacontact.crm4.dynamics.com (PROD)             │
-└────────────┬─────────────────────────┬───────────────────┘
-             │                         │
-      Notebooks (MSAL)         Dataflows Gen1/Gen2
-             │                         │
-    ┌────────▼─────────┐    ┌──────────▼──────────────────────────┐
-    │  CRM_Monitoring  │    │  dataverse_esacontact_cds2_workspace │
-    │    Lakehouse     │    │  _a94a4bf848e144bba608bb2eb51cbe     │
-    │  crm_health_     │    │  (PROD Lakehouse)                    │
-    │  snapshot        │    └──────────────┬──────────────────────┘
-    │  (Delta table)   │                   │
-    └────────┬─────────┘                   │
-             │                             │
-             └──────────────┬──────────────┘
-                            │
-                 ┌──────────▼──────────┐
-                 │   Semantic Model    │
-                 │  (Direct Lake /     │
-                 │  pbiServiceLive)    │
-                 │  ID: ebbd2012-...   │
-                 └──────────┬──────────┘
-                            │
-              ┌─────────────▼──────────────┐
-              │  V4PROD_LAKEHOUSE_          │
-              │  ChangeRequest_Analytics   │
-              │  (Power BI Report)         │
-              │                            │
-              │  • Customers               │
-              │  • Consents                │
-              │  • Onboarding Projects     │
-              │  • MarketingInsights       │
-              │  • Infrastructure Health   │
-              └────────────────────────────┘
+┌─────────────────────────────────────────────┐
+│           Dataverse (D365 CRM)              │
+│     esacontact.crm4.dynamics.com (PROD)     │
+└────────────┬────────────────────┬───────────┘
+             │                    │
+     PROD_Capacity_Notebook    cap_cap_esacontactonboarding
+     (MSAL / daily 06:00 UTC)  _systemuser Dataflow Gen2
+             │                    │
+             ▼                    ▼
+  ┌──────────────────┐   ┌─────────────────────────────────────────────┐
+  │  CRM_Monitoring  │   │  dataverse_esacontact_cds2_workspace        │
+  │    Lakehouse     │   │  _a94a4bf848e144bba608bb2eb51cbe            │
+  │                  │   │  Lakehouse                                  │
+  │  ┌─────────────┐ │   │                                             │
+  │  │crm_health_  │ │   │  account, contact, cap_esacontactonboarding │
+  │  │snapshot     │ │   │  cap_cap_esacontactonboarding_systemuser    │
+  │  │(Delta table)│ │   │  consenttable, consentvaluecheck2           │
+  │  └─────────────┘ │   │  msdyncrm_segment, msdynmkt_*, msevtmgt_*  │
+  └────────┬─────────┘   │  msfp_surveyresponse, Email* tables, etc.  │
+           │             └──────────────────┬──────────────────────────┘
+           │                                │
+           │    ┌───────────────────────────┘
+           │    │  crm_health_snapshot manually added
+           │    │  to the semantic model, bringing
+           │    │  both Lakehouses together here
+           ▼    ▼
+  ┌──────────────────────────────────────────────────────┐
+  │                   Semantic Model                     │
+  │  dataverse_esacontact_cds2_workspace                 │
+  │  _a94a4bf848e144bba608bb2eb51cbe                     │
+  │  ID: ebbd2012-021b-4460-8f42-5712c7c918a3            │
+  └──────────────────────────┬───────────────────────────┘
+                             │  pbiServiceLive
+                             ▼
+              ┌──────────────────────────────┐
+              │           Report             │
+              │  V4PROD_LAKEHOUSE_           │
+              │  ChangeRequest_Analytics     │
+              │                              │
+              │  • Customers                 │
+              │  • Consents                  │
+              │  • Onboarding Projects       │
+              │  • MarketingInsights         │
+              │  • Infrastructure Health     │
+              └──────────────────────────────┘
 ```
+
+---
+
+## Why Two Lakehouses?
+
+The `dataverse_esacontact_cds2_workspace_a94a4bf848e144bba608bb2eb51cbe` Lakehouse is **auto-created and managed by the Dataverse sync**. It is read-only — nothing can be written to it from Fabric.
+
+`CRM_Monitoring` exists as a separate **writable Lakehouse** so that the `PROD_Capacity_Notebook` can append rows to the `crm_health_snapshot` Delta table. There is no other way to store custom notebook output alongside the Dataverse-synced data.
+
+The two Lakehouses are brought together in the **semantic model**, where `crm_health_snapshot` has been manually added alongside the Dataverse sync tables. The report connects to that single semantic model and has no visibility of the two underlying Lakehouses.
+
+| Lakehouse | Managed by | Writable | Purpose |
+|---|---|---|---|
+| `dataverse_esacontact_cds2_workspace_...` | Dataverse sync (auto) | ❌ | Mirrors Dataverse entities into Fabric |
+| `CRM_Monitoring` | Mike Kolling | ✅ | Stores custom notebook output (`crm_health_snapshot`) |
+
+---
+
+## Solution Objects
+
+### Notebook
+- `PROD_Capacity_Notebook`
+
+### Dataflow
+- `cap_cap_esacontactonboarding_systemuser` (Gen2 CI/CD)
+
+### Lakehouses
+- `CRM_Monitoring`
+- `dataverse_esacontact_cds2_workspace_a94a4bf848e144bba608bb2eb51cbe`
+
+### SQL Analytics Endpoints (auto-created with Lakehouses)
+- `CRM_Monitoring`
+- `dataverse_esacontact_cds2_workspace_a94a4bf848e144bba608bb2eb51cbe`
+
+### Semantic Model
+- `dataverse_esacontact_cds2_workspace_a94a4bf848e144bba608bb2eb51cbe` (ID: `ebbd2012-021b-4460-8f42-5712c7c918a3`)
+
+### Delta Table
+- `crm_health_snapshot` (in `CRM_Monitoring` Lakehouse)
+
+### Report
+- `V4PROD_LAKEHOUSE_ChangeRequest_Analytics`
+
+### Theme File
+- `CRM_Dark_Navy_Theme_V2.json`
+
+### Azure / Entra
+- App Registration: `Dynamics CRM` (ID: `28d48667-10ad-4563-93c3-499438dafbab`)
+
+> ℹ️ The workspace also contains a `CRM Health Monitoring` semantic model which appears to be a legacy object from an earlier iteration of this solution. The Infrastructure Health page in the current report sources entirely from `crm_health_snapshot` via the main semantic model — `CRM Health Monitoring` is no longer referenced anywhere in the report and can likely be deleted after confirming nothing else in the workspace connects to it (check via the lineage view in the Power BI service).
 
 ---
 
@@ -76,9 +136,9 @@ This solution connects to the ESA D365 CRM production Dataverse environment, pul
 
 ## Data Ingestion
 
-### 1. Capacity Notebooks — Infrastructure Health data
+### 1. PROD_Capacity_Notebook — Infrastructure Health data
 
-The `PROD_Capacity_Notebook` runs on a daily schedule via Fabric notebook scheduler. It authenticates to Dataverse using a Service Principal and writes infrastructure metrics to the `CRM_Monitoring` Lakehouse.
+The notebook runs on a daily schedule via Fabric notebook scheduler. It authenticates to Dataverse using a Service Principal and writes infrastructure metrics to the `CRM_Monitoring` Lakehouse.
 
 | Notebook | Environment | Target |
 |---|---|---|
@@ -87,8 +147,6 @@ The `PROD_Capacity_Notebook` runs on a daily schedule via Fabric notebook schedu
 **Schedule:** Daily at 06:00 UTC. Each run appends one row to `crm_health_snapshot`.
 
 #### Cell Structure
-
-
 
 | Cell | Purpose |
 |---|---|
@@ -118,18 +176,15 @@ GET /api/data/v9.2/plugintypestatistics
 
 ---
 
-### 2. Dataflows — CRM entity data
+### 2. cap_cap_esacontactonboarding_systemuser Dataflow — Onboarding data
 
-Two dataflows sync Dataverse entity data into the PROD Lakehouse. These feed the Customers, Consents, Onboarding Projects, and MarketingInsights pages.
+This Gen2 dataflow syncs the junction table between onboarding projects and system users from Dataverse into the PROD Lakehouse. It feeds the Onboarding Projects page, specifically the measure that counts distinct users assigned to each project.
 
-| Dataflow | Type | Target Lakehouse |
+| Dataflow | Type | Target |
 |---|---|---|
 | `cap_cap_esacontactonboarding_systemuser` | Gen2 (CI/CD) | PROD Lakehouse |
-| `Get LOS Data` / `LoS1302_2` | Gen1 | Separate (LoS solution) |
 
-The `cap_cap_esacontactonboarding_systemuser` dataflow populates the `cap_cap_esacontactonboarding_systemuser` table used by the Onboarding Projects page.
-
-> ⚠️ `cap_cap_esacontactonboarding_systemuser` currently shows a refresh error in the workspace — check credentials and Dataverse connectivity if the Onboarding Projects page shows stale or missing data.
+> ⚠️ This dataflow currently shows a refresh error in the workspace. If the Onboarding Projects page shows stale or missing data, check credentials and Dataverse connectivity.
 
 ---
 
@@ -140,57 +195,57 @@ The `cap_cap_esacontactonboarding_systemuser` dataflow populates the `cap_cap_es
 | Workspace | HIF-IA PowerBI Workspace | `6988ba37-18e0-4677-82f3-aab0aa8112cc` |
 | PROD Lakehouse | `dataverse_esacontact_cds2_workspace_a94a4bf848e144bba608bb2eb51cbe` | — |
 | Monitoring Lakehouse | `CRM_Monitoring` | `4eaaee48-ced4-4efc-9115-c094bf6646f6` |
-| Semantic Model | (pbiServiceLive) | `ebbd2012-021b-4460-8f42-5712c7c918a3` |
+| Semantic Model | `dataverse_esacontact_cds2_workspace_a94a4bf848e144bba608bb2eb51cbe` | `ebbd2012-021b-4460-8f42-5712c7c918a3` |
 
 ---
 
 ## Semantic Model
 
-The report connects via a **live Power BI Service connection** (`pbiServiceLive`) to a shared semantic model. The model is not embedded in the `.pbix` — it lives in the service and is referenced by model ID `ebbd2012-021b-4460-8f42-5712c7c918a3`.
+The report connects via a **live Power BI Service connection** (`pbiServiceLive`) to the semantic model. The model is not embedded in the `.pbix` — it lives in the service.
+
+The semantic model combines tables from both Lakehouses. `crm_health_snapshot` from `CRM_Monitoring` has been manually added alongside the auto-synced Dataverse tables.
 
 ### Tables in the Model
 
-The following Dataverse / Fabric tables are referenced across the report pages:
-
 | Table | Source | Pages |
 |---|---|---|
-| `account` | Dataverse | Customers |
-| `contact` | Dataverse | Customers, Consents |
+| `account` | Dataverse sync Lakehouse | Customers |
+| `contact` | Dataverse sync Lakehouse | Customers, Consents |
 | `DateTable` | Calculated | Customers |
-| `msdyncrm_segment` | Dataverse (Marketing) | Customers |
-| `msdynci_segmentmembership` | Dataverse (Customer Insights) | Customers |
+| `msdyncrm_segment` | Dataverse sync Lakehouse | Customers |
+| `msdynci_segmentmembership` | Dataverse sync Lakehouse | Customers |
 | `SegmentSubscribed` | Derived | Customers |
-| `msdynmkt_contactpointconsent4` | Dataverse (Marketing) | Customers, Consents |
-| `msdynmkt_email` | Dataverse (Marketing) | Customers, MarketingInsights |
-| `msdynmkt_journey` | Dataverse (Marketing) | Customers, MarketingInsights |
-| `msdynmkt_marketingform` | Dataverse (Marketing) | Customers |
-| `msevtmgt_event` | Dataverse (Events) | Customers |
-| `msevtmgt_eventregistration` | Dataverse (Events) | Customers |
-| `msfp_surveyresponse` | Dataverse (Customer Voice) | Customers, MarketingInsights |
-| `consenttable` | Fabric / custom | Consents |
-| `consentvaluecheck2` | Fabric / custom | Consents |
-| `cap_esacontactonboarding` | Dataverse | Onboarding Projects |
-| `cap_cap_esacontactonboarding_systemuser` | Dataverse / Dataflow | Onboarding Projects |
-| `systemuser` | Dataverse | Onboarding Projects |
-| `email` | Dataverse | MarketingInsights |
-| `interactionforemail` | Dataverse | MarketingInsights |
-| `EmailSent` | Fabric / derived | MarketingInsights |
-| `EmailBounced` | Fabric / derived | MarketingInsights |
-| `EmailHardBounced` | Fabric / derived | MarketingInsights |
-| `EmailSoftBounced` | Fabric / derived | MarketingInsights |
-| `EmailDelivered` | Fabric / derived | MarketingInsights |
-| `EmailOpened` | Fabric / derived | MarketingInsights |
-| `EmailAddressOptedOut` | Fabric / derived | MarketingInsights |
-| `EmailBlockBounced` | Fabric / derived | MarketingInsights |
-| `EmailBlockedByUnsubscription` | Fabric / derived | MarketingInsights |
-| `EmailBlockedByUser` | Fabric / derived | MarketingInsights |
-| `EmailBlockedInvalidRecipientAddress` | Fabric / derived | MarketingInsights |
-| `EmailSendingFailed` | Fabric / derived | MarketingInsights |
-| `crm_health_snapshot` | CRM_Monitoring Lakehouse | Infrastructure Health |
+| `msdynmkt_contactpointconsent4` | Dataverse sync Lakehouse | Customers, Consents |
+| `msdynmkt_email` | Dataverse sync Lakehouse | Customers, MarketingInsights |
+| `msdynmkt_journey` | Dataverse sync Lakehouse | Customers, MarketingInsights |
+| `msdynmkt_marketingform` | Dataverse sync Lakehouse | Customers |
+| `msevtmgt_event` | Dataverse sync Lakehouse | Customers |
+| `msevtmgt_eventregistration` | Dataverse sync Lakehouse | Customers |
+| `msfp_surveyresponse` | Dataverse sync Lakehouse | Customers, MarketingInsights |
+| `consenttable` | Dataverse sync Lakehouse | Consents |
+| `consentvaluecheck2` | Dataverse sync Lakehouse | Consents |
+| `cap_esacontactonboarding` | Dataverse sync Lakehouse | Onboarding Projects |
+| `cap_cap_esacontactonboarding_systemuser` | Dataverse sync Lakehouse (via Dataflow) | Onboarding Projects |
+| `systemuser` | Dataverse sync Lakehouse | Onboarding Projects |
+| `email` | Dataverse sync Lakehouse | MarketingInsights |
+| `interactionforemail` | Dataverse sync Lakehouse | MarketingInsights |
+| `EmailSent` | Derived | MarketingInsights |
+| `EmailBounced` | Derived | MarketingInsights |
+| `EmailHardBounced` | Derived | MarketingInsights |
+| `EmailSoftBounced` | Derived | MarketingInsights |
+| `EmailDelivered` | Derived | MarketingInsights |
+| `EmailOpened` | Derived | MarketingInsights |
+| `EmailAddressOptedOut` | Derived | MarketingInsights |
+| `EmailBlockBounced` | Derived | MarketingInsights |
+| `EmailBlockedByUnsubscription` | Derived | MarketingInsights |
+| `EmailBlockedByUser` | Derived | MarketingInsights |
+| `EmailBlockedInvalidRecipientAddress` | Derived | MarketingInsights |
+| `EmailSendingFailed` | Derived | MarketingInsights |
+| `crm_health_snapshot` | CRM_Monitoring Lakehouse (manually added) | Infrastructure Health |
 
 ### Report-level DAX Measures
 
-Two measures are defined at report level (model extensions), not in the semantic model itself:
+Two measures are defined at report level (model extensions):
 
 ```dax
 -- Table: cap_esacontactonboarding
@@ -260,13 +315,13 @@ Tracks ESA onboarding projects and the system users assigned to them.
 | Onboarding Projects | Table | `cap_esacontactonboarding.cap_name`, `Users Associated to an Onboarding Project` |
 | Users Associated to an Onboarding Project | Card | DAX measure (see above) |
 
-**Data source:** `cap_esacontactonboarding` and `cap_cap_esacontactonboarding_systemuser` tables, synced via the `cap_cap_esacontactonboarding_systemuser` Gen2 dataflow.
+**Data source:** `cap_esacontactonboarding` and `cap_cap_esacontactonboarding_systemuser` tables, synced via the Gen2 dataflow of the same name.
 
 ---
 
 ### Page 4 — MarketingInsights
 
-Email delivery and engagement metrics. Note: the four bounce/sent visuals pull from derived `Email*` tables — these must be present and populated in the semantic model for these cards to show data.
+Email delivery and engagement metrics.
 
 | Visual | Type | Fields |
 |---|---|---|
@@ -279,13 +334,13 @@ Email delivery and engagement metrics. Note: the four bounce/sent visuals pull f
 | Customer Surveys | Card | `msfp_surveyresponse.Total Customer Voice` |
 | Total Newsletters | Card | `msdynmkt_email.Total Newsletters 2` |
 
-> ⚠️ Bounced/Sent visuals currently show no field bindings in the report definition, which typically means the underlying `Email*` tables are not connected or are empty in the semantic model. Verify these tables exist and are populated in the Lakehouse.
+> ⚠️ The Bounced, Sent, Hard Bounced, and Soft Bounced visuals currently show no live field bindings in the report definition. The `Email*` derived tables need to be verified as present and populated in the semantic model.
 
 ---
 
 ### Page 5 — Infrastructure Health
 
-Daily snapshot of CRM platform capacity metrics. Sourced entirely from `crm_health_snapshot` in the `CRM_Monitoring` Lakehouse.
+Daily snapshot of CRM platform capacity metrics. Sourced entirely from `crm_health_snapshot` in the `CRM_Monitoring` Lakehouse, exposed via the semantic model.
 
 | Visual | Type | Fields |
 |---|---|---|
@@ -301,8 +356,8 @@ Daily snapshot of CRM platform capacity metrics. Sourced entirely from `crm_heal
 
 ## crm_health_snapshot Table
 
-**Location:** `CRM_Monitoring` Lakehouse → Tables → `crm_health_snapshot`  
-**Format:** Delta table, append mode  
+**Location:** `CRM_Monitoring` Lakehouse → Tables → `crm_health_snapshot`
+**Format:** Delta table, append mode
 **Growth rate:** 1 row/day
 
 | Column | Type | Description |
@@ -342,6 +397,7 @@ Authentication uses a **Service Principal** (App Registration) with MSAL client 
 | App Registration | Dynamics CRM |
 | Application ID | `28d48667-10ad-4563-93c3-499438dafbab` |
 | Tenant ID | `9a5cacd0-2bef-4dd7-ac5c-7ebe1f54f495` |
+| Dataverse scope | `https://esacontact.crm4.dynamics.com/.default` |
 | Dataverse role | System Administrator on esacontact |
 
 ### Configuration — PROD Notebook (Cell 2)
@@ -360,8 +416,6 @@ environment    = 'PROD'
 ---
 
 ## Theme
-
-The report uses a custom dark navy theme.
 
 | Property | Value |
 |---|---|
@@ -410,7 +464,7 @@ Minimum Dataverse roles for full report access:
 Database, file and log storage figures require the **Power Platform Administrator** role assigned in Microsoft Entra ID to the Service Principal.
 
 **Admin request:**
-> Assign the **Power Platform Administrator** role in Microsoft Entra ID to App Registration **Dynamics CRM** (ID: `28d48667-10ad-4563-93c3-499438dafbab`).  
+> Assign the **Power Platform Administrator** role in Microsoft Entra ID to App Registration **Dynamics CRM** (ID: `28d48667-10ad-4563-93c3-499438dafbab`).
 > Steps: `entra.microsoft.com → Roles and administrators → Power Platform administrator → Add assignments → search App ID`
 
 ### ⚠️ MarketingInsights Email Bounce Visuals — BROKEN
@@ -419,7 +473,11 @@ The Bounced, Sent, Hard Bounced, and Soft Bounced cards on the MarketingInsights
 
 ### ⚠️ cap_cap_esacontactonboarding_systemuser Dataflow — REFRESH ERROR
 
-The Gen2 dataflow syncing onboarding systemuser data is currently showing a refresh error in the workspace. This will cause the Onboarding Projects page to show stale data. Check dataflow credentials and Dataverse connectivity.
+The Gen2 dataflow is currently showing a refresh error in the workspace. This will cause the Onboarding Projects page to show stale data. Check dataflow credentials and Dataverse connectivity.
+
+### ⚠️ CRM Health Monitoring Semantic Model — LIKELY REDUNDANT
+
+The workspace contains a `CRM Health Monitoring` semantic model which is not referenced anywhere in the current report. It appears to be a legacy object from an earlier iteration before the infrastructure health data was consolidated into the main semantic model. Confirm nothing else connects to it via the lineage view in the Power BI service, then delete.
 
 ### Email Alerts — NOT YET CONFIGURED
 
@@ -446,9 +504,9 @@ The Client Secret should be rotated every **12 months**:
 ### Monitoring the Monitors
 
 Check regularly:
-- Fabric workspace → notebook **Recent runs** — both should show ✅ daily
+- Fabric workspace → notebook **Recent runs** — should show ✅ daily
 - CRM_Monitoring Lakehouse → `crm_health_snapshot` — should gain 1 row/day
-- If notebooks fail: check Client Secret expiry, Dataverse availability, Fabric capacity
+- If notebook fails: check Client Secret expiry, Dataverse availability, Fabric capacity
 
 ### Adding a New Environment (e.g. UAT)
 
@@ -458,7 +516,7 @@ Check regularly:
    - Power Platform Admin Centre → Environments → select env → Settings → Application Users → New
    - Search for App ID `28d48667-10ad-4563-93c3-499438dafbab` → assign System Administrator role
 4. Schedule the new notebook
-5. New environment rows appear automatically in the table and Power BI slicer
+5. New environment rows appear automatically in the table and report slicer
 
 ---
 
@@ -466,8 +524,8 @@ Check regularly:
 
 | Version | Date | Author | Changes |
 |---|---|---|---|
-| 1.0 | 19 May 2026 | Mike Kolling | Initial build — notebooks, Lakehouse table, Power BI Infrastructure Health page |
-| 1.1 | 02 Jun 2026 | — | README expanded to cover full solution — all 5 report pages, all Dataverse tables, semantic model, dataflow dependencies, known issues |
+| 1.0 | 19 May 2026 | Mike Kolling | Initial build — notebook, Lakehouse table, Power BI Infrastructure Health page |
+| 1.1 | 02 Jun 2026 | — | README expanded to cover full solution — all 5 report pages, all Dataverse tables, semantic model, dataflow dependencies, dual Lakehouse architecture, known issues |
 
 ---
 
