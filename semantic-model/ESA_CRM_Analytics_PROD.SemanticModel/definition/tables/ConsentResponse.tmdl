@@ -1,0 +1,20 @@
+table ConsentResponse
+	lineageTag: 5802e9bb-7469-4c2b-a322-85e4312726b6
+
+	column Response
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Response]
+
+	column ResponseText
+		dataType: string
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [ResponseText]
+
+	partition ConsentResponse = calculated
+		mode: import
+		source = DATATABLE("Response", INTEGER, "ResponseText", STRING, {{534120000, "Not Set"}, {534120001, "Opted In"}, {534120002, "Opted Out"}})
+

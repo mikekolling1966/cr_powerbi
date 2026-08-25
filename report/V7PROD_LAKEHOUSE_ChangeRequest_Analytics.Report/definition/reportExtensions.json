@@ -1,0 +1,31 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/reportExtension/1.0.0/schema.json",
+    "name": "extension",
+    "entities": [
+        {
+            "name": "cap_esacontactonboarding",
+            "measures": [
+                {
+                    "name": "Users Associated to an Onboarding Project",
+                    "dataType": "Double",
+                    "expression": "\nCOUNTROWS(\n    DISTINCT(\n        SELECTCOLUMNS(\n            RELATEDTABLE ( 'cap_cap_esacontactonboarding_systemuser' ),\n            \"systemuserid\",\n            'cap_cap_esacontactonboarding_systemuser'[systemuserid]\n        )\n    )\n)"
+                }
+            ]
+        },
+        {
+            "name": "crm_health_snapshot",
+            "measures": [
+                {
+                    "name": "Alert Threshold",
+                    "dataType": "Double",
+                    "expression": "100"
+                },
+                {
+                    "name": "Failed Jobs Max",
+                    "dataType": "Double",
+                    "expression": "500"
+                }
+            ]
+        }
+    ]
+}

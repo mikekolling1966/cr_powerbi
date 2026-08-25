@@ -1,0 +1,250 @@
+table crm_health_snapshot
+	lineageTag: fc9ef545-36f1-40fe-b7d8-36c12e5fe942
+	sourceLineageTag: [dbo].[crm_health_snapshot]
+
+	measure 'Health Active Users Display' = VAR v = [Health Active Users] RETURN IF(ISBLANK(v), BLANK(), FORMAT(v, "0"))
+		formatString: ""
+
+	measure 'Health Enabled System Users Display' = VAR v = [Health Enabled System Users] RETURN IF(ISBLANK(v), BLANK(), FORMAT(v, "0"))
+		formatString: ""
+
+	measure 'Health Last Refreshed Display' = VAR v = [Health Last Refreshed] RETURN IF(ISBLANK(v), BLANK(), FORMAT(v, "dd/MM/yyyy"))
+		formatString: ""
+
+	measure 'Health Active Users' = VAR MinDate = MIN('DateTable'[Date]) VAR MaxDate = MAX('DateTable'[Date]) RETURN CALCULATE(MAX(crm_health_snapshot[active_users_current]), TREATAS(VALUES(Environment[Environment]), crm_health_snapshot[environment]), crm_health_snapshot[snapshot_date] >= MinDate, crm_health_snapshot[snapshot_date] < MaxDate + 1)
+		formatString: 0
+
+	measure 'Health Active Users Max' = VAR MinDate = MIN('DateTable'[Date]) VAR MaxDate = MAX('DateTable'[Date]) RETURN CALCULATE(MAX(crm_health_snapshot[active_users_max]), TREATAS(VALUES(Environment[Environment]), crm_health_snapshot[environment]), crm_health_snapshot[snapshot_date] >= MinDate, crm_health_snapshot[snapshot_date] < MaxDate + 1)
+		formatString: 0
+
+	measure 'Health Failed System Jobs' = VAR MinDate = MIN('DateTable'[Date]) VAR MaxDate = MAX('DateTable'[Date]) RETURN CALCULATE(MAX(crm_health_snapshot[failed_system_jobs]), TREATAS(VALUES(Environment[Environment]), crm_health_snapshot[environment]), crm_health_snapshot[snapshot_date] >= MinDate, crm_health_snapshot[snapshot_date] < MaxDate + 1)
+		formatString: 0
+
+	measure 'Health Custom Entities' = VAR MinDate = MIN('DateTable'[Date]) VAR MaxDate = MAX('DateTable'[Date]) RETURN CALCULATE(MAX(crm_health_snapshot[custom_entities_current]), TREATAS(VALUES(Environment[Environment]), crm_health_snapshot[environment]), crm_health_snapshot[snapshot_date] >= MinDate, crm_health_snapshot[snapshot_date] < MaxDate + 1)
+		formatString: 0
+
+	measure 'Health Custom Entities Max' = VAR MinDate = MIN('DateTable'[Date]) VAR MaxDate = MAX('DateTable'[Date]) RETURN CALCULATE(MAX(crm_health_snapshot[custom_entities_max]), TREATAS(VALUES(Environment[Environment]), crm_health_snapshot[environment]), crm_health_snapshot[snapshot_date] >= MinDate, crm_health_snapshot[snapshot_date] < MaxDate + 1)
+		formatString: 0
+
+	measure 'Health Enabled System Users' = VAR MinDate = MIN('DateTable'[Date]) VAR MaxDate = MAX('DateTable'[Date]) RETURN CALCULATE(MAX(crm_health_snapshot[enabled_users]), TREATAS(VALUES(Environment[Environment]), crm_health_snapshot[environment]), crm_health_snapshot[snapshot_date] >= MinDate, crm_health_snapshot[snapshot_date] < MaxDate + 1)
+		formatString: 0
+
+	measure 'Health Last Refreshed' = VAR MinDate = MIN('DateTable'[Date]) VAR MaxDate = MAX('DateTable'[Date]) RETURN CALCULATE(MAX(crm_health_snapshot[snapshot_date]), TREATAS(VALUES(Environment[Environment]), crm_health_snapshot[environment]), crm_health_snapshot[snapshot_date] >= MinDate, crm_health_snapshot[snapshot_date] < MaxDate + 1)
+		formatString: dd/MM/yyyy
+
+	measure 'Alert Threshold' = 80
+		formatString: 0
+		lineageTag: 1a17271e-094b-46d9-85d7-02c1f60a59c3
+
+	measure 'Failed Jobs Max' = 100
+		formatString: 0
+		lineageTag: d15b2918-1ec4-4b0a-8c9b-fdc1ae972213
+
+	column snapshot_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4d28dd04-c57f-4fd8-a61d-8132a0dcb0da
+		sourceLineageTag: snapshot_date
+		summarizeBy: none
+		sourceColumn: snapshot_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column active_users_current
+		dataType: int64
+		formatString: 0
+		lineageTag: 5cdf972b-c52d-4fa8-8029-70eb976c2cb0
+		sourceLineageTag: active_users_current
+		summarizeBy: sum
+		sourceColumn: active_users_current
+
+		annotation SummarizationSetBy = Automatic
+
+	column active_users_max
+		dataType: int64
+		formatString: 0
+		lineageTag: 3b2bf0d7-b727-42d2-833d-e617d5c62942
+		sourceLineageTag: active_users_max
+		summarizeBy: sum
+		sourceColumn: active_users_max
+
+		annotation SummarizationSetBy = Automatic
+
+	column active_users_pct
+		dataType: double
+		lineageTag: 83fa55b3-7ea6-4855-a98a-e8b7723bd9ae
+		sourceLineageTag: active_users_pct
+		summarizeBy: sum
+		sourceColumn: active_users_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column non_interactive_users_current
+		dataType: int64
+		formatString: 0
+		lineageTag: 53d216b4-5d90-49fe-91cb-266b0d5bb6a6
+		sourceLineageTag: non_interactive_users_current
+		summarizeBy: sum
+		sourceColumn: non_interactive_users_current
+
+		annotation SummarizationSetBy = Automatic
+
+	column non_interactive_users_max
+		dataType: int64
+		formatString: 0
+		lineageTag: 20b2ed42-9fb1-403a-8098-f75e8cfbd588
+		sourceLineageTag: non_interactive_users_max
+		summarizeBy: sum
+		sourceColumn: non_interactive_users_max
+
+		annotation SummarizationSetBy = Automatic
+
+	column custom_entities_current
+		dataType: int64
+		formatString: 0
+		lineageTag: e12c8c62-0bcc-4390-a133-cdc62776ab05
+		sourceLineageTag: custom_entities_current
+		summarizeBy: sum
+		sourceColumn: custom_entities_current
+
+		annotation SummarizationSetBy = Automatic
+
+	column custom_entities_max
+		dataType: int64
+		formatString: 0
+		lineageTag: 929d5c6f-c7b7-422a-8854-75ce7ef3a132
+		sourceLineageTag: custom_entities_max
+		summarizeBy: sum
+		sourceColumn: custom_entities_max
+
+		annotation SummarizationSetBy = Automatic
+
+	column custom_entities_pct
+		dataType: double
+		lineageTag: 65e73f7f-11f8-4ad0-bc59-b83bc67d2f32
+		sourceLineageTag: custom_entities_pct
+		summarizeBy: sum
+		sourceColumn: custom_entities_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column published_workflows_current
+		dataType: int64
+		formatString: 0
+		lineageTag: b8510841-a635-4bb4-8c5e-8457aca243c9
+		sourceLineageTag: published_workflows_current
+		summarizeBy: sum
+		sourceColumn: published_workflows_current
+
+		annotation SummarizationSetBy = Automatic
+
+	column published_workflows_max
+		dataType: int64
+		formatString: 0
+		lineageTag: db5118bf-137b-4971-97d7-c90518fe49f7
+		sourceLineageTag: published_workflows_max
+		summarizeBy: sum
+		sourceColumn: published_workflows_max
+
+		annotation SummarizationSetBy = Automatic
+
+	column max_storage_bytes
+		dataType: int64
+		formatString: 0
+		lineageTag: 21c185ff-e3ed-49de-88cf-bdc7278bb2e6
+		sourceLineageTag: max_storage_bytes
+		summarizeBy: sum
+		sourceColumn: max_storage_bytes
+
+		annotation SummarizationSetBy = Automatic
+
+	column max_storage_gb
+		dataType: double
+		lineageTag: 5d9d5c6e-c1d9-4cac-9fc2-fcb1056136a0
+		sourceLineageTag: max_storage_gb
+		summarizeBy: sum
+		sourceColumn: max_storage_gb
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column current_storage_bytes
+		dataType: int64
+		formatString: 0
+		lineageTag: f84f1f80-3d78-449b-bb83-9c6fe16f9468
+		sourceLineageTag: current_storage_bytes
+		summarizeBy: sum
+		sourceColumn: current_storage_bytes
+
+		annotation SummarizationSetBy = Automatic
+
+	column failed_system_jobs
+		dataType: int64
+		formatString: 0
+		lineageTag: 740d0ac1-ba64-4456-b116-5492c5cc9632
+		sourceLineageTag: failed_system_jobs
+		summarizeBy: sum
+		sourceColumn: failed_system_jobs
+
+		annotation SummarizationSetBy = Automatic
+
+	column enabled_users
+		dataType: int64
+		formatString: 0
+		lineageTag: 7e264bf9-30c7-4b00-87a2-ad47ff619ccf
+		sourceLineageTag: enabled_users
+		summarizeBy: sum
+		sourceColumn: enabled_users
+
+		annotation SummarizationSetBy = Automatic
+
+	column plugin_total_executions
+		dataType: int64
+		formatString: 0
+		lineageTag: be390f9f-83cd-4d2a-a79f-61ed2a88714f
+		sourceLineageTag: plugin_total_executions
+		summarizeBy: sum
+		sourceColumn: plugin_total_executions
+
+		annotation SummarizationSetBy = Automatic
+
+	column plugin_total_crashes
+		dataType: int64
+		formatString: 0
+		lineageTag: 8287e7a8-6296-427e-8937-bc40ec8eb39a
+		sourceLineageTag: plugin_total_crashes
+		summarizeBy: sum
+		sourceColumn: plugin_total_crashes
+
+		annotation SummarizationSetBy = Automatic
+
+	column storage_pending_permissions
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 23b2fe84-d439-4de5-a2ac-8a096b2626f9
+		sourceLineageTag: storage_pending_permissions
+		summarizeBy: none
+		sourceColumn: storage_pending_permissions
+
+		annotation SummarizationSetBy = Automatic
+
+	column environment
+		dataType: string
+		lineageTag: e32412dc-006c-460a-a779-7aecdaf3e1a0
+		sourceLineageTag: environment
+		summarizeBy: none
+		sourceColumn: environment
+
+		annotation SummarizationSetBy = Automatic
+
+	partition crm_health_snapshot = entity
+		mode: directLake
+		source
+			entityName: crm_health_snapshot
+			expressionSource: 'DirectLake - CRM_Monitoring'
+

@@ -1,0 +1,2861 @@
+table msevtmgt_event
+	lineageTag: e266c5a2-a175-4b88-983e-4aa0bb1d5959
+	sourceLineageTag: [dbo].[msevtmgt_event]
+
+	measure 'Total EVents' = VAR MinDate = MIN('DateTable'[Date]) VAR MaxDate = MAX('DateTable'[Date]) RETURN CALCULATE(COUNTROWS(msevtmgt_event), msevtmgt_event[createdon] >= MinDate, msevtmgt_event[createdon] < MaxDate + 1)
+		formatString: 0
+		lineageTag: 22af788e-cdf4-424a-b3ef-b1c8bc9c77d3
+
+	column Id
+		dataType: string
+		lineageTag: 5b41a329-71a1-4475-b55b-7c1b6748ee47
+		sourceLineageTag: Id
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column SinkCreatedOn
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 19ae0267-8940-421e-b53f-5f90e256adb3
+		sourceLineageTag: SinkCreatedOn
+		summarizeBy: none
+		sourceColumn: SinkCreatedOn
+
+		annotation SummarizationSetBy = Automatic
+
+	column SinkModifiedOn
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c8df6411-9b98-4113-adbe-f3814d3736db
+		sourceLineageTag: SinkModifiedOn
+		summarizeBy: none
+		sourceColumn: SinkModifiedOn
+
+		annotation SummarizationSetBy = Automatic
+
+	column statecode
+		dataType: int64
+		formatString: 0
+		lineageTag: 83568ce8-e627-402e-84de-bf10d8ab0949
+		sourceLineageTag: statecode
+		summarizeBy: sum
+		sourceColumn: statecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column statuscode
+		dataType: int64
+		formatString: 0
+		lineageTag: 769c8aa6-f79f-47f7-814f-34115d023e9a
+		sourceLineageTag: statuscode
+		summarizeBy: sum
+		sourceColumn: statuscode
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_eventcategory
+		dataType: int64
+		formatString: 0
+		lineageTag: 8bb8e96b-5c14-44c5-bc1e-8aeea1898b7b
+		sourceLineageTag: cap_eventcategory
+		summarizeBy: sum
+		sourceColumn: cap_eventcategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_allowmeetingchat
+		dataType: int64
+		formatString: 0
+		lineageTag: aa4d8459-50d7-4d7a-b1ef-d6dcab1b4668
+		sourceLineageTag: msevtmgt_allowmeetingchat
+		summarizeBy: sum
+		sourceColumn: msevtmgt_allowmeetingchat
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_autoadmittedusers
+		dataType: int64
+		formatString: 0
+		lineageTag: 8bbe218d-cbae-4088-a0b1-aeca5da36ce4
+		sourceLineageTag: msevtmgt_autoadmittedusers
+		summarizeBy: sum
+		sourceColumn: msevtmgt_autoadmittedusers
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_bookedflightreservations
+		dataType: int64
+		formatString: 0
+		lineageTag: 130d189b-d3fd-4baa-abfe-3b314b87b890
+		sourceLineageTag: msevtmgt_bookedflightreservations
+		summarizeBy: sum
+		sourceColumn: msevtmgt_bookedflightreservations
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_bookrooms
+		dataType: int64
+		formatString: 0
+		lineageTag: d388a3fb-cf27-4cc3-93fe-7cd95d3c71c9
+		sourceLineageTag: msevtmgt_bookrooms
+		summarizeBy: sum
+		sourceColumn: msevtmgt_bookrooms
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_cateringrequired
+		dataType: int64
+		formatString: 0
+		lineageTag: 5d2f6697-43a0-4397-a55c-ebcb61c59ca9
+		sourceLineageTag: msevtmgt_cateringrequired
+		summarizeBy: sum
+		sourceColumn: msevtmgt_cateringrequired
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_confirmedhotelchoices
+		dataType: int64
+		formatString: 0
+		lineageTag: a1caeeaa-cda6-46c3-9a9a-e036035b11c9
+		sourceLineageTag: msevtmgt_confirmedhotelchoices
+		summarizeBy: sum
+		sourceColumn: msevtmgt_confirmedhotelchoices
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_createmarketingcollateral
+		dataType: int64
+		formatString: 0
+		lineageTag: d2337880-8055-4531-aeae-63a366d4aa58
+		sourceLineageTag: msevtmgt_createmarketingcollateral
+		summarizeBy: sum
+		sourceColumn: msevtmgt_createmarketingcollateral
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_creationsource
+		dataType: int64
+		formatString: 0
+		lineageTag: fd782bfe-66f1-46c4-a25e-a5dee25a376c
+		sourceLineageTag: msevtmgt_creationsource
+		summarizeBy: sum
+		sourceColumn: msevtmgt_creationsource
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_definepackagesandpricing
+		dataType: int64
+		formatString: 0
+		lineageTag: 8d663297-ef52-42bb-8265-b5b6c75feaf2
+		sourceLineageTag: msevtmgt_definepackagesandpricing
+		summarizeBy: sum
+		sourceColumn: msevtmgt_definepackagesandpricing
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_definesessions
+		dataType: int64
+		formatString: 0
+		lineageTag: f7f2d9e7-89b4-43bf-9dc6-5f7f3aaecb5a
+		sourceLineageTag: msevtmgt_definesessions
+		summarizeBy: sum
+		sourceColumn: msevtmgt_definesessions
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_defineteam
+		dataType: int64
+		formatString: 0
+		lineageTag: bbbfcb92-0374-4f2c-afc1-e9492f0b8164
+		sourceLineageTag: msevtmgt_defineteam
+		summarizeBy: sum
+		sourceColumn: msevtmgt_defineteam
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_descriptorsyncstatus
+		dataType: int64
+		formatString: 0
+		lineageTag: db4f2a4e-ff9e-4a24-92e2-214902dba495
+		sourceLineageTag: msevtmgt_descriptorsyncstatus
+		summarizeBy: sum
+		sourceColumn: msevtmgt_descriptorsyncstatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_developmarketingplan
+		dataType: int64
+		formatString: 0
+		lineageTag: 1168b4c9-48d0-41dd-9913-18c8d62b6ad8
+		sourceLineageTag: msevtmgt_developmarketingplan
+		summarizeBy: sum
+		sourceColumn: msevtmgt_developmarketingplan
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_eventdebriefing
+		dataType: int64
+		formatString: 0
+		lineageTag: d47e5653-70d2-4cdf-9be4-9b3d85f43877
+		sourceLineageTag: msevtmgt_eventdebriefing
+		summarizeBy: sum
+		sourceColumn: msevtmgt_eventdebriefing
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_eventformat
+		dataType: int64
+		formatString: 0
+		lineageTag: 6f4805a8-5a1c-46b7-80c5-d8f8712172a2
+		sourceLineageTag: msevtmgt_eventformat
+		summarizeBy: sum
+		sourceColumn: msevtmgt_eventformat
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_eventtype
+		dataType: int64
+		formatString: 0
+		lineageTag: 5fd3ac95-6350-4982-8780-990edc0a2fbd
+		sourceLineageTag: msevtmgt_eventtype
+		summarizeBy: sum
+		sourceColumn: msevtmgt_eventtype
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_followuponleads
+		dataType: int64
+		formatString: 0
+		lineageTag: 983aaf9c-b953-4caa-a285-00e340183061
+		sourceLineageTag: msevtmgt_followuponleads
+		summarizeBy: sum
+		sourceColumn: msevtmgt_followuponleads
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_guestlogistics
+		dataType: int64
+		formatString: 0
+		lineageTag: 63c85681-7903-428d-bbbe-88828819063a
+		sourceLineageTag: msevtmgt_guestlogistics
+		summarizeBy: sum
+		sourceColumn: msevtmgt_guestlogistics
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_identifyspeakers
+		dataType: int64
+		formatString: 0
+		lineageTag: 01d3d581-198d-4271-9a9a-c1050ca8bcef
+		sourceLineageTag: msevtmgt_identifyspeakers
+		summarizeBy: sum
+		sourceColumn: msevtmgt_identifyspeakers
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_identifysponsors
+		dataType: int64
+		formatString: 0
+		lineageTag: 20374d14-dce8-4cbf-b524-5cda6e997e33
+		sourceLineageTag: msevtmgt_identifysponsors
+		summarizeBy: sum
+		sourceColumn: msevtmgt_identifysponsors
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_istemplate
+		dataType: int64
+		formatString: 0
+		lineageTag: f006efd4-5084-46a9-be44-d434cc62fc82
+		sourceLineageTag: msevtmgt_istemplate
+		summarizeBy: sum
+		sourceColumn: msevtmgt_istemplate
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_language
+		dataType: int64
+		formatString: 0
+		lineageTag: 15c83276-2ab1-4371-90c2-94924d02e677
+		sourceLineageTag: msevtmgt_language
+		summarizeBy: sum
+		sourceColumn: msevtmgt_language
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_makepaymentsdue
+		dataType: int64
+		formatString: 0
+		lineageTag: 2640a04d-1b6b-4374-b422-297db0d4b632
+		sourceLineageTag: msevtmgt_makepaymentsdue
+		summarizeBy: sum
+		sourceColumn: msevtmgt_makepaymentsdue
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_manageregistrationcount
+		dataType: int64
+		formatString: 0
+		lineageTag: f21ae180-fda3-41b2-8004-50b529af2d2b
+		sourceLineageTag: msevtmgt_manageregistrationcount
+		summarizeBy: sum
+		sourceColumn: msevtmgt_manageregistrationcount
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_notifyauthoritiesofevent
+		dataType: int64
+		formatString: 0
+		lineageTag: 244fe0e2-6f40-4e5c-bee7-54dafde1a222
+		sourceLineageTag: msevtmgt_notifyauthoritiesofevent
+		summarizeBy: sum
+		sourceColumn: msevtmgt_notifyauthoritiesofevent
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_planregistration
+		dataType: int64
+		formatString: 0
+		lineageTag: 8fcf3340-65e5-4639-b474-2e0e31cf0a45
+		sourceLineageTag: msevtmgt_planregistration
+		summarizeBy: sum
+		sourceColumn: msevtmgt_planregistration
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_primarygoal
+		dataType: int64
+		formatString: 0
+		lineageTag: c9a98183-6418-49e7-a95a-dcc1508e5d75
+		sourceLineageTag: msevtmgt_primarygoal
+		summarizeBy: sum
+		sourceColumn: msevtmgt_primarygoal
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_publishstatus
+		dataType: int64
+		formatString: 0
+		lineageTag: b96ed253-90a7-4bc8-b3da-3b7a02768210
+		sourceLineageTag: msevtmgt_publishstatus
+		summarizeBy: sum
+		sourceColumn: msevtmgt_publishstatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_requestsponsorship
+		dataType: int64
+		formatString: 0
+		lineageTag: e44ac2c1-d3d6-42de-a8b7-086365be8bda
+		sourceLineageTag: msevtmgt_requestsponsorship
+		summarizeBy: sum
+		sourceColumn: msevtmgt_requestsponsorship
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_scheduleairportpickups
+		dataType: int64
+		formatString: 0
+		lineageTag: 3bd8a093-bc03-4d4d-a526-c93c1d73a901
+		sourceLineageTag: msevtmgt_scheduleairportpickups
+		summarizeBy: sum
+		sourceColumn: msevtmgt_scheduleairportpickups
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_schedulesessions
+		dataType: int64
+		formatString: 0
+		lineageTag: 71501c7c-bd02-4624-9870-6f7efa98e038
+		sourceLineageTag: msevtmgt_schedulesessions
+		summarizeBy: sum
+		sourceColumn: msevtmgt_schedulesessions
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_selectspeakers
+		dataType: int64
+		formatString: 0
+		lineageTag: e7b22db6-f2a6-4f75-b52d-25173f588de9
+		sourceLineageTag: msevtmgt_selectspeakers
+		summarizeBy: sum
+		sourceColumn: msevtmgt_selectspeakers
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_selectvendors
+		dataType: int64
+		formatString: 0
+		lineageTag: 4dca4159-55eb-4df8-a34d-d4694d6f35e1
+		sourceLineageTag: msevtmgt_selectvendors
+		summarizeBy: sum
+		sourceColumn: msevtmgt_selectvendors
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_sendeventinvitation
+		dataType: int64
+		formatString: 0
+		lineageTag: fc8e2a97-d86f-44bb-bf62-4a3516a0b9b4
+		sourceLineageTag: msevtmgt_sendeventinvitation
+		summarizeBy: sum
+		sourceColumn: msevtmgt_sendeventinvitation
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_sendmarketingmaterial
+		dataType: int64
+		formatString: 0
+		lineageTag: a17756d0-ba76-4fd0-9430-abb59122d0f3
+		sourceLineageTag: msevtmgt_sendmarketingmaterial
+		summarizeBy: sum
+		sourceColumn: msevtmgt_sendmarketingmaterial
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_sendpreeventreminders
+		dataType: int64
+		formatString: 0
+		lineageTag: 762bc06e-622f-4ccb-8c3d-77593bde31c7
+		sourceLineageTag: msevtmgt_sendpreeventreminders
+		summarizeBy: sum
+		sourceColumn: msevtmgt_sendpreeventreminders
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_sendthankyouemails
+		dataType: int64
+		formatString: 0
+		lineageTag: 98bff1e5-dca0-4c19-9098-ba41cca63b99
+		sourceLineageTag: msevtmgt_sendthankyouemails
+		summarizeBy: sum
+		sourceColumn: msevtmgt_sendthankyouemails
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_sourcesystem
+		dataType: int64
+		formatString: 0
+		lineageTag: cb0e8335-df40-4be1-af75-5bd9dc0d077b
+		sourceLineageTag: msevtmgt_sourcesystem
+		summarizeBy: sum
+		sourceColumn: msevtmgt_sourcesystem
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_streamingprovider
+		dataType: int64
+		formatString: 0
+		lineageTag: 7fbe99bb-2c0a-4d09-89a1-1a7c90e3038d
+		sourceLineageTag: msevtmgt_streamingprovider
+		summarizeBy: sum
+		sourceColumn: msevtmgt_streamingprovider
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_teamdebriefing
+		dataType: int64
+		formatString: 0
+		lineageTag: 402f88bc-67c2-44a2-8a48-6f11688e9226
+		sourceLineageTag: msevtmgt_teamdebriefing
+		summarizeBy: sum
+		sourceColumn: msevtmgt_teamdebriefing
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_waitlistthisevent
+		dataType: int64
+		formatString: 0
+		lineageTag: e33a0b1d-6345-496d-87f0-c5bd6b213fe7
+		sourceLineageTag: msevtmgt_waitlistthisevent
+		summarizeBy: sum
+		sourceColumn: msevtmgt_waitlistthisevent
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_websitepreference
+		dataType: int64
+		formatString: 0
+		lineageTag: 188a8088-c5c8-4a56-9c3f-a2f664dfd9fe
+		sourceLineageTag: msevtmgt_websitepreference
+		summarizeBy: sum
+		sourceColumn: msevtmgt_websitepreference
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_allowanonymousregistrations
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 120b1c6f-88c2-4fdb-9dd1-c653fbd6da64
+		sourceLineageTag: adx_allowanonymousregistrations
+		summarizeBy: none
+		sourceColumn: adx_allowanonymousregistrations
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_internalevent
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: e9d20ffd-00ad-449a-ba76-082b81cd6e21
+		sourceLineageTag: cap_internalevent
+		summarizeBy: none
+		sourceColumn: cap_internalevent
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_locationformat
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 22336a38-fe6f-40a4-a316-4a3d81505ef8
+		sourceLineageTag: cap_locationformat
+		summarizeBy: none
+		sourceColumn: cap_locationformat
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_onlineevent
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 1ae2b499-c61f-42cb-9d96-b3839f18d5c1
+		sourceLineageTag: cap_onlineevent
+		summarizeBy: none
+		sourceColumn: cap_onlineevent
+
+		annotation SummarizationSetBy = Automatic
+
+	column dxc_showcloseregistrationdate
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 92cb04e1-131b-4302-a149-6bd092b33698
+		sourceLineageTag: dxc_showcloseregistrationdate
+		summarizeBy: none
+		sourceColumn: dxc_showcloseregistrationdate
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_eventurlspecified
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: b1ab1be6-31d3-4014-84f9-9c25515dc08d
+		sourceLineageTag: msdyncrm_eventurlspecified
+		summarizeBy: none
+		sourceColumn: msdyncrm_eventurlspecified
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_usemarketingform
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 08ff2228-1209-4c28-9367-3852cdf1538e
+		sourceLineageTag: msdyncrm_usemarketingform
+		summarizeBy: none
+		sourceColumn: msdyncrm_usemarketingform
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_allowanonymousregistrations
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: d5ccd603-90af-4b89-b43d-89fa3fc98739
+		sourceLineageTag: msevtmgt_allowanonymousregistrations
+		summarizeBy: none
+		sourceColumn: msevtmgt_allowanonymousregistrations
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_allowattendeestounmute
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a7f43c98-2585-4961-8af0-9a4e64eb3ba5
+		sourceLineageTag: msevtmgt_allowattendeestounmute
+		summarizeBy: none
+		sourceColumn: msevtmgt_allowattendeestounmute
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_allowcameraforattendees
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f2675fca-bcc9-4530-9841-9ce4739ee213
+		sourceLineageTag: msevtmgt_allowcameraforattendees
+		summarizeBy: none
+		sourceColumn: msevtmgt_allowcameraforattendees
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_allowcustomagenda
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 416c149d-62ae-4dfa-a37b-6a62b9732d56
+		sourceLineageTag: msevtmgt_allowcustomagenda
+		summarizeBy: none
+		sourceColumn: msevtmgt_allowcustomagenda
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_allowexternalpresenters
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: d6a61ddc-4b95-4358-8b2d-3b87032e1e26
+		sourceLineageTag: msevtmgt_allowexternalpresenters
+		summarizeBy: none
+		sourceColumn: msevtmgt_allowexternalpresenters
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_allowpstnsserstobypasslobby
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 9ce60fcd-f32f-47cc-89cf-c33021937ab0
+		sourceLineageTag: msevtmgt_allowpstnsserstobypasslobby
+		summarizeBy: none
+		sourceColumn: msevtmgt_allowpstnsserstobypasslobby
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_allowteamsmeetingreactions
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: e1fcef69-c929-46f0-bcde-8ca9d718810b
+		sourceLineageTag: msevtmgt_allowteamsmeetingreactions
+		summarizeBy: none
+		sourceColumn: msevtmgt_allowteamsmeetingreactions
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_attendeeengagementreport
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 817c08b9-e464-4063-8396-e1aee06ed6be
+		sourceLineageTag: msevtmgt_attendeeengagementreport
+		summarizeBy: none
+		sourceColumn: msevtmgt_attendeeengagementreport
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_autorecordingenabled
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: b1563c2b-6d8e-4c17-9224-4b2260ed9091
+		sourceLineageTag: msevtmgt_autorecordingenabled
+		summarizeBy: none
+		sourceColumn: msevtmgt_autorecordingenabled
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_autoregisterwaitlistitems
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: b60e65f6-7182-474b-998f-6a8c52c1eb07
+		sourceLineageTag: msevtmgt_autoregisterwaitlistitems
+		summarizeBy: none
+		sourceColumn: msevtmgt_autoregisterwaitlistitems
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_changemeetingoptions
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 39d93975-b6a8-4100-9886-b1b32e1c19cb
+		sourceLineageTag: msevtmgt_changemeetingoptions
+		summarizeBy: none
+		sourceColumn: msevtmgt_changemeetingoptions
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_createleadsforeventregistrations
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 5efdcce4-89ea-4357-9b22-0aa510f7f166
+		sourceLineageTag: msevtmgt_createleadsforeventregistrations
+		summarizeBy: none
+		sourceColumn: msevtmgt_createleadsforeventregistrations
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_customeventurl
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f8a1502a-0a66-4ade-a7ac-59f84b23de4b
+		sourceLineageTag: msevtmgt_customeventurl
+		summarizeBy: none
+		sourceColumn: msevtmgt_customeventurl
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_embedregistrationform
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 97a1f388-aa58-4ef8-9b28-7d2fe9c9670b
+		sourceLineageTag: msevtmgt_embedregistrationform
+		summarizeBy: none
+		sourceColumn: msevtmgt_embedregistrationform
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_enablecaptcha
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: ec792b78-4373-4fe6-9078-ef6776c07dc7
+		sourceLineageTag: msevtmgt_enablecaptcha
+		summarizeBy: none
+		sourceColumn: msevtmgt_enablecaptcha
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_enablemultiattendeeregistration
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 4d6a33cb-e819-43c0-87f0-76421664db01
+		sourceLineageTag: msevtmgt_enablemultiattendeeregistration
+		summarizeBy: none
+		sourceColumn: msevtmgt_enablemultiattendeeregistration
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_enablepaymentgateway
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: e2305651-8abd-4aad-8dc0-8d9668490810
+		sourceLineageTag: msevtmgt_enablepaymentgateway
+		summarizeBy: none
+		sourceColumn: msevtmgt_enablepaymentgateway
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_entryexitannouncementsenabled
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 8c762896-c8d5-4512-84fd-fba6b7eacbda
+		sourceLineageTag: msevtmgt_entryexitannouncementsenabled
+		summarizeBy: none
+		sourceColumn: msevtmgt_entryexitannouncementsenabled
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_gridoperationinprogress
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f52f5771-71ef-470e-abb3-5515fe2fb197
+		sourceLineageTag: msevtmgt_gridoperationinprogress
+		summarizeBy: none
+		sourceColumn: msevtmgt_gridoperationinprogress
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_isoutofsync
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 6a658ca9-84b4-49ce-b23c-cc04ee9ef85c
+		sourceLineageTag: msevtmgt_isoutofsync
+		summarizeBy: none
+		sourceColumn: msevtmgt_isoutofsync
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_isrecurringevent
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 85e7f812-8659-4061-8964-574354756287
+		sourceLineageTag: msevtmgt_isrecurringevent
+		summarizeBy: none
+		sourceColumn: msevtmgt_isrecurringevent
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_issessionregistrationrequired
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a9c2214f-8e50-4c08-bf8a-3575f09f5911
+		sourceLineageTag: msevtmgt_issessionregistrationrequired
+		summarizeBy: none
+		sourceColumn: msevtmgt_issessionregistrationrequired
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_issinglesessionregistration
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 15b2b8ec-869c-4742-90c5-ec1246a5beec
+		sourceLineageTag: msevtmgt_issinglesessionregistration
+		summarizeBy: none
+		sourceColumn: msevtmgt_issinglesessionregistration
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_qna
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 33db01c8-3ea1-40b8-a0f1-5bf61c6eded7
+		sourceLineageTag: msevtmgt_qna
+		summarizeBy: none
+		sourceColumn: msevtmgt_qna
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_recordingforattendees
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 20e42e91-0843-4cf0-a052-ad0246407f7e
+		sourceLineageTag: msevtmgt_recordingforattendees
+		summarizeBy: none
+		sourceColumn: msevtmgt_recordingforattendees
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_recordingforproducersandspeakers
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 8a2d0949-0284-4d1f-b4a5-470681ecba08
+		sourceLineageTag: msevtmgt_recordingforproducersandspeakers
+		summarizeBy: none
+		sourceColumn: msevtmgt_recordingforproducersandspeakers
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_setregistrationperiod
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 69bad5f1-e653-4bf3-a0ba-339028f730ef
+		sourceLineageTag: msevtmgt_setregistrationperiod
+		summarizeBy: none
+		sourceColumn: msevtmgt_setregistrationperiod
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_setregistrationsenddate
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: fe9b153d-3b5e-46b5-a296-bf4aefc1d8a7
+		sourceLineageTag: msevtmgt_setregistrationsenddate
+		summarizeBy: none
+		sourceColumn: msevtmgt_setregistrationsenddate
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_showautomaticregistrationcheckbox
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 3b03974b-0dea-4870-9170-0e696d29cef6
+		sourceLineageTag: msevtmgt_showautomaticregistrationcheckbox
+		summarizeBy: none
+		sourceColumn: msevtmgt_showautomaticregistrationcheckbox
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_showwaitlist
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: b1936fc6-4707-4628-a68f-bb81a9cdc12a
+		sourceLineageTag: msevtmgt_showwaitlist
+		summarizeBy: none
+		sourceColumn: msevtmgt_showwaitlist
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_streamingenabled
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 341a1fb8-e180-4b9b-881f-49ac00425a08
+		sourceLineageTag: msevtmgt_streamingenabled
+		summarizeBy: none
+		sourceColumn: msevtmgt_streamingenabled
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_webinarnotificationseen
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: c19e75b9-3905-4e12-8671-361d3625bf11
+		sourceLineageTag: msevtmgt_webinarnotificationseen
+		summarizeBy: none
+		sourceColumn: msevtmgt_webinarnotificationseen
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_portalbannerimage
+		dataType: string
+		lineageTag: 309a4c92-5162-4e50-878c-f3f190501107
+		sourceLineageTag: adx_portalbannerimage
+		summarizeBy: none
+		sourceColumn: adx_portalbannerimage
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_portalbannerimage_entitytype
+		dataType: string
+		lineageTag: 0199d5b6-61e0-4abb-bb58-1b8de320f778
+		sourceLineageTag: adx_portalbannerimage_entitytype
+		summarizeBy: none
+		sourceColumn: adx_portalbannerimage_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_portalimage
+		dataType: string
+		lineageTag: 6b1d08ff-ac79-4d90-83a4-6927f4fc4c22
+		sourceLineageTag: adx_portalimage
+		summarizeBy: none
+		sourceColumn: adx_portalimage
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_portalimage_entitytype
+		dataType: string
+		lineageTag: bc67cfc7-c6cd-44d9-ac5e-6a153434ae2e
+		sourceLineageTag: adx_portalimage_entitytype
+		summarizeBy: none
+		sourceColumn: adx_portalimage_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_marketinglistreference
+		dataType: string
+		lineageTag: c4509def-f0a6-47d2-8af8-23be4a26d47b
+		sourceLineageTag: cap_marketinglistreference
+		summarizeBy: none
+		sourceColumn: cap_marketinglistreference
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_marketinglistreference_entitytype
+		dataType: string
+		lineageTag: 3a05e3ae-502f-411e-982b-1c132e15f7af
+		sourceLineageTag: cap_marketinglistreference_entitytype
+		summarizeBy: none
+		sourceColumn: cap_marketinglistreference_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdby
+		dataType: string
+		lineageTag: a386ad9e-b140-415f-be59-b47f1c39d85a
+		sourceLineageTag: createdby
+		summarizeBy: none
+		sourceColumn: createdby
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdby_entitytype
+		dataType: string
+		lineageTag: 62f4d13c-6656-40d1-adaa-79ea0a196829
+		sourceLineageTag: createdby_entitytype
+		summarizeBy: none
+		sourceColumn: createdby_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdonbehalfby
+		dataType: string
+		lineageTag: 9a0a499c-cef4-4e65-adea-423a41f181b8
+		sourceLineageTag: createdonbehalfby
+		summarizeBy: none
+		sourceColumn: createdonbehalfby
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdonbehalfby_entitytype
+		dataType: string
+		lineageTag: 7ec6b91d-3648-4f5e-a8a0-8a9b05f63df3
+		sourceLineageTag: createdonbehalfby_entitytype
+		summarizeBy: none
+		sourceColumn: createdonbehalfby_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column esa_rtmformid
+		dataType: string
+		lineageTag: 4923a343-4605-42a2-8c67-72f776a6dc9c
+		sourceLineageTag: esa_rtmformid
+		summarizeBy: none
+		sourceColumn: esa_rtmformid
+
+		annotation SummarizationSetBy = Automatic
+
+	column esa_rtmformid_entitytype
+		dataType: string
+		lineageTag: 428cd393-c1f4-43ae-a69e-3a48849e42b2
+		sourceLineageTag: esa_rtmformid_entitytype
+		summarizeBy: none
+		sourceColumn: esa_rtmformid_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedby
+		dataType: string
+		lineageTag: f8750099-1fe7-437e-a8a1-7a3d7a5d026f
+		sourceLineageTag: modifiedby
+		summarizeBy: none
+		sourceColumn: modifiedby
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedby_entitytype
+		dataType: string
+		lineageTag: 4dc03795-c203-44e4-8098-d86a18d4dcc9
+		sourceLineageTag: modifiedby_entitytype
+		summarizeBy: none
+		sourceColumn: modifiedby_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedonbehalfby
+		dataType: string
+		lineageTag: 1d347b01-12b1-43bc-99e0-e74201914b57
+		sourceLineageTag: modifiedonbehalfby
+		summarizeBy: none
+		sourceColumn: modifiedonbehalfby
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedonbehalfby_entitytype
+		dataType: string
+		lineageTag: be6b17b2-a0b6-456b-94b7-19f808d494f2
+		sourceLineageTag: modifiedonbehalfby_entitytype
+		summarizeBy: none
+		sourceColumn: modifiedonbehalfby_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_marketingformid
+		dataType: string
+		lineageTag: 7ac7d01b-d064-4bcc-922b-7a288b5d7213
+		sourceLineageTag: msdyncrm_marketingformid
+		summarizeBy: none
+		sourceColumn: msdyncrm_marketingformid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_marketingformid_entitytype
+		dataType: string
+		lineageTag: 2a54a8bc-83c7-4eb0-9764-2e35482f4781
+		sourceLineageTag: msdyncrm_marketingformid_entitytype
+		summarizeBy: none
+		sourceColumn: msdyncrm_marketingformid_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_building
+		dataType: string
+		lineageTag: 60da23d1-b356-4735-9d64-281906ec93fd
+		sourceLineageTag: msevtmgt_building
+		summarizeBy: none
+		sourceColumn: msevtmgt_building
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_building_entitytype
+		dataType: string
+		lineageTag: 069e9af4-e937-4576-b80d-e33aed892602
+		sourceLineageTag: msevtmgt_building_entitytype
+		summarizeBy: none
+		sourceColumn: msevtmgt_building_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_eventimage
+		dataType: string
+		lineageTag: 8617e53c-1657-4fd1-b5bf-1f7f93fe9003
+		sourceLineageTag: msevtmgt_eventimage
+		summarizeBy: none
+		sourceColumn: msevtmgt_eventimage
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_eventimage_entitytype
+		dataType: string
+		lineageTag: 77f23595-f00a-4af9-b803-af52115d43eb
+		sourceLineageTag: msevtmgt_eventimage_entitytype
+		summarizeBy: none
+		sourceColumn: msevtmgt_eventimage_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_eventpowerpageswebsite
+		dataType: string
+		lineageTag: 6265a03c-55d2-4e2a-90c9-88a30c52957b
+		sourceLineageTag: msevtmgt_eventpowerpageswebsite
+		summarizeBy: none
+		sourceColumn: msevtmgt_eventpowerpageswebsite
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_eventpowerpageswebsite_entitytype
+		dataType: string
+		lineageTag: 94dbf536-3c52-4279-ab26-4b3c29e393f2
+		sourceLineageTag: msevtmgt_eventpowerpageswebsite_entitytype
+		summarizeBy: none
+		sourceColumn: msevtmgt_eventpowerpageswebsite_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_eventteammember
+		dataType: string
+		lineageTag: 27e104b2-eea3-4473-bd49-375d4665e3e0
+		sourceLineageTag: msevtmgt_eventteammember
+		summarizeBy: none
+		sourceColumn: msevtmgt_eventteammember
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_eventteammember_entitytype
+		dataType: string
+		lineageTag: ffbfb1b4-9ed9-4033-9d6e-befdf8830844
+		sourceLineageTag: msevtmgt_eventteammember_entitytype
+		summarizeBy: none
+		sourceColumn: msevtmgt_eventteammember_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_eventwebapplication
+		dataType: string
+		lineageTag: f3fb1725-8692-488b-a32f-ce8f7534d171
+		sourceLineageTag: msevtmgt_eventwebapplication
+		summarizeBy: none
+		sourceColumn: msevtmgt_eventwebapplication
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_eventwebapplication_entitytype
+		dataType: string
+		lineageTag: 84433250-d454-4915-9ce3-d0c94f984b19
+		sourceLineageTag: msevtmgt_eventwebapplication_entitytype
+		summarizeBy: none
+		sourceColumn: msevtmgt_eventwebapplication_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_layout
+		dataType: string
+		lineageTag: 91f7ff3b-2ccb-4f97-aaf6-3d4f6f0b598e
+		sourceLineageTag: msevtmgt_layout
+		summarizeBy: none
+		sourceColumn: msevtmgt_layout
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_layout_entitytype
+		dataType: string
+		lineageTag: bf055ff4-46cc-40a3-be25-fdac890eb331
+		sourceLineageTag: msevtmgt_layout_entitytype
+		summarizeBy: none
+		sourceColumn: msevtmgt_layout_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_marketingformid
+		dataType: string
+		lineageTag: e484ace0-6341-4b43-8f64-3a5c23609627
+		sourceLineageTag: msevtmgt_marketingformid
+		summarizeBy: none
+		sourceColumn: msevtmgt_marketingformid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_marketingformid_entitytype
+		dataType: string
+		lineageTag: 581fa020-60e5-498c-9245-a6be42187b77
+		sourceLineageTag: msevtmgt_marketingformid_entitytype
+		summarizeBy: none
+		sourceColumn: msevtmgt_marketingformid_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_paymentprovider
+		dataType: string
+		lineageTag: a2d88ba3-fbcb-4f07-9d41-8d7cc1b7959a
+		sourceLineageTag: msevtmgt_paymentprovider
+		summarizeBy: none
+		sourceColumn: msevtmgt_paymentprovider
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_paymentprovider_entitytype
+		dataType: string
+		lineageTag: baa454f8-66a5-4d77-b9d4-1e47c56fe4b2
+		sourceLineageTag: msevtmgt_paymentprovider_entitytype
+		summarizeBy: none
+		sourceColumn: msevtmgt_paymentprovider_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_portalpaymentgateway
+		dataType: string
+		lineageTag: 50966ac9-4f3e-4095-b46a-38b9fc0a2977
+		sourceLineageTag: msevtmgt_portalpaymentgateway
+		summarizeBy: none
+		sourceColumn: msevtmgt_portalpaymentgateway
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_portalpaymentgateway_entitytype
+		dataType: string
+		lineageTag: b9b75fb7-7ef5-40a8-bd61-62b93396b682
+		sourceLineageTag: msevtmgt_portalpaymentgateway_entitytype
+		summarizeBy: none
+		sourceColumn: msevtmgt_portalpaymentgateway_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_primaryvenue
+		dataType: string
+		lineageTag: c201e5c1-97dc-4298-8606-de2ee3f7db30
+		sourceLineageTag: msevtmgt_primaryvenue
+		summarizeBy: none
+		sourceColumn: msevtmgt_primaryvenue
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_primaryvenue_entitytype
+		dataType: string
+		lineageTag: 194bcf72-8e1d-4185-a678-9e5fff4971b8
+		sourceLineageTag: msevtmgt_primaryvenue_entitytype
+		summarizeBy: none
+		sourceColumn: msevtmgt_primaryvenue_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_producer
+		dataType: string
+		lineageTag: 8f3ba339-83a2-45c7-8ace-5afbd75ed5b4
+		sourceLineageTag: msevtmgt_producer
+		summarizeBy: none
+		sourceColumn: msevtmgt_producer
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_producer_entitytype
+		dataType: string
+		lineageTag: 107c7082-a032-4022-ac07-eb3cac0decb9
+		sourceLineageTag: msevtmgt_producer_entitytype
+		summarizeBy: none
+		sourceColumn: msevtmgt_producer_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_registrationcancelationform
+		dataType: string
+		lineageTag: b2e46f0f-4aa1-4d3b-9461-4c6f8369a4a9
+		sourceLineageTag: msevtmgt_registrationcancelationform
+		summarizeBy: none
+		sourceColumn: msevtmgt_registrationcancelationform
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_registrationcancelationform_entitytype
+		dataType: string
+		lineageTag: 05250760-1128-415d-83b5-96758fa32633
+		sourceLineageTag: msevtmgt_registrationcancelationform_entitytype
+		summarizeBy: none
+		sourceColumn: msevtmgt_registrationcancelationform_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_room
+		dataType: string
+		lineageTag: d9427c1a-5ffc-4914-901a-43fe5c4b1d82
+		sourceLineageTag: msevtmgt_room
+		summarizeBy: none
+		sourceColumn: msevtmgt_room
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_room_entitytype
+		dataType: string
+		lineageTag: 7abc5dbe-c72e-461c-8a89-9708b5856f2c
+		sourceLineageTag: msevtmgt_room_entitytype
+		summarizeBy: none
+		sourceColumn: msevtmgt_room_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_streamowner
+		dataType: string
+		lineageTag: 554e71ad-d6c7-43aa-b318-1e32699fdd02
+		sourceLineageTag: msevtmgt_streamowner
+		summarizeBy: none
+		sourceColumn: msevtmgt_streamowner
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_streamowner_entitytype
+		dataType: string
+		lineageTag: fe92dbb2-f857-4afc-84e4-610adb8234e3
+		sourceLineageTag: msevtmgt_streamowner_entitytype
+		summarizeBy: none
+		sourceColumn: msevtmgt_streamowner_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_transactioncurrencyid
+		dataType: string
+		lineageTag: 0e3fbe7f-2fea-43ff-9c41-f6baa306ca6f
+		sourceLineageTag: msevtmgt_transactioncurrencyid
+		summarizeBy: none
+		sourceColumn: msevtmgt_transactioncurrencyid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_transactioncurrencyid_entitytype
+		dataType: string
+		lineageTag: 63df4ab3-6623-42ab-9a5a-354dafcb0977
+		sourceLineageTag: msevtmgt_transactioncurrencyid_entitytype
+		summarizeBy: none
+		sourceColumn: msevtmgt_transactioncurrencyid_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_webinarconfigurationid
+		dataType: string
+		lineageTag: 41bb52e6-034e-42b3-b394-a7a7cc43d970
+		sourceLineageTag: msevtmgt_webinarconfigurationid
+		summarizeBy: none
+		sourceColumn: msevtmgt_webinarconfigurationid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_webinarconfigurationid_entitytype
+		dataType: string
+		lineageTag: ab2ae794-f09e-4df6-ba14-25549689dea3
+		sourceLineageTag: msevtmgt_webinarconfigurationid_entitytype
+		summarizeBy: none
+		sourceColumn: msevtmgt_webinarconfigurationid_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_webinartype
+		dataType: string
+		lineageTag: 170228ae-b32c-4542-bdaf-d5f79e2f2461
+		sourceLineageTag: msevtmgt_webinartype
+		summarizeBy: none
+		sourceColumn: msevtmgt_webinartype
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_webinartype_entitytype
+		dataType: string
+		lineageTag: 772d5b64-74fa-4815-b60c-553e76c37773
+		sourceLineageTag: msevtmgt_webinartype_entitytype
+		summarizeBy: none
+		sourceColumn: msevtmgt_webinartype_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningbusinessunit
+		dataType: string
+		lineageTag: c3a00137-edbe-4d81-a742-7d463ffdd88d
+		sourceLineageTag: owningbusinessunit
+		summarizeBy: none
+		sourceColumn: owningbusinessunit
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningbusinessunit_entitytype
+		dataType: string
+		lineageTag: 508ef76a-42d2-473a-ab81-dda87a5c7f75
+		sourceLineageTag: owningbusinessunit_entitytype
+		summarizeBy: none
+		sourceColumn: owningbusinessunit_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningteam
+		dataType: string
+		lineageTag: c4090f1b-38d1-4c54-87c2-ba7f617bcb8e
+		sourceLineageTag: owningteam
+		summarizeBy: none
+		sourceColumn: owningteam
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningteam_entitytype
+		dataType: string
+		lineageTag: 8d3e704e-a174-47c6-9953-467b17eab6b2
+		sourceLineageTag: owningteam_entitytype
+		summarizeBy: none
+		sourceColumn: owningteam_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column owninguser
+		dataType: string
+		lineageTag: b2e5e88a-6a9b-43e5-8a56-b77829933ce3
+		sourceLineageTag: owninguser
+		summarizeBy: none
+		sourceColumn: owninguser
+
+		annotation SummarizationSetBy = Automatic
+
+	column owninguser_entitytype
+		dataType: string
+		lineageTag: 2aa65800-45b1-4257-b208-da9a51f3b749
+		sourceLineageTag: owninguser_entitytype
+		summarizeBy: none
+		sourceColumn: owninguser_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column transactioncurrencyid
+		dataType: string
+		lineageTag: 8a95e393-8b9c-4c4e-b1b1-21bd0cbeb293
+		sourceLineageTag: transactioncurrencyid
+		summarizeBy: none
+		sourceColumn: transactioncurrencyid
+
+		annotation SummarizationSetBy = Automatic
+
+	column transactioncurrencyid_entitytype
+		dataType: string
+		lineageTag: b3943976-d6e2-45d0-a1e8-743093884c65
+		sourceLineageTag: transactioncurrencyid_entitytype
+		summarizeBy: none
+		sourceColumn: transactioncurrencyid_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column ownerid
+		dataType: string
+		lineageTag: 7f8a19c7-a8b6-49b1-b161-001b7c2cfc2a
+		sourceLineageTag: ownerid
+		summarizeBy: none
+		sourceColumn: ownerid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ownerid_entitytype
+		dataType: string
+		lineageTag: a655fd90-fab5-4bc7-a985-61f4a90c2787
+		sourceLineageTag: ownerid_entitytype
+		summarizeBy: none
+		sourceColumn: ownerid_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_budgetallocated
+		dataType: double
+		lineageTag: e28382ad-b5b8-4742-9d03-57c120ff72c1
+		sourceLineageTag: msevtmgt_budgetallocated
+		summarizeBy: sum
+		sourceColumn: msevtmgt_budgetallocated
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column msevtmgt_budgetallocated_base
+		dataType: double
+		lineageTag: 7c954c7e-9d0e-428b-9b22-abe29617d9cc
+		sourceLineageTag: msevtmgt_budgetallocated_base
+		summarizeBy: sum
+		sourceColumn: msevtmgt_budgetallocated_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column msevtmgt_eventvenuecost
+		dataType: double
+		lineageTag: dff687c1-cf36-4e0d-b06b-28ae36bd1666
+		sourceLineageTag: msevtmgt_eventvenuecost
+		summarizeBy: sum
+		sourceColumn: msevtmgt_eventvenuecost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column msevtmgt_eventvenuecost_base
+		dataType: double
+		lineageTag: eb50f0ea-d073-4a6f-9b61-dfc35dcb81ab
+		sourceLineageTag: msevtmgt_eventvenuecost_base
+		summarizeBy: sum
+		sourceColumn: msevtmgt_eventvenuecost_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column msevtmgt_miscellaneouscosts
+		dataType: double
+		lineageTag: e5996cd9-74d1-4a87-9f37-799d471decba
+		sourceLineageTag: msevtmgt_miscellaneouscosts
+		summarizeBy: sum
+		sourceColumn: msevtmgt_miscellaneouscosts
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column msevtmgt_miscellaneouscosts_base
+		dataType: double
+		lineageTag: 4fbf8371-470b-42e0-8add-a0e2453558a7
+		sourceLineageTag: msevtmgt_miscellaneouscosts_base
+		summarizeBy: sum
+		sourceColumn: msevtmgt_miscellaneouscosts_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column msevtmgt_revenuefromsponsorship
+		dataType: double
+		lineageTag: b0230d00-fe53-4829-9451-84671452b4c8
+		sourceLineageTag: msevtmgt_revenuefromsponsorship
+		summarizeBy: sum
+		sourceColumn: msevtmgt_revenuefromsponsorship
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column msevtmgt_revenuefromsponsorship_base
+		dataType: double
+		lineageTag: 544deb6e-731a-459f-891f-10d87a1da028
+		sourceLineageTag: msevtmgt_revenuefromsponsorship_base
+		summarizeBy: sum
+		sourceColumn: msevtmgt_revenuefromsponsorship_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column msevtmgt_targetrevenue
+		dataType: double
+		lineageTag: 53e8151e-3d4c-4129-90d0-04dc57eb9530
+		sourceLineageTag: msevtmgt_targetrevenue
+		summarizeBy: sum
+		sourceColumn: msevtmgt_targetrevenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column msevtmgt_targetrevenue_base
+		dataType: double
+		lineageTag: adcd8446-ee4e-4e03-9018-e54f9035e806
+		sourceLineageTag: msevtmgt_targetrevenue_base
+		summarizeBy: sum
+		sourceColumn: msevtmgt_targetrevenue_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column msevtmgt_totalcostofeventsactivities
+		dataType: double
+		lineageTag: 1cd5caac-0106-4614-9c57-c35fbc23be75
+		sourceLineageTag: msevtmgt_totalcostofeventsactivities
+		summarizeBy: sum
+		sourceColumn: msevtmgt_totalcostofeventsactivities
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column msevtmgt_totalcostofeventsactivities_base
+		dataType: double
+		lineageTag: aec61c74-5d5b-4c7c-bccc-4dc2e641362e
+		sourceLineageTag: msevtmgt_totalcostofeventsactivities_base
+		summarizeBy: sum
+		sourceColumn: msevtmgt_totalcostofeventsactivities_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column msevtmgt_totalcostofexternalmembers
+		dataType: double
+		lineageTag: bf27c6e4-1bb1-4a1d-84a8-0e0178da7f59
+		sourceLineageTag: msevtmgt_totalcostofexternalmembers
+		summarizeBy: sum
+		sourceColumn: msevtmgt_totalcostofexternalmembers
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column msevtmgt_totalcostofexternalmembers_base
+		dataType: double
+		lineageTag: f74cd73f-5daa-4cff-99d0-f00468cd021a
+		sourceLineageTag: msevtmgt_totalcostofexternalmembers_base
+		summarizeBy: sum
+		sourceColumn: msevtmgt_totalcostofexternalmembers_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column msevtmgt_totalregistrationfee
+		dataType: double
+		lineageTag: a95c5479-c3f5-4a5e-854e-e9489667216f
+		sourceLineageTag: msevtmgt_totalregistrationfee
+		summarizeBy: sum
+		sourceColumn: msevtmgt_totalregistrationfee
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column msevtmgt_totalregistrationfee_base
+		dataType: double
+		lineageTag: ddb37c40-9338-49ad-a774-83532718a2bb
+		sourceLineageTag: msevtmgt_totalregistrationfee_base
+		summarizeBy: sum
+		sourceColumn: msevtmgt_totalregistrationfee_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column msevtmgt_totalrevenuefromtheevent
+		dataType: double
+		lineageTag: 4a796f14-dec3-4fd7-92f0-7f3c1936bfcb
+		sourceLineageTag: msevtmgt_totalrevenuefromtheevent
+		summarizeBy: sum
+		sourceColumn: msevtmgt_totalrevenuefromtheevent
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column msevtmgt_totalrevenuefromtheevent_base
+		dataType: double
+		lineageTag: a889a3fc-aab5-4046-abfb-1ca34730cad7
+		sourceLineageTag: msevtmgt_totalrevenuefromtheevent_base
+		summarizeBy: sum
+		sourceColumn: msevtmgt_totalrevenuefromtheevent_base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column adx_portalbannerimagename
+		dataType: string
+		lineageTag: 8d42cb55-1c4c-413a-bf19-6f4cb974bba4
+		sourceLineageTag: adx_portalbannerimagename
+		summarizeBy: none
+		sourceColumn: adx_portalbannerimagename
+
+		annotation SummarizationSetBy = Automatic
+
+	column adx_portalimagename
+		dataType: string
+		lineageTag: e28d705b-17e0-4ef4-a10a-35659e5fc2db
+		sourceLineageTag: adx_portalimagename
+		summarizeBy: none
+		sourceColumn: adx_portalimagename
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_backgroundinformation
+		dataType: string
+		lineageTag: f1dfd25d-727b-45c3-bb72-d49d51da908e
+		sourceLineageTag: cap_backgroundinformation
+		summarizeBy: none
+		sourceColumn: cap_backgroundinformation
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_dresscode
+		dataType: string
+		lineageTag: dd5fea7d-cc47-4f40-a4e3-dff39e3ffb7f
+		sourceLineageTag: cap_dresscode
+		summarizeBy: none
+		sourceColumn: cap_dresscode
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_eventurl
+		dataType: string
+		lineageTag: 288f1830-3227-4636-8bfb-679c519dd65d
+		sourceLineageTag: cap_eventurl
+		summarizeBy: none
+		sourceColumn: cap_eventurl
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_locationdetails
+		dataType: string
+		lineageTag: 876bd61c-d9cb-4184-bcc5-9c7901f60465
+		sourceLineageTag: cap_locationdetails
+		summarizeBy: none
+		sourceColumn: cap_locationdetails
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_logistics
+		dataType: string
+		lineageTag: f6c29c1c-5cc9-45fa-b699-623000fe409b
+		sourceLineageTag: cap_logistics
+		summarizeBy: none
+		sourceColumn: cap_logistics
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_marketinglistreferencename
+		dataType: string
+		lineageTag: 3202d9dc-89a2-4844-9f0f-84ed852c893e
+		sourceLineageTag: cap_marketinglistreferencename
+		summarizeBy: none
+		sourceColumn: cap_marketinglistreferencename
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_subtitle
+		dataType: string
+		lineageTag: bb93bde2-7a55-4c34-aa8a-a6f1cb73f888
+		sourceLineageTag: cap_subtitle
+		summarizeBy: none
+		sourceColumn: cap_subtitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdbyname
+		dataType: string
+		lineageTag: 1e8f3a82-86dd-4ec0-9a83-02d30c568a07
+		sourceLineageTag: createdbyname
+		summarizeBy: none
+		sourceColumn: createdbyname
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdbyyominame
+		dataType: string
+		lineageTag: fc20f383-6e9b-4d80-8059-1f375c91f0c2
+		sourceLineageTag: createdbyyominame
+		summarizeBy: none
+		sourceColumn: createdbyyominame
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: fffd0049-4796-4f3d-935c-c74979888732
+		sourceLineageTag: createdon
+		summarizeBy: none
+		sourceColumn: createdon
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdonbehalfbyname
+		dataType: string
+		lineageTag: e353edae-dcbc-4db6-8041-6b06007a2518
+		sourceLineageTag: createdonbehalfbyname
+		summarizeBy: none
+		sourceColumn: createdonbehalfbyname
+
+		annotation SummarizationSetBy = Automatic
+
+	column createdonbehalfbyyominame
+		dataType: string
+		lineageTag: 69d03d01-7ac2-461e-a2cb-a54b44821a95
+		sourceLineageTag: createdonbehalfbyyominame
+		summarizeBy: none
+		sourceColumn: createdonbehalfbyyominame
+
+		annotation SummarizationSetBy = Automatic
+
+	column entityimage
+		dataType: string
+		lineageTag: e736ce9e-1716-4c89-93b5-ad089558e80e
+		sourceLineageTag: entityimage
+		summarizeBy: none
+		sourceColumn: entityimage
+
+		annotation SummarizationSetBy = Automatic
+
+	column entityimage_timestamp
+		dataType: int64
+		formatString: 0
+		lineageTag: c607a280-6512-4595-9e85-15260a699fe4
+		sourceLineageTag: entityimage_timestamp
+		summarizeBy: sum
+		sourceColumn: entityimage_timestamp
+
+		annotation SummarizationSetBy = Automatic
+
+	column entityimage_url
+		dataType: string
+		lineageTag: 8674ef58-5e9a-406d-a90b-41c92ef5dcdc
+		sourceLineageTag: entityimage_url
+		summarizeBy: none
+		sourceColumn: entityimage_url
+
+		annotation SummarizationSetBy = Automatic
+
+	column entityimageid
+		dataType: string
+		lineageTag: d07d7bfa-edac-47d6-bfa8-f10003fba062
+		sourceLineageTag: entityimageid
+		summarizeBy: none
+		sourceColumn: entityimageid
+
+		annotation SummarizationSetBy = Automatic
+
+	column esa_enddategmt
+		dataType: string
+		lineageTag: 1620d98f-ef3d-45c3-9c62-8be9f98a5e6a
+		sourceLineageTag: esa_enddategmt
+		summarizeBy: none
+		sourceColumn: esa_enddategmt
+
+		annotation SummarizationSetBy = Automatic
+
+	column esa_eventfriendlyurl
+		dataType: string
+		lineageTag: 146f91b3-b582-419e-b245-ecc70b1ea515
+		sourceLineageTag: esa_eventfriendlyurl
+		summarizeBy: none
+		sourceColumn: esa_eventfriendlyurl
+
+		annotation SummarizationSetBy = Automatic
+
+	column esa_previouseventname
+		dataType: string
+		lineageTag: 3ded74df-ba14-42f9-8f55-ad1f8dc89d1c
+		sourceLineageTag: esa_previouseventname
+		summarizeBy: none
+		sourceColumn: esa_previouseventname
+
+		annotation SummarizationSetBy = Automatic
+
+	column esa_rtmformidname
+		dataType: string
+		lineageTag: 498f91bb-14a7-4ceb-9c97-17c5bdaa4ee0
+		sourceLineageTag: esa_rtmformidname
+		summarizeBy: none
+		sourceColumn: esa_rtmformidname
+
+		annotation SummarizationSetBy = Automatic
+
+	column esa_startdategmt
+		dataType: string
+		lineageTag: 51f992f5-3a71-4970-8690-72c30dbd8bb6
+		sourceLineageTag: esa_startdategmt
+		summarizeBy: none
+		sourceColumn: esa_startdategmt
+
+		annotation SummarizationSetBy = Automatic
+
+	column exchangerate
+		dataType: double
+		lineageTag: fd193040-89ae-4a51-b589-429b5da5f648
+		sourceLineageTag: exchangerate
+		summarizeBy: sum
+		sourceColumn: exchangerate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column importsequencenumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 0bc99e66-c0f4-4e8f-a5dc-c1cb63e4564c
+		sourceLineageTag: importsequencenumber
+		summarizeBy: sum
+		sourceColumn: importsequencenumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedbyname
+		dataType: string
+		lineageTag: 3686fe5c-d4bd-4077-886c-2a2fa06626c6
+		sourceLineageTag: modifiedbyname
+		summarizeBy: none
+		sourceColumn: modifiedbyname
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedbyyominame
+		dataType: string
+		lineageTag: d9da6a31-4668-4374-9612-cc9fb7c700c1
+		sourceLineageTag: modifiedbyyominame
+		summarizeBy: none
+		sourceColumn: modifiedbyyominame
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 06298b85-1296-4766-a304-dc6afb35a8de
+		sourceLineageTag: modifiedon
+		summarizeBy: none
+		sourceColumn: modifiedon
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedonbehalfbyname
+		dataType: string
+		lineageTag: 1b11aa7a-57eb-47d4-9512-801c788e3ab5
+		sourceLineageTag: modifiedonbehalfbyname
+		summarizeBy: none
+		sourceColumn: modifiedonbehalfbyname
+
+		annotation SummarizationSetBy = Automatic
+
+	column modifiedonbehalfbyyominame
+		dataType: string
+		lineageTag: 40d399bc-9866-43a1-b146-0fcd3dabb4e2
+		sourceLineageTag: modifiedonbehalfbyyominame
+		summarizeBy: none
+		sourceColumn: modifiedonbehalfbyyominame
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_marketingformidname
+		dataType: string
+		lineageTag: 76adfb3f-b9a9-4f2a-ab9e-1d155d55df7a
+		sourceLineageTag: msdyncrm_marketingformidname
+		summarizeBy: none
+		sourceColumn: msdyncrm_marketingformidname
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_sessionscount
+		dataType: int64
+		formatString: 0
+		lineageTag: 10752ab5-ce17-4997-a1ce-a9c6bfe8f823
+		sourceLineageTag: msdyncrm_sessionscount
+		summarizeBy: sum
+		sourceColumn: msdyncrm_sessionscount
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_sessionscount_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 706baae4-b12a-438d-a729-d77f14110883
+		sourceLineageTag: msdyncrm_sessionscount_date
+		summarizeBy: none
+		sourceColumn: msdyncrm_sessionscount_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdyncrm_sessionscount_state
+		dataType: int64
+		formatString: 0
+		lineageTag: 0650033f-dc40-4213-8398-d3e767e259df
+		sourceLineageTag: msdyncrm_sessionscount_state
+		summarizeBy: sum
+		sourceColumn: msdyncrm_sessionscount_state
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_bannerimageid
+		dataType: string
+		lineageTag: d484b762-baaa-40cb-9d5e-97ea6835869e
+		sourceLineageTag: msdynmkt_bannerimageid
+		summarizeBy: none
+		sourceColumn: msdynmkt_bannerimageid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_completiondate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 30effb3d-cf2c-4264-a56f-7089829335b3
+		sourceLineageTag: msdynmkt_completiondate
+		summarizeBy: none
+		sourceColumn: msdynmkt_completiondate
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_linkedvirtualeventid
+		dataType: string
+		lineageTag: 763dde6b-8025-442d-8dc5-a96510866bfa
+		sourceLineageTag: msdynmkt_linkedvirtualeventid
+		summarizeBy: none
+		sourceColumn: msdynmkt_linkedvirtualeventid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msdynmkt_logoimageid
+		dataType: string
+		lineageTag: 0b5a9813-8053-476a-a55a-d30a323a330d
+		sourceLineageTag: msdynmkt_logoimageid
+		summarizeBy: none
+		sourceColumn: msdynmkt_logoimageid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_attendeeurl
+		dataType: string
+		lineageTag: 58b03ae1-2e6d-488b-9c64-04260861c945
+		sourceLineageTag: msevtmgt_attendeeurl
+		summarizeBy: none
+		sourceColumn: msevtmgt_attendeeurl
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_baserecurrenteventid
+		dataType: string
+		lineageTag: 69284db6-4b9d-4fc9-892e-2755334882e2
+		sourceLineageTag: msevtmgt_baserecurrenteventid
+		summarizeBy: none
+		sourceColumn: msevtmgt_baserecurrenteventid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_buildingname
+		dataType: string
+		lineageTag: 33a34245-70e1-4b8f-b541-da923635f20e
+		sourceLineageTag: msevtmgt_buildingname
+		summarizeBy: none
+		sourceColumn: msevtmgt_buildingname
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_calendarcontent
+		dataType: string
+		lineageTag: 4781efca-79d9-4e7d-b15b-fd022fc7e44b
+		sourceLineageTag: msevtmgt_calendarcontent
+		summarizeBy: none
+		sourceColumn: msevtmgt_calendarcontent
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_calendarcontent_plaintext
+		dataType: string
+		lineageTag: 32fb6e9b-3957-4317-acd2-c037f1e38ca3
+		sourceLineageTag: msevtmgt_calendarcontent_plaintext
+		summarizeBy: none
+		sourceColumn: msevtmgt_calendarcontent_plaintext
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_calendarevent
+		dataType: string
+		lineageTag: 9115f087-7259-4291-95f3-aebb4d57c1e3
+		sourceLineageTag: msevtmgt_calendarevent
+		summarizeBy: none
+		sourceColumn: msevtmgt_calendarevent
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_checkincount
+		dataType: int64
+		formatString: 0
+		lineageTag: 0f349592-cb2c-4223-afe3-68a293f1a0cf
+		sourceLineageTag: msevtmgt_checkincount
+		summarizeBy: sum
+		sourceColumn: msevtmgt_checkincount
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_countdownindays
+		dataType: int64
+		formatString: 0
+		lineageTag: 027c7188-8c44-4723-9734-c0b8a7bf228a
+		sourceLineageTag: msevtmgt_countdownindays
+		summarizeBy: sum
+		sourceColumn: msevtmgt_countdownindays
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_description
+		dataType: string
+		lineageTag: caf06f6a-9e37-47cc-94da-adbbd0680fb4
+		sourceLineageTag: msevtmgt_description
+		summarizeBy: none
+		sourceColumn: msevtmgt_description
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_earlybirdcutoffdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8860d7bf-563d-4e5d-a4df-f5973c8afd5c
+		sourceLineageTag: msevtmgt_earlybirdcutoffdate
+		summarizeBy: none
+		sourceColumn: msevtmgt_earlybirdcutoffdate
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_eventcancellationurl
+		dataType: string
+		lineageTag: ddd3b508-953b-4ed1-8434-f7e4f24b11f5
+		sourceLineageTag: msevtmgt_eventcancellationurl
+		summarizeBy: none
+		sourceColumn: msevtmgt_eventcancellationurl
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_eventenddate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 98c30253-f5ea-42ae-8889-8ef3c49215f1
+		sourceLineageTag: msevtmgt_eventenddate
+		summarizeBy: none
+		sourceColumn: msevtmgt_eventenddate
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_eventid
+		dataType: string
+		lineageTag: 990afad8-a234-424d-9ebe-fd123d7a0ff8
+		sourceLineageTag: msevtmgt_eventid
+		summarizeBy: none
+		sourceColumn: msevtmgt_eventid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_eventimagename
+		dataType: string
+		lineageTag: 57017e08-444c-4e17-9b39-36ff9aaf8f62
+		sourceLineageTag: msevtmgt_eventimagename
+		summarizeBy: none
+		sourceColumn: msevtmgt_eventimagename
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_eventimageurl
+		dataType: string
+		lineageTag: f33154db-fd6c-4675-98d7-ef5f156baafa
+		sourceLineageTag: msevtmgt_eventimageurl
+		summarizeBy: none
+		sourceColumn: msevtmgt_eventimageurl
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_eventpowerpageswebsitename
+		dataType: string
+		lineageTag: b4762605-17ef-4cfa-a14f-3738e150f599
+		sourceLineageTag: msevtmgt_eventpowerpageswebsitename
+		summarizeBy: none
+		sourceColumn: msevtmgt_eventpowerpageswebsitename
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_eventstartdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1a9eadc1-be13-46eb-9b16-faa208ad9548
+		sourceLineageTag: msevtmgt_eventstartdate
+		summarizeBy: none
+		sourceColumn: msevtmgt_eventstartdate
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_eventteammembername
+		dataType: string
+		lineageTag: d8c8200c-f2c2-4278-8aae-8837cce4e76b
+		sourceLineageTag: msevtmgt_eventteammembername
+		summarizeBy: none
+		sourceColumn: msevtmgt_eventteammembername
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_eventtimezone
+		dataType: int64
+		formatString: 0
+		lineageTag: c2b7c8e1-2b99-4151-9b5a-1816feb238ea
+		sourceLineageTag: msevtmgt_eventtimezone
+		summarizeBy: sum
+		sourceColumn: msevtmgt_eventtimezone
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_eventtimezonename
+		dataType: string
+		lineageTag: b5570f93-d96c-471f-8ea3-03082abc50f5
+		sourceLineageTag: msevtmgt_eventtimezonename
+		summarizeBy: none
+		sourceColumn: msevtmgt_eventtimezonename
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_eventurl
+		dataType: string
+		lineageTag: 409f4324-c880-4135-bc61-29860ead901e
+		sourceLineageTag: msevtmgt_eventurl
+		summarizeBy: none
+		sourceColumn: msevtmgt_eventurl
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_eventutcenddate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f7be0641-2fab-456b-b5a4-86c8b60f1a1c
+		sourceLineageTag: msevtmgt_eventutcenddate
+		summarizeBy: none
+		sourceColumn: msevtmgt_eventutcenddate
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_eventutcstartdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0bfdc49c-46d4-41f9-b8e8-5ddb340ed532
+		sourceLineageTag: msevtmgt_eventutcstartdate
+		summarizeBy: none
+		sourceColumn: msevtmgt_eventutcstartdate
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_eventwebapplicationname
+		dataType: string
+		lineageTag: dc4f13d6-c511-4a0c-8b7f-31931a784192
+		sourceLineageTag: msevtmgt_eventwebapplicationname
+		summarizeBy: none
+		sourceColumn: msevtmgt_eventwebapplicationname
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_expectedoutcome
+		dataType: string
+		lineageTag: d3279e7f-7f25-4d47-b495-b82a576a4c67
+		sourceLineageTag: msevtmgt_expectedoutcome
+		summarizeBy: none
+		sourceColumn: msevtmgt_expectedoutcome
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_formpagejavascriptcode
+		dataType: string
+		lineageTag: f589a4dc-2b3e-4729-8e47-a33740285bad
+		sourceLineageTag: msevtmgt_formpagejavascriptcode
+		summarizeBy: none
+		sourceColumn: msevtmgt_formpagejavascriptcode
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_lastgolivedate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 47fa3efa-3a2a-45c8-a826-108029f49d96
+		sourceLineageTag: msevtmgt_lastgolivedate
+		summarizeBy: none
+		sourceColumn: msevtmgt_lastgolivedate
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_lastteamssyncdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1d478000-5f68-4e91-850a-da1bc62eb2eb
+		sourceLineageTag: msevtmgt_lastteamssyncdate
+		summarizeBy: none
+		sourceColumn: msevtmgt_lastteamssyncdate
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_layoutname
+		dataType: string
+		lineageTag: 78d2968c-3c0e-4c1c-b801-3339a4bc70a5
+		sourceLineageTag: msevtmgt_layoutname
+		summarizeBy: none
+		sourceColumn: msevtmgt_layoutname
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_marketingformidname
+		dataType: string
+		lineageTag: dd0e4759-0547-45ab-a1cb-0786fa550b01
+		sourceLineageTag: msevtmgt_marketingformidname
+		summarizeBy: none
+		sourceColumn: msevtmgt_marketingformidname
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_maximumeventcapacity
+		dataType: int64
+		formatString: 0
+		lineageTag: 533deff4-2875-4837-abf0-85011ede43a7
+		sourceLineageTag: msevtmgt_maximumeventcapacity
+		summarizeBy: sum
+		sourceColumn: msevtmgt_maximumeventcapacity
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_maxnumberofregistrations
+		dataType: int64
+		formatString: 0
+		lineageTag: 69bb2012-148d-43cf-8a1b-ea26fe32c8b1
+		sourceLineageTag: msevtmgt_maxnumberofregistrations
+		summarizeBy: sum
+		sourceColumn: msevtmgt_maxnumberofregistrations
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_name
+		dataType: string
+		lineageTag: 7815127e-f94d-4cd5-a7f3-b7f538d47268
+		sourceLineageTag: msevtmgt_name
+		summarizeBy: none
+		sourceColumn: msevtmgt_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_numberofinvitations
+		dataType: int64
+		formatString: 0
+		lineageTag: 84e47d69-95ad-4bfa-913a-00adca8d47c4
+		sourceLineageTag: msevtmgt_numberofinvitations
+		summarizeBy: sum
+		sourceColumn: msevtmgt_numberofinvitations
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_paymentprovidername
+		dataType: string
+		lineageTag: d6eadac4-9964-49a4-be19-d3315dc06dc0
+		sourceLineageTag: msevtmgt_paymentprovidername
+		summarizeBy: none
+		sourceColumn: msevtmgt_paymentprovidername
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_portalpaymentgatewayname
+		dataType: string
+		lineageTag: 826a2008-7aff-4b28-b81e-eb767fd7ca4b
+		sourceLineageTag: msevtmgt_portalpaymentgatewayname
+		summarizeBy: none
+		sourceColumn: msevtmgt_portalpaymentgatewayname
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_portalspecificeventenddate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4a624388-2d19-4d89-9d0e-42b2dfbae40b
+		sourceLineageTag: msevtmgt_portalspecificeventenddate
+		summarizeBy: none
+		sourceColumn: msevtmgt_portalspecificeventenddate
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_portalspecificeventstartdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e0f2fccd-3f20-4fb1-83b3-0cd034fbbf40
+		sourceLineageTag: msevtmgt_portalspecificeventstartdate
+		summarizeBy: none
+		sourceColumn: msevtmgt_portalspecificeventstartdate
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_presentationmanagerurl
+		dataType: string
+		lineageTag: 4fc0215d-5b06-4a53-a219-9387a11924c1
+		sourceLineageTag: msevtmgt_presentationmanagerurl
+		summarizeBy: none
+		sourceColumn: msevtmgt_presentationmanagerurl
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_previousnumberoffreeslots
+		dataType: int64
+		formatString: 0
+		lineageTag: 7da372fc-97af-4870-9a5e-c2b24fade13f
+		sourceLineageTag: msevtmgt_previousnumberoffreeslots
+		summarizeBy: sum
+		sourceColumn: msevtmgt_previousnumberoffreeslots
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_primaryvenuename
+		dataType: string
+		lineageTag: 7aecd04a-eb50-4da0-9058-103390280fff
+		sourceLineageTag: msevtmgt_primaryvenuename
+		summarizeBy: none
+		sourceColumn: msevtmgt_primaryvenuename
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_producername
+		dataType: string
+		lineageTag: ad654419-3d49-4837-b8fe-45a22cc7d8b1
+		sourceLineageTag: msevtmgt_producername
+		summarizeBy: none
+		sourceColumn: msevtmgt_producername
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_publiceventurl
+		dataType: string
+		lineageTag: d8d49d8f-d862-4608-8ba5-e9b51056601a
+		sourceLineageTag: msevtmgt_publiceventurl
+		summarizeBy: none
+		sourceColumn: msevtmgt_publiceventurl
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_readableeventid
+		dataType: string
+		lineageTag: 923e5079-50e7-4031-84d9-6b2b0117e178
+		sourceLineageTag: msevtmgt_readableeventid
+		summarizeBy: none
+		sourceColumn: msevtmgt_readableeventid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_recoveryitems
+		dataType: string
+		lineageTag: dcf5cb98-155c-4979-b868-850e64f23f64
+		sourceLineageTag: msevtmgt_recoveryitems
+		summarizeBy: none
+		sourceColumn: msevtmgt_recoveryitems
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_recurrencepattern
+		dataType: string
+		lineageTag: c36f592b-7a08-4508-b32d-b92ba46a8169
+		sourceLineageTag: msevtmgt_recurrencepattern
+		summarizeBy: none
+		sourceColumn: msevtmgt_recurrencepattern
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_recurrenteventstatus
+		dataType: int64
+		formatString: 0
+		lineageTag: 2f0e2449-c989-4250-b0da-a4490ac45544
+		sourceLineageTag: msevtmgt_recurrenteventstatus
+		summarizeBy: sum
+		sourceColumn: msevtmgt_recurrenteventstatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_registrationcancelationformname
+		dataType: string
+		lineageTag: d82c2e58-f851-4ba0-b08e-b73032948ccb
+		sourceLineageTag: msevtmgt_registrationcancelationformname
+		summarizeBy: none
+		sourceColumn: msevtmgt_registrationcancelationformname
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_registrationcount
+		dataType: int64
+		formatString: 0
+		lineageTag: 12cfffc4-0fce-4d24-b0c8-159ef689269a
+		sourceLineageTag: msevtmgt_registrationcount
+		summarizeBy: sum
+		sourceColumn: msevtmgt_registrationcount
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_registrationcounterlock
+		dataType: string
+		lineageTag: 8a96ff27-8bce-4e2a-8a4a-5a422410c333
+		sourceLineageTag: msevtmgt_registrationcounterlock
+		summarizeBy: none
+		sourceColumn: msevtmgt_registrationcounterlock
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_registrationenddate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: bfd29fb9-a34f-48a1-b9b2-e2395e308c34
+		sourceLineageTag: msevtmgt_registrationenddate
+		summarizeBy: none
+		sourceColumn: msevtmgt_registrationenddate
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_registrationsgridid
+		dataType: string
+		lineageTag: eaa01e28-6da2-4928-9c27-3a46f02d82c9
+		sourceLineageTag: msevtmgt_registrationsgridid
+		summarizeBy: none
+		sourceColumn: msevtmgt_registrationsgridid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_registrationstarget
+		dataType: int64
+		formatString: 0
+		lineageTag: 520fc402-a6e4-4686-94ca-7edb68d3796c
+		sourceLineageTag: msevtmgt_registrationstarget
+		summarizeBy: sum
+		sourceColumn: msevtmgt_registrationstarget
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_registrationstartdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8e17447b-15d3-49e1-b022-321b6b1e7c32
+		sourceLineageTag: msevtmgt_registrationstartdate
+		summarizeBy: none
+		sourceColumn: msevtmgt_registrationstartdate
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_registrationutcenddate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e00ff8bf-346b-49b2-95f9-7efaa8f34b1d
+		sourceLineageTag: msevtmgt_registrationutcenddate
+		summarizeBy: none
+		sourceColumn: msevtmgt_registrationutcenddate
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_registrationutcstartdate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7ca5f478-519c-474e-a166-60a3dbb52ba4
+		sourceLineageTag: msevtmgt_registrationutcstartdate
+		summarizeBy: none
+		sourceColumn: msevtmgt_registrationutcstartdate
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_roomname
+		dataType: string
+		lineageTag: f39b9d0d-5892-41f3-86a3-eb82f4780257
+		sourceLineageTag: msevtmgt_roomname
+		summarizeBy: none
+		sourceColumn: msevtmgt_roomname
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_stopwebsiteregistrationson
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d9588939-317a-4e52-8e7c-ee164b84920d
+		sourceLineageTag: msevtmgt_stopwebsiteregistrationson
+		summarizeBy: none
+		sourceColumn: msevtmgt_stopwebsiteregistrationson
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_streamownername
+		dataType: string
+		lineageTag: 5e10282e-13f6-493a-8a36-b66efa1f2d4f
+		sourceLineageTag: msevtmgt_streamownername
+		summarizeBy: none
+		sourceColumn: msevtmgt_streamownername
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_streamowneryominame
+		dataType: string
+		lineageTag: 9f8b8d66-5bad-47a3-8030-543de3c6d1f8
+		sourceLineageTag: msevtmgt_streamowneryominame
+		summarizeBy: none
+		sourceColumn: msevtmgt_streamowneryominame
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_teamsevent
+		dataType: string
+		lineageTag: fd21157d-faa2-4586-9bf7-91d516fc0a5e
+		sourceLineageTag: msevtmgt_teamsevent
+		summarizeBy: none
+		sourceColumn: msevtmgt_teamsevent
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_teamsinvitationhtml
+		dataType: string
+		lineageTag: cb9ad3aa-648b-43e5-ba66-1eb8df5f34f2
+		sourceLineageTag: msevtmgt_teamsinvitationhtml
+		summarizeBy: none
+		sourceColumn: msevtmgt_teamsinvitationhtml
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_transactioncurrencyidname
+		dataType: string
+		lineageTag: c0c0d9cb-10d5-4df1-9e19-d45ae291b9b5
+		sourceLineageTag: msevtmgt_transactioncurrencyidname
+		summarizeBy: none
+		sourceColumn: msevtmgt_transactioncurrencyidname
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_waitliststartingpoint
+		dataType: int64
+		formatString: 0
+		lineageTag: b9f37fbe-20ec-4700-9cab-fda64c741b31
+		sourceLineageTag: msevtmgt_waitliststartingpoint
+		summarizeBy: sum
+		sourceColumn: msevtmgt_waitliststartingpoint
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_webinarconfigurationidname
+		dataType: string
+		lineageTag: 053ebdfa-67b0-4ba3-a281-17da696a990b
+		sourceLineageTag: msevtmgt_webinarconfigurationidname
+		summarizeBy: none
+		sourceColumn: msevtmgt_webinarconfigurationidname
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_webinarid
+		dataType: string
+		lineageTag: ce0195f6-3b04-4609-969a-affa3f81cce0
+		sourceLineageTag: msevtmgt_webinarid
+		summarizeBy: none
+		sourceColumn: msevtmgt_webinarid
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_webinaroperation
+		dataType: string
+		lineageTag: 6551a6fe-5dc4-43db-b157-0416acef984a
+		sourceLineageTag: msevtmgt_webinaroperation
+		summarizeBy: none
+		sourceColumn: msevtmgt_webinaroperation
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_webinarstatus
+		dataType: string
+		lineageTag: 7fb6c375-3c1a-491d-8bb1-4e1775493e37
+		sourceLineageTag: msevtmgt_webinarstatus
+		summarizeBy: none
+		sourceColumn: msevtmgt_webinarstatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_webinarstatusreason
+		dataType: string
+		lineageTag: dad8539b-9640-45aa-bab7-56770d43f832
+		sourceLineageTag: msevtmgt_webinarstatusreason
+		summarizeBy: none
+		sourceColumn: msevtmgt_webinarstatusreason
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_webinartypename
+		dataType: string
+		lineageTag: 2a6ee6ce-8b30-4ed9-ae6a-76333708a23c
+		sourceLineageTag: msevtmgt_webinartypename
+		summarizeBy: none
+		sourceColumn: msevtmgt_webinartypename
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_webinarurl
+		dataType: string
+		lineageTag: d6c12039-425d-4ac3-ac97-fc83125e937e
+		sourceLineageTag: msevtmgt_webinarurl
+		summarizeBy: none
+		sourceColumn: msevtmgt_webinarurl
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_websitemessage
+		dataType: string
+		lineageTag: 92b3fbd1-8b0c-4884-8085-b2fc51c0690d
+		sourceLineageTag: msevtmgt_websitemessage
+		summarizeBy: none
+		sourceColumn: msevtmgt_websitemessage
+
+		annotation SummarizationSetBy = Automatic
+
+	column overriddencreatedon
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: afd433f8-6053-4c81-a5cd-0f3a9305228b
+		sourceLineageTag: overriddencreatedon
+		summarizeBy: none
+		sourceColumn: overriddencreatedon
+
+		annotation SummarizationSetBy = Automatic
+
+	column owneridname
+		dataType: string
+		lineageTag: 2f70e48f-48f5-4e10-b4b7-46335cfd3ec4
+		sourceLineageTag: owneridname
+		summarizeBy: none
+		sourceColumn: owneridname
+
+		annotation SummarizationSetBy = Automatic
+
+	column owneridtype
+		dataType: string
+		lineageTag: bf3a03a9-87f1-4db4-a371-c2d1e0091197
+		sourceLineageTag: owneridtype
+		summarizeBy: none
+		sourceColumn: owneridtype
+
+		annotation SummarizationSetBy = Automatic
+
+	column owneridyominame
+		dataType: string
+		lineageTag: 35852a48-7025-478b-996b-e370addb6c3e
+		sourceLineageTag: owneridyominame
+		summarizeBy: none
+		sourceColumn: owneridyominame
+
+		annotation SummarizationSetBy = Automatic
+
+	column owningbusinessunitname
+		dataType: string
+		lineageTag: b3252a8d-a045-465b-8e39-d4c9e8d826e2
+		sourceLineageTag: owningbusinessunitname
+		summarizeBy: none
+		sourceColumn: owningbusinessunitname
+
+		annotation SummarizationSetBy = Automatic
+
+	column processid
+		dataType: string
+		lineageTag: 958fe655-f632-457c-a5e7-9f7459efdc23
+		sourceLineageTag: processid
+		summarizeBy: none
+		sourceColumn: processid
+
+		annotation SummarizationSetBy = Automatic
+
+	column stageid
+		dataType: string
+		lineageTag: 993d20fb-78bf-4bbc-9af3-040f252bb812
+		sourceLineageTag: stageid
+		summarizeBy: none
+		sourceColumn: stageid
+
+		annotation SummarizationSetBy = Automatic
+
+	column timezoneruleversionnumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 916edf00-33d8-4fb1-8683-14a1189b9684
+		sourceLineageTag: timezoneruleversionnumber
+		summarizeBy: sum
+		sourceColumn: timezoneruleversionnumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column transactioncurrencyidname
+		dataType: string
+		lineageTag: 9028ae2a-3c49-4ecb-99d9-fdec4561bfb3
+		sourceLineageTag: transactioncurrencyidname
+		summarizeBy: none
+		sourceColumn: transactioncurrencyidname
+
+		annotation SummarizationSetBy = Automatic
+
+	column traversedpath
+		dataType: string
+		lineageTag: 00bd16d7-eecd-4b52-9bc7-cc050d9fc5b5
+		sourceLineageTag: traversedpath
+		summarizeBy: none
+		sourceColumn: traversedpath
+
+		annotation SummarizationSetBy = Automatic
+
+	column utcconversiontimezonecode
+		dataType: int64
+		formatString: 0
+		lineageTag: f9338de6-73ad-44bc-be40-2864e393220f
+		sourceLineageTag: utcconversiontimezonecode
+		summarizeBy: sum
+		sourceColumn: utcconversiontimezonecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column versionnumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 8e023c8c-5198-464e-b44e-41489fee6768
+		sourceLineageTag: versionnumber
+		summarizeBy: sum
+		sourceColumn: versionnumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column msft_datastate
+		dataType: int64
+		formatString: 0
+		lineageTag: 7517ca12-1a1e-4360-b4ee-ac1f7f2f619f
+		sourceLineageTag: msft_datastate
+		summarizeBy: sum
+		sourceColumn: msft_datastate
+
+		annotation SummarizationSetBy = Automatic
+
+	column PartitionId
+		dataType: string
+		lineageTag: ec959868-e538-4c38-9a85-e61991ef3864
+		sourceLineageTag: PartitionId
+		summarizeBy: none
+		sourceColumn: PartitionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsDelete
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: e3cd7b4a-daa1-42a0-96c1-580a7ea619d8
+		sourceLineageTag: IsDelete
+		summarizeBy: none
+		sourceColumn: IsDelete
+
+		annotation SummarizationSetBy = Automatic
+
+	column esa_useapprovalregistrationflow
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 3335f879-4514-434b-8a6d-8e3be3c7c670
+		sourceLineageTag: esa_useapprovalregistrationflow
+		summarizeBy: none
+		sourceColumn: esa_useapprovalregistrationflow
+
+		annotation SummarizationSetBy = Automatic
+
+	column esa_eventlookup
+		dataType: string
+		lineageTag: 5fc643d6-0c13-4f17-87e5-ee9a635de9a5
+		sourceLineageTag: esa_eventlookup
+		summarizeBy: none
+		sourceColumn: esa_eventlookup
+
+		annotation SummarizationSetBy = Automatic
+
+	column esa_eventlookup_entitytype
+		dataType: string
+		lineageTag: fe6b65b5-7cd3-4234-a502-8968c7c0b401
+		sourceLineageTag: esa_eventlookup_entitytype
+		summarizeBy: none
+		sourceColumn: esa_eventlookup_entitytype
+
+		annotation SummarizationSetBy = Automatic
+
+	column esa_eventid
+		dataType: string
+		lineageTag: 6b874f38-071a-47e3-81ef-a8183f1ecd4a
+		sourceLineageTag: esa_eventid
+		summarizeBy: none
+		sourceColumn: esa_eventid
+
+		annotation SummarizationSetBy = Automatic
+
+	column esa_eventlookupname
+		dataType: string
+		lineageTag: d51c2469-8c91-4295-9440-8345c8dbd1ea
+		sourceLineageTag: esa_eventlookupname
+		summarizeBy: none
+		sourceColumn: esa_eventlookupname
+
+		annotation SummarizationSetBy = Automatic
+
+	column msevtmgt_teamseventaccess
+		dataType: int64
+		formatString: 0
+		lineageTag: 6baaa52d-43f6-4dc6-8cca-eaf1e8b460ae
+		sourceLineageTag: msevtmgt_teamseventaccess
+		summarizeBy: sum
+		sourceColumn: msevtmgt_teamseventaccess
+
+		annotation SummarizationSetBy = Automatic
+
+	partition msevtmgt_event = entity
+		mode: directLake
+		source
+			entityName: msevtmgt_event
+			expressionSource: 'DirectLake - dataverse_esacontact_cds2_workspace_a94a4bf848e144bba608bb2eb51cbe'
+

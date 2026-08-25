@@ -1,0 +1,20 @@
+table ConsentMessageType
+	lineageTag: 2f960ec2-b537-449a-b67e-8994e44ead28
+
+	column MessageType
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MessageType]
+
+	column MessageTypeText
+		dataType: string
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MessageTypeText]
+
+	partition ConsentMessageType = calculated
+		mode: import
+		source = DATATABLE("MessageType", INTEGER, "MessageTypeText", STRING, {{534120000, "Email"}, {534120001, "Text Message"}})
+

@@ -1,0 +1,158 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+    "name": "d74b353583f23012787a",
+    "position": {
+        "x": 10.397148568467145,
+        "y": 110.03648901627727,
+        "z": 1000,
+        "height": 112.63577615839407,
+        "width": 1174.8777882367874,
+        "tabOrder": 1000
+    },
+    "visual": {
+        "visualType": "cardVisual",
+        "query": {
+            "queryState": {
+                "Data": {
+                    "projections": [
+                        {
+                            "field": {
+                                "Measure": {
+                                    "Expression": {
+                                        "SourceRef": {
+                                            "Entity": "msdynmkt_contactpointconsent4"
+                                        }
+                                    },
+                                    "Property": "Total Email Not Set"
+                                }
+                            },
+                            "queryRef": "msdynmkt_contactpointconsent4.Total Email Not Set",
+                            "nativeQueryRef": "Total Email Not Set"
+                        },
+                        {
+                            "field": {
+                                "Measure": {
+                                    "Expression": {
+                                        "SourceRef": {
+                                            "Entity": "msdynmkt_contactpointconsent4"
+                                        }
+                                    },
+                                    "Property": "Total Email Opted Out"
+                                }
+                            },
+                            "queryRef": "msdynmkt_contactpointconsent4.Total Email Opted Out",
+                            "nativeQueryRef": "Total Email Opted Out"
+                        },
+                        {
+                            "field": {
+                                "Measure": {
+                                    "Expression": {
+                                        "SourceRef": {
+                                            "Entity": "msdynmkt_contactpointconsent4"
+                                        }
+                                    },
+                                    "Property": "Total Email Subscribers"
+                                }
+                            },
+                            "queryRef": "msdynmkt_contactpointconsent4.Total Email Subscribers",
+                            "nativeQueryRef": "Total Email Subscribers"
+                        },
+                        {
+                            "field": {
+                                "Measure": {
+                                    "Expression": {
+                                        "SourceRef": {
+                                            "Entity": "msdynmkt_contactpointconsent4"
+                                        }
+                                    },
+                                    "Property": "Subscriber Count"
+                                }
+                            },
+                            "queryRef": "msdynmkt_contactpointconsent4.Subscriber Count",
+                            "nativeQueryRef": "Subscriber Count"
+                        }
+                    ]
+                }
+            },
+            "sortDefinition": {
+                "sort": [
+                    {
+                        "field": {
+                            "Measure": {
+                                "Expression": {
+                                    "SourceRef": {
+                                        "Entity": "msdynmkt_contactpointconsent4"
+                                    }
+                                },
+                                "Property": "Total Email Not Set"
+                            }
+                        },
+                        "direction": "Descending"
+                    }
+                ],
+                "isDefaultSort": true
+            }
+        },
+        "objects": {
+            "value": [
+                {
+                    "properties": {
+                        "labelDisplayUnits": {
+                            "expr": {
+                                "Literal": {
+                                    "Value": "1D"
+                                }
+                            }
+                        }
+                    },
+                    "selector": {
+                        "metadata": "msdynmkt_contactpointconsent4.Total Email Not Set"
+                    }
+                },
+                {
+                    "properties": {
+                        "labelDisplayUnits": {
+                            "expr": {
+                                "Literal": {
+                                    "Value": "1D"
+                                }
+                            }
+                        }
+                    },
+                    "selector": {
+                        "metadata": "msdynmkt_contactpointconsent4.Total Email Opted Out"
+                    }
+                },
+                {
+                    "properties": {
+                        "labelDisplayUnits": {
+                            "expr": {
+                                "Literal": {
+                                    "Value": "1D"
+                                }
+                            }
+                        }
+                    },
+                    "selector": {
+                        "metadata": "msdynmkt_contactpointconsent4.Total Email Subscribers"
+                    }
+                },
+                {
+                    "properties": {
+                        "labelDisplayUnits": {
+                            "expr": {
+                                "Literal": {
+                                    "Value": "1D"
+                                }
+                            }
+                        }
+                    },
+                    "selector": {
+                        "metadata": "msdynmkt_contactpointconsent4.Subscriber Count"
+                    }
+                }
+            ]
+        },
+        "drillFilterOtherVisuals": true
+    }
+}

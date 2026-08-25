@@ -1,0 +1,115 @@
+table cap_cap_esacontactonboarding_systemuser
+	lineageTag: 0dafe6ec-cdfa-404f-8ac6-864e0aca87cb
+	sourceLineageTag: [dbo].[cap_cap_esacontactonboarding_systemuser]
+
+	column Id
+		dataType: string
+		lineageTag: deef00a9-d950-4f2c-a989-5e29f536fbbc
+		sourceLineageTag: Id
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column SinkCreatedOn
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 65bb394a-d118-4ca8-8ab4-b2f78afeb7fc
+		sourceLineageTag: SinkCreatedOn
+		summarizeBy: none
+		sourceColumn: SinkCreatedOn
+
+		annotation SummarizationSetBy = Automatic
+
+	column SinkModifiedOn
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: fa6f54f7-b2d2-46d2-92e3-07de4aa9cbc9
+		sourceLineageTag: SinkModifiedOn
+		summarizeBy: none
+		sourceColumn: SinkModifiedOn
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_cap_esacontactonboarding_systemuserid
+		dataType: string
+		lineageTag: d02d9891-1ecb-434f-8afb-9b3a5ca966bb
+		sourceLineageTag: cap_cap_esacontactonboarding_systemuserid
+		summarizeBy: none
+		sourceColumn: cap_cap_esacontactonboarding_systemuserid
+
+		annotation SummarizationSetBy = Automatic
+
+	column cap_esacontactonboardingid
+		dataType: string
+		lineageTag: 04599c68-14ff-47d5-a22e-3d8a3901751c
+		sourceLineageTag: cap_esacontactonboardingid
+		summarizeBy: none
+		sourceColumn: cap_esacontactonboardingid
+
+		annotation SummarizationSetBy = Automatic
+
+	column systemuserid
+		dataType: string
+		lineageTag: 7b18d2e8-9aaf-41eb-92fe-7257af77a27b
+		sourceLineageTag: systemuserid
+		summarizeBy: none
+		sourceColumn: systemuserid
+
+		annotation SummarizationSetBy = Automatic
+
+	column versionnumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 3b509927-e8a4-42bf-87d7-8e7147f696db
+		sourceLineageTag: versionnumber
+		summarizeBy: sum
+		sourceColumn: versionnumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedOn
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6a0ffe11-b99d-4792-b6d6-027d0f5bf939
+		sourceLineageTag: CreatedOn
+		summarizeBy: none
+		sourceColumn: CreatedOn
+
+		annotation SummarizationSetBy = Automatic
+
+	column msft_datastate
+		dataType: int64
+		formatString: 0
+		lineageTag: 34b515ce-66e5-45a1-9488-f12fd1a57e3b
+		sourceLineageTag: msft_datastate
+		summarizeBy: sum
+		sourceColumn: msft_datastate
+
+		annotation SummarizationSetBy = Automatic
+
+	column PartitionId
+		dataType: string
+		lineageTag: 2ba7682b-4b15-448f-92b1-6f115a8ec21b
+		sourceLineageTag: PartitionId
+		summarizeBy: none
+		sourceColumn: PartitionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsDelete
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 7d6d1ce7-ffcb-46bb-8d15-5b78f5ba3702
+		sourceLineageTag: IsDelete
+		summarizeBy: none
+		sourceColumn: IsDelete
+
+		annotation SummarizationSetBy = Automatic
+
+	partition cap_cap_esacontactonboarding_systemuser = entity
+		mode: directLake
+		source
+			entityName: cap_cap_esacontactonboarding_systemuser
+			expressionSource: 'DirectLake - dataverse_esacontact_cds2_workspace_a94a4bf848e144bba608bb2eb51cbe'
+

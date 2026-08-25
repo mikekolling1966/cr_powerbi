@@ -1,0 +1,151 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+    "name": "7d51b1cff589d8cccaf8",
+    "position": {
+        "x": 915.7970662565542,
+        "y": 541.5211936432561,
+        "z": 4001,
+        "height": 164.54950033311124,
+        "width": 289.18960692871417,
+        "tabOrder": 4001
+    },
+    "visual": {
+        "visualType": "slicer",
+        "query": {
+            "queryState": {
+                "Values": {
+                    "projections": [
+                        {
+                            "field": {
+                                "Column": {
+                                    "Expression": {
+                                        "SourceRef": {
+                                            "Entity": "DateTable"
+                                        }
+                                    },
+                                    "Property": "Date"
+                                }
+                            },
+                            "queryRef": "DateTable.Date",
+                            "nativeQueryRef": "Date",
+                            "active": true
+                        }
+                    ]
+                }
+            },
+            "sortDefinition": {
+                "sort": [
+                    {
+                        "field": {
+                            "Column": {
+                                "Expression": {
+                                    "SourceRef": {
+                                        "Entity": "DateTable"
+                                    }
+                                },
+                                "Property": "Date"
+                            }
+                        },
+                        "direction": "Ascending"
+                    }
+                ],
+                "isDefaultSort": true
+            }
+        },
+        "objects": {
+            "data": [
+                {
+                    "properties": {
+                        "startDate": {
+                            "expr": {
+                                "Literal": {
+                                    "Value": "datetime'2015-01-01T00:00:00'"
+                                }
+                            }
+                        },
+                        "mode": {
+                            "expr": {
+                                "Literal": {
+                                    "Value": "'Between'"
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            "general": [
+                {
+                    "properties": {
+                        "filter": {
+                            "filter": {
+                                "Version": 2,
+                                "From": [
+                                    {
+                                        "Name": "d",
+                                        "Entity": "DateTable",
+                                        "Type": 0
+                                    }
+                                ],
+                                "Where": [
+                                    {
+                                        "Condition": {
+                                            "Comparison": {
+                                                "ComparisonKind": 2,
+                                                "Left": {
+                                                    "Column": {
+                                                        "Expression": {
+                                                            "SourceRef": {
+                                                                "Source": "d"
+                                                            }
+                                                        },
+                                                        "Property": "Date"
+                                                    }
+                                                },
+                                                "Right": {
+                                                    "Literal": {
+                                                        "Value": "datetime'2015-01-01T00:00:00'"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "responsive": {
+                            "expr": {
+                                "Literal": {
+                                    "Value": "false"
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            "slider": [
+                {
+                    "properties": {
+                        "color": {
+                            "solid": {
+                                "color": {
+                                    "expr": {
+                                        "ThemeDataColor": {
+                                            "ColorId": 5,
+                                            "Percent": 0
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "syncGroup": {
+            "groupName": "Date",
+            "fieldChanges": true,
+            "filterChanges": true
+        },
+        "drillFilterOtherVisuals": true
+    }
+}

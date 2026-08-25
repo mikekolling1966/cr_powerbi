@@ -1,0 +1,161 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+    "name": "6307a4fbe27774f89940",
+    "position": {
+        "x": 6.708094878490388,
+        "y": 412.17516308946495,
+        "z": 4000,
+        "height": 149.814118952952,
+        "width": 362.2371234384809,
+        "tabOrder": 4000
+    },
+    "visual": {
+        "visualType": "gauge",
+        "query": {
+            "queryState": {
+                "MaxValue": {
+                    "projections": [
+                        {
+                            "field": {
+                                "Measure": {
+                                    "Expression": {
+                                        "SourceRef": {
+                                            "Entity": "crm_health_snapshot"
+                                        }
+                                    },
+                                    "Property": "Health Custom Entities Max"
+                                }
+                            },
+                            "queryRef": "crm_health_snapshot.Health Custom Entities Max",
+                            "nativeQueryRef": "Health Custom Entities Max"
+                        }
+                    ]
+                },
+                "Y": {
+                    "projections": [
+                        {
+                            "field": {
+                                "Measure": {
+                                    "Expression": {
+                                        "SourceRef": {
+                                            "Entity": "crm_health_snapshot"
+                                        }
+                                    },
+                                    "Property": "Health Custom Entities"
+                                }
+                            },
+                            "queryRef": "crm_health_snapshot.Health Custom Entities",
+                            "nativeQueryRef": "Health Custom Entities"
+                        }
+                    ]
+                }
+            },
+            "sortDefinition": {
+                "sort": [
+                    {
+                        "field": {
+                            "Measure": {
+                                "Expression": {
+                                    "SourceRef": {
+                                        "Entity": "crm_health_snapshot"
+                                    }
+                                },
+                                "Property": "Health Custom Entities"
+                            }
+                        },
+                        "direction": "Descending"
+                    }
+                ],
+                "isDefaultSort": true
+            }
+        },
+        "objects": {
+            "target": [
+                {
+                    "properties": {
+                        "show": {
+                            "expr": {
+                                "Literal": {
+                                    "Value": "false"
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "visualContainerObjects": {
+            "title": [
+                {
+                    "properties": {
+                        "text": {
+                            "expr": {
+                                "Literal": {
+                                    "Value": "'Custom Entities Usage'"
+                                }
+                            }
+                        },
+                        "fontColor": {
+                            "solid": {
+                                "color": {
+                                    "expr": {
+                                        "ThemeDataColor": {
+                                            "ColorId": 0,
+                                            "Percent": 0
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            "background": [
+                {
+                    "properties": {
+                        "show": {
+                            "expr": {
+                                "Literal": {
+                                    "Value": "false"
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "drillFilterOtherVisuals": true
+    },
+    "filterConfig": {
+        "filters": [
+            {
+                "name": "3afd87f7433356c8e611",
+                "field": {
+                    "Measure": {
+                        "Expression": {
+                            "SourceRef": {
+                                "Entity": "crm_health_snapshot"
+                            }
+                        },
+                        "Property": "Health Custom Entities"
+                    }
+                },
+                "type": "Advanced"
+            },
+            {
+                "name": "ccfa8ed42cf72e9bdc23",
+                "field": {
+                    "Measure": {
+                        "Expression": {
+                            "SourceRef": {
+                                "Entity": "crm_health_snapshot"
+                            }
+                        },
+                        "Property": "Health Custom Entities Max"
+                    }
+                },
+                "type": "Advanced"
+            }
+        ]
+    }
+}

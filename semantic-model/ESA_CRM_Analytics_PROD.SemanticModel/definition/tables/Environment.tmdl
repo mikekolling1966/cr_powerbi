@@ -1,0 +1,13 @@
+table Environment
+	lineageTag: 11111111-1111-1111-1111-111111111111
+
+	column Environment
+		dataType: string
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Environment]
+
+	partition Environment = calculated
+		mode: import
+		source = DATATABLE("Environment", STRING, {{"PROD"}, {"DEV"}})
+

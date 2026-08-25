@@ -1,0 +1,51 @@
+table consenttable
+	lineageTag: cda456b7-eff2-4527-afb7-04cbd9319029
+	sourceLineageTag: [dbo].[consenttable]
+
+	measure 'Consent Given Numeric Date' = VAR MinDate = MIN('DateTable'[Date]) VAR MaxDate = MAX('DateTable'[Date]) VAR ContactsInRange = CALCULATETABLE(VALUES(contact[contactid]), contact[createdon] >= MinDate, contact[createdon] < MaxDate + 1) RETURN CALCULATE(SUM(consenttable[ConsentGivenNumeric]), TREATAS(ContactsInRange, consenttable[ContactID]))
+		formatString: 0
+
+	column ContactID
+		dataType: string
+		lineageTag: 997f171d-e843-40ba-8519-eb5890c76b8b
+		sourceLineageTag: ContactID
+		summarizeBy: none
+		sourceColumn: ContactID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ConsentType
+		dataType: string
+		lineageTag: 1d0537aa-f06e-4d77-a2b2-08a0e93e9616
+		sourceLineageTag: ConsentType
+		summarizeBy: none
+		sourceColumn: ConsentType
+
+		annotation SummarizationSetBy = Automatic
+
+	column ConsentGiven
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 770ae0d9-ae65-4bb8-b46c-5cb59a7a128b
+		sourceLineageTag: ConsentGiven
+		summarizeBy: none
+		sourceColumn: ConsentGiven
+
+		annotation SummarizationSetBy = Automatic
+
+	column ConsentGivenNumeric
+		dataType: int64
+		formatString: 0
+		lineageTag: a7568af9-65fb-49db-8d0e-47d316b0cbce
+		sourceLineageTag: ConsentGivenNumeric
+		summarizeBy: sum
+		sourceColumn: ConsentGivenNumeric
+
+		annotation SummarizationSetBy = Automatic
+
+	partition consenttable = entity
+		mode: directLake
+		source
+			entityName: consenttable
+			expressionSource: 'DirectLake - CRM_Monitoring'
+

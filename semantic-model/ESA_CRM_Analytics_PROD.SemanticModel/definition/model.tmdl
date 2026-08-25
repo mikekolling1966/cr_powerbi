@@ -1,0 +1,48 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["DirectLake - dataverse_esacontact_cds2_workspace_a94a4bf848e144bba608bb2eb51cbe","DirectLake - CRM_Monitoring"]
+
+annotation PBI_ProTooling = ["DirectLakeOnOneLakeInWeb","WebModelingEdit","TMDLView_Desktop"]
+
+ref table cap_cap_esacontactonboarding_systemuser
+ref table msdyncrm_marketingpage
+ref table cap_cap_project_systemuser
+ref table msdyncrm_marketingform
+ref table msdyncrm_customerjourney
+ref table cap_project
+ref table contact
+ref table msdyncrm_marketingemail
+ref table listmember
+ref table systemuser
+ref table account
+ref table cap_esacontactonboarding
+ref table msfp_surveyresponse
+ref table msevtmgt_eventregistration
+ref table msevtmgt_event
+ref table EmailBounced
+ref table EmailSent
+ref table EmailHardBounced
+ref table EmailSoftBounced
+ref table msdynmkt_marketingform
+ref table msdynmkt_journey
+ref table msdynmkt_segment
+ref table msdynmkt_contactpointconsent4
+ref table msdynmkt_email
+ref table DateTable
+ref table crm_health_snapshot
+ref table consentvaluecheck2
+ref table consenttable
+
+ref table Environment
+
+ref table ConsentMessageType
+
+ref table ConsentResponse

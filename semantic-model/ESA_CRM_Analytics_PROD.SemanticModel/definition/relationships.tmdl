@@ -1,0 +1,27 @@
+relationship rel_evtreg_event
+	fromColumn: msevtmgt_eventregistration.msevtmgt_eventid
+	toColumn: msevtmgt_event.msevtmgt_eventid
+
+relationship rel_projsu_project
+	fromColumn: cap_cap_project_systemuser.cap_projectid
+	toColumn: cap_project.cap_projectid
+
+relationship rel_projsu_user
+	fromColumn: cap_cap_project_systemuser.systemuserid
+	toColumn: systemuser.systemuserid
+
+relationship rel_onbsu_onb
+	fromColumn: cap_cap_esacontactonboarding_systemuser.cap_esacontactonboardingid
+	toColumn: cap_esacontactonboarding.cap_esacontactonboardingid
+
+relationship rel_onbsu_user
+	fromColumn: cap_cap_esacontactonboarding_systemuser.systemuserid
+	toColumn: systemuser.systemuserid
+
+relationship rel_consentvaluecheck2_messagetype
+	fromColumn: consentvaluecheck2.MessageType
+	toColumn: ConsentMessageType.MessageType
+
+relationship rel_consentvaluecheck2_response
+	fromColumn: consentvaluecheck2.Response
+	toColumn: ConsentResponse.Response

@@ -1,0 +1,91 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "a719f1fc84e13b683308",
+  "position": {
+    "x": 586.4637688980025,
+    "y": 243.1319644928905,
+    "z": 3000,
+    "height": 306.49362796679526,
+    "width": 256.3937080106845,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ConsentMessageType"
+                    }
+                  },
+                  "Property": "MessageTypeText"
+                }
+              },
+              "queryRef": "ConsentMessageType.MessageTypeText",
+              "nativeQueryRef": "MessageType",
+              "displayName": "MessageType"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ConsentResponse"
+                    }
+                  },
+                  "Property": "ResponseText"
+                }
+              },
+              "queryRef": "ConsentResponse.ResponseText",
+              "nativeQueryRef": "Response",
+              "displayName": "Response"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "consentvaluecheck2"
+                        }
+                      },
+                      "Property": "RowCount"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(consentvaluecheck2.RowCount)",
+              "nativeQueryRef": "Count",
+              "displayName": "Count"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "ConsentMessageType"
+                  }
+                },
+                "Property": "MessageTypeText"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

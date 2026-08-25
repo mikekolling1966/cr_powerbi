@@ -1,0 +1,203 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+    "name": "a08581d1aac1e2193a77",
+    "position": {
+        "x": 248.5993643105797,
+        "y": 397.3870137732708,
+        "z": 7001,
+        "height": 293.235659149387,
+        "width": 901.4051763281368,
+        "tabOrder": 7001
+    },
+    "visual": {
+        "visualType": "clusteredColumnChart",
+        "query": {
+            "queryState": {
+                "Category": {
+                    "projections": [
+                        {
+                            "field": {
+                                "Column": {
+                                    "Expression": {
+                                        "SourceRef": {
+                                            "Entity": "EmailSent"
+                                        }
+                                    },
+                                    "Property": "EmailYear"
+                                }
+                            },
+                            "queryRef": "EmailSent.EmailYear",
+                            "nativeQueryRef": "EmailYear",
+                            "active": true
+                        },
+                        {
+                            "field": {
+                                "Column": {
+                                    "Expression": {
+                                        "SourceRef": {
+                                            "Entity": "EmailSent"
+                                        }
+                                    },
+                                    "Property": "EmailQuarter"
+                                }
+                            },
+                            "queryRef": "EmailSent.EmailQuarter",
+                            "nativeQueryRef": "Quarter",
+                            "active": true,
+                            "displayName": "Quarter"
+                        }
+                    ]
+                },
+                "Y": {
+                    "projections": [
+                        {
+                            "field": {
+                                "Aggregation": {
+                                    "Expression": {
+                                        "Column": {
+                                            "Expression": {
+                                                "SourceRef": {
+                                                    "Entity": "EmailSent"
+                                                }
+                                            },
+                                            "Property": "ContactId"
+                                        }
+                                    },
+                                    "Function": 5
+                                }
+                            },
+                            "queryRef": "CountNonNull(EmailSent.ContactId)",
+                            "nativeQueryRef": "#Emails",
+                            "displayName": "#Emails"
+                        }
+                    ]
+                }
+            },
+            "sortDefinition": {
+                "sort": [
+                    {
+                        "field": {
+                            "Column": {
+                                "Expression": {
+                                    "SourceRef": {
+                                        "Entity": "EmailSent"
+                                    }
+                                },
+                                "Property": "EmailYear"
+                            }
+                        },
+                        "direction": "Ascending"
+                    },
+                    {
+                        "field": {
+                            "Column": {
+                                "Expression": {
+                                    "SourceRef": {
+                                        "Entity": "EmailSent"
+                                    }
+                                },
+                                "Property": "EmailQuarter"
+                            }
+                        },
+                        "direction": "Ascending"
+                    }
+                ]
+            }
+        },
+        "objects": {
+            "valueAxis": [
+                {
+                    "properties": {
+                        "titleText": {
+                            "expr": {
+                                "Literal": {
+                                    "Value": "'Emails Sent'"
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            "categoryAxis": [
+                {
+                    "properties": {
+                        "titleText": {
+                            "expr": {
+                                "Literal": {
+                                    "Value": "'Quarters'"
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "visualContainerObjects": {
+            "title": [
+                {
+                    "properties": {
+                        "text": {
+                            "expr": {
+                                "Literal": {
+                                    "Value": "'Emails Sent by Year & Quarter'"
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "drillFilterOtherVisuals": true
+    },
+    "filterConfig": {
+        "filters": [
+            {
+                "name": "f29e8467166eb2d1f93f",
+                "field": {
+                    "Column": {
+                        "Expression": {
+                            "SourceRef": {
+                                "Entity": "EmailSent"
+                            }
+                        },
+                        "Property": "EmailYear"
+                    }
+                },
+                "type": "Advanced"
+            },
+            {
+                "name": "1207ac56dfb7826603a6",
+                "field": {
+                    "Aggregation": {
+                        "Expression": {
+                            "Column": {
+                                "Expression": {
+                                    "SourceRef": {
+                                        "Entity": "EmailSent"
+                                    }
+                                },
+                                "Property": "ContactId"
+                            }
+                        },
+                        "Function": 5
+                    }
+                },
+                "type": "Advanced"
+            },
+            {
+                "name": "5aac98e6541da80bf838",
+                "field": {
+                    "Column": {
+                        "Expression": {
+                            "SourceRef": {
+                                "Entity": "EmailSent"
+                            }
+                        },
+                        "Property": "EmailQuarter"
+                    }
+                },
+                "type": "Categorical"
+            }
+        ]
+    }
+}

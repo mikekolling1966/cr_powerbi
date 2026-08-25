@@ -1,0 +1,161 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+    "name": "88b569c133f88285c169",
+    "position": {
+        "x": 598.5111319364202,
+        "y": 180.37321784385264,
+        "z": 3000,
+        "height": 129.68983431748083,
+        "width": 352.54765305843927,
+        "tabOrder": 3000
+    },
+    "visual": {
+        "visualType": "gauge",
+        "query": {
+            "queryState": {
+                "MaxValue": {
+                    "projections": [
+                        {
+                            "field": {
+                                "Measure": {
+                                    "Expression": {
+                                        "SourceRef": {
+                                            "Entity": "crm_health_snapshot"
+                                        }
+                                    },
+                                    "Property": "Health Active Users Max"
+                                }
+                            },
+                            "queryRef": "crm_health_snapshot.Health Active Users Max",
+                            "nativeQueryRef": "Health Active Users Max"
+                        }
+                    ]
+                },
+                "Y": {
+                    "projections": [
+                        {
+                            "field": {
+                                "Measure": {
+                                    "Expression": {
+                                        "SourceRef": {
+                                            "Entity": "crm_health_snapshot"
+                                        }
+                                    },
+                                    "Property": "Health Active Users"
+                                }
+                            },
+                            "queryRef": "crm_health_snapshot.Health Active Users",
+                            "nativeQueryRef": "Health Active Users"
+                        }
+                    ]
+                }
+            },
+            "sortDefinition": {
+                "sort": [
+                    {
+                        "field": {
+                            "Measure": {
+                                "Expression": {
+                                    "SourceRef": {
+                                        "Entity": "crm_health_snapshot"
+                                    }
+                                },
+                                "Property": "Health Active Users"
+                            }
+                        },
+                        "direction": "Descending"
+                    }
+                ],
+                "isDefaultSort": true
+            }
+        },
+        "objects": {
+            "calloutValue": [
+                {
+                    "properties": {
+                        "labelDisplayUnits": {
+                            "expr": {
+                                "Literal": {
+                                    "Value": "1D"
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "visualContainerObjects": {
+            "title": [
+                {
+                    "properties": {
+                        "text": {
+                            "expr": {
+                                "Literal": {
+                                    "Value": "'User License Usage'"
+                                }
+                            }
+                        },
+                        "fontColor": {
+                            "solid": {
+                                "color": {
+                                    "expr": {
+                                        "ThemeDataColor": {
+                                            "ColorId": 0,
+                                            "Percent": 0
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            "background": [
+                {
+                    "properties": {
+                        "show": {
+                            "expr": {
+                                "Literal": {
+                                    "Value": "false"
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "drillFilterOtherVisuals": true
+    },
+    "filterConfig": {
+        "filters": [
+            {
+                "name": "e218e42e873f3d10c6e1",
+                "field": {
+                    "Measure": {
+                        "Expression": {
+                            "SourceRef": {
+                                "Entity": "crm_health_snapshot"
+                            }
+                        },
+                        "Property": "Health Active Users"
+                    }
+                },
+                "type": "Advanced"
+            },
+            {
+                "name": "783ee08e12c4fedd35c4",
+                "field": {
+                    "Measure": {
+                        "Expression": {
+                            "SourceRef": {
+                                "Entity": "crm_health_snapshot"
+                            }
+                        },
+                        "Property": "Health Active Users Max"
+                    }
+                },
+                "type": "Advanced"
+            }
+        ]
+    }
+}

@@ -1,0 +1,58 @@
+table DateTable
+	lineageTag: 9ef76f32-b40e-4d52-b9ca-06c87eca17cd
+	sourceLineageTag: [dbo].[DateTable]
+
+	column Date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4276fa0d-7142-4257-8af6-cd2c04f3b2cc
+		sourceLineageTag: Date
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 25c642e4-a934-4fac-94af-8f17faab6677
+		sourceLineageTag: Year
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 9e25d4de-a1b0-4e1e-828b-2a6a2bf4c7a4
+		sourceLineageTag: MonthNumber
+		summarizeBy: sum
+		sourceColumn: MonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthName
+		dataType: string
+		lineageTag: f4291b6b-3aef-4996-bb85-488fa7a71f8d
+		sourceLineageTag: MonthName
+		summarizeBy: none
+		sourceColumn: MonthName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		dataType: string
+		lineageTag: 923087f1-14da-4c09-b49a-392319ad4069
+		sourceLineageTag: Quarter
+		summarizeBy: none
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DateTable = entity
+		mode: directLake
+		source
+			entityName: DateTable
+			expressionSource: 'DirectLake - dataverse_esacontact_cds2_workspace_a94a4bf848e144bba608bb2eb51cbe'
+

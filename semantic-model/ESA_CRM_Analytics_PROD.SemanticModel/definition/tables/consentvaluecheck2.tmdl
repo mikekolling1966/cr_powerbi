@@ -1,0 +1,40 @@
+table consentvaluecheck2
+	lineageTag: f1a71ff8-0258-448c-af0b-b75e46fde636
+	sourceLineageTag: [dbo].[consentvaluecheck2]
+
+	column MessageType
+		dataType: int64
+		formatString: 0
+		lineageTag: 24b06fb7-b5da-4c96-ac64-38d38ff4a880
+		sourceLineageTag: MessageType
+		summarizeBy: sum
+		sourceColumn: MessageType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Response
+		dataType: int64
+		formatString: 0
+		lineageTag: 3ae1cc33-638f-43a2-b5db-8b346c1f3bf6
+		sourceLineageTag: Response
+		summarizeBy: sum
+		sourceColumn: Response
+
+		annotation SummarizationSetBy = Automatic
+
+	column RowCount
+		dataType: int64
+		formatString: 0
+		lineageTag: 18f9af2d-eba5-4687-b056-646385c3f628
+		sourceLineageTag: RowCount
+		summarizeBy: sum
+		sourceColumn: RowCount
+
+		annotation SummarizationSetBy = Automatic
+
+
+	partition consentvaluecheck2 = entity
+		mode: directLake
+		source
+			entityName: consentvaluecheck2
+			expressionSource: 'DirectLake - CRM_Monitoring'

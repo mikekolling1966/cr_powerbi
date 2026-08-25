@@ -1,0 +1,29 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+    "name": "066b2b44790d7abdb388",
+    "displayName": "Customers",
+    "displayOption": "FitToPage",
+    "height": 720,
+    "width": 1280,
+    "pageBinding": {
+        "name": "13516debc5ed033187dc",
+        "type": "Default",
+        "parameters": [],
+        "acceptsFilterContext": "None"
+    },
+    "objects": {
+        "outspacePane": [
+            {
+                "properties": {
+                    "width": {
+                        "expr": {
+                            "Literal": {
+                                "Value": "409L"
+                            }
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}
