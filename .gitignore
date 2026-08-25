@@ -1,0 +1,5 @@
+
+# Local notebook audit/backup files - never commit
+notebooks/*_BEFORE_CLEANUP.*
+notebooks/*_FABRIC_CURRENT.*
+local_backups/
